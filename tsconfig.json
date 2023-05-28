@@ -21,8 +21,10 @@
     "baseUrl": ".",
     "paths": {
       "@components/*": ["src/components/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@interfaces/*": ["src/interfaces/*"],
       "@images/*": ["public/images/*"],
-      "@icons/*": ["public/icons/*"]
+      "@icons/*": ["src/components/icons/*"]
     },
     "plugins": [
       {
