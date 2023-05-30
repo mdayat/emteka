@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{ts,tsx,mdx}",
+    "./src/app/**/*.{ts,tsx,mdx}",
   ],
   theme: {
     screens: {
@@ -89,7 +89,11 @@ module.exports = {
         900: "#5B0E0E",
       },
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        poppins: ["var(--font-poppins)", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
