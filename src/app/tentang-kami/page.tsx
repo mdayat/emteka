@@ -6,5 +6,5 @@ export const metadata: Metadata = {
 };
 
 export default function TentangKami() {
-  return <h1 className="text-2xl">TENTANG KAMI</h1>;
+  return <h1 className="text-2xl">TENTANG KAMI hehe</h1>;
 }
