@@ -10,7 +10,8 @@
     "format": "prettier --write .",
     "check-lint": "next lint",
     "check-format": "prettier --check .",
-    "check-types": "tsc"
+    "check-types": "tsc",
+    "check-all": "next lint && prettier --check . && tsc"
   },
   "dependencies": {
     "@next/font": "^13.4.4",

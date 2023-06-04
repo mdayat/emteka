@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 @layer components {
+  .red-asterisk {
+    @apply after:content-['*'] after:text-error-400 after:ml-1;
+  }
+
+  .blue-ball {
+    @apply bg-secondary-500 grid place-items-center rounded-full w-[72px] h-[72px] mx-auto mb-4;
+  }
 }
 
 @layer utilities {
