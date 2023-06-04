@@ -6,7 +6,9 @@ export function HubungiKami() {
   return (
     <section id="hubungi-kami" className="bg-secondary-50 mt-9 py-10 px-6">
       <form
-        action=""
+        action="mailto:muhnurdayexp@gmail.com"
+        method="post"
+        encType="text/plain"
         className="bg-neutral-0 shadow-[0_24px_34px_-20px_rgba(185,206,234,0.25)] rounded-lg py-10 px-5 mb-8"
       >
         <article className="text-center mb-8">
