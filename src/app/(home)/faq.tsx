@@ -35,7 +35,7 @@ export function FAQ() {
   }
 
   return (
-    <section className="mt-9 mx-6 desktop:mt-20 desktop:mx-20">
+    <section className="mt-9 mx-6 desktop:mt-20 desktop:mx-20 mediumDesktop:mx-32">
       <article>
         <h2 className="text-neutral-900 font-semibold text-center text-2xl mb-4 desktop:text-4xl desktop:mb-6">
           FAQ

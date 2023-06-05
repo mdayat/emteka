@@ -14,8 +14,8 @@ export function Hero() {
 
   return (
     <section className="bg-secondary-500 relative overflow-hidden h-[724px] desktop:h-[512px]">
-      <article className="absolute top-1/4 -translate-y-1/4 left-6 desktop:top-1/2 desktop:-translate-y-1/2 desktop:left-20 desktop:w-[518px]">
-        <h1 className="text-neutral-50 font-semibold text-[40px] leading-[48px] mb-4 desktop:text-[48px] desktop:leading-[58px] desktop:mb-6">
+      <article className="absolute top-1/4 -translate-y-1/4 left-6 desktop:top-1/2 desktop:-translate-y-1/2 desktop:left-20 desktop:w-[518px] mediumDesktop:left-52">
+        <h1 className="text-neutral-50 font-semibold text-[40px] leading-[48px] mb-4 desktop:text-[48px] desktop:leading-[58px] desktop:mb-6 mediumDesktop:text-[56px] mediumDesktop:leading-[68px]">
           Buka Potensi Matematika Anda dengan Emteka
         </h1>
 

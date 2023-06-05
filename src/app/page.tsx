@@ -20,11 +20,11 @@ export default function Home() {
     <>
       <Hero />
 
-      <section className="text-center my-16 mx-11 desktop:mx-20 desktop:my-20">
+      <section className="text-center my-16 mx-11 desktop:mx-20 desktop:my-20 mediumDesktop:mx-32 mediumDesktop:my-[120px]">
         <article>
           <div className="flex justify-center items-center gap-x-4 mb-16 desktop:mb-8">
             <Image src={EmtekaLogo} alt="Logo Emteka" />
-            <h2 className="text-neutral-900 font-bold text-[28px] desktop:text-[32px]">
+            <h2 className="text-neutral-900 font-bold text-[28px] desktop:text-[32px] mediumDesktop:text-4xl">
               Emteka
             </h2>
           </div>
@@ -39,9 +39,9 @@ export default function Home() {
       </section>
 
       <section className="bg-secondary-50 py-10 desktop:py-20">
-        <article className="text-center mx-6 desktop:mx-20">
+        <article className="text-center mx-6 desktop:mx-20 mediumDesktop:mx-32">
           <div>
-            <h2 className="text-neutral-900 font-semibold text-2xl mb-4 desktop:text-4xl desktop:mb-6">
+            <h2 className="text-neutral-900 font-semibold text-2xl mb-4 desktop:text-4xl desktop:mb-6 mediumDesktop:text-5xl">
               Latar Belakang
             </h2>
 
@@ -90,7 +90,7 @@ export default function Home() {
         </article>
       </section>
 
-      <section className="text-center mt-9 mx-6 desktop:mt-20 desktop:mx-20">
+      <section className="text-center mt-9 mx-6 desktop:mt-20 desktop:mx-20 mediumDesktop:mx-32">
         <article>
           <h2 className="text-neutral-900 font-semibold text-2xl mb-4 desktop:text-4xl desktop:mb-6">
             Solusi Kami
@@ -104,7 +104,7 @@ export default function Home() {
         </article>
       </section>
 
-      <section className="grid gap-y-8 mt-10 mx-6 desktop:grid-cols-3 desktop:gap-y-0 desktop:gap-x-6 desktop:mt-12 desktop:mx-20">
+      <section className="grid gap-y-8 mt-10 mx-6 desktop:grid-cols-3 desktop:gap-y-0 desktop:gap-x-6 desktop:mt-12 desktop:mx-20 mediumDesktop:mx-32">
         <article className="shadow-[0_0_8px_rgba(0,0,0,0.25)] rounded-lg py-4 px-3">
           <Image
             src={BranchingImage}
@@ -157,7 +157,7 @@ export default function Home() {
         </article>
       </section>
 
-      <section className="bg-secondary-50 mt-9 py-10 px-6 desktop:mt-20 desktop:px-20 desktop:py-20">
+      <section className="bg-secondary-50 mt-9 py-10 px-6 desktop:mt-20 desktop:px-20 desktop:py-20 mediumDesktop:px-32">
         <h2 className="text-neutral-900 font-semibold text-center text-2xl mb-4 desktop:text-4xl desktop:mb-12">
           How It Works
         </h2>
@@ -171,7 +171,7 @@ export default function Home() {
         ></iframe>
       </section>
 
-      <section className="bg-secondary-500 text-center flex flex-col justify-center items-center rounded-xl mt-9 mx-6 h-[200px] desktop:mt-20 desktop:mx-20 desktop:h-[448px]">
+      <section className="bg-secondary-500 text-center flex flex-col justify-center items-center rounded-xl mt-9 mx-6 h-[200px] desktop:mt-20 desktop:mx-20 desktop:h-[448px] mediumDesktop:mx-32">
         <h4 className="text-neutral-0 font-semibold text-[32px] leading-[38px] w-10/12 mx-auto mb-2 desktop:font-extrabold desktop:text-[88px] desktop:leading-normal desktop:mb-2">
           Coming Soon
         </h4>

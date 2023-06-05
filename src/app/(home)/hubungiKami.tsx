@@ -14,7 +14,7 @@ export function HubungiKami() {
         action="mailto:muhnurdayexp@gmail.com"
         method="post"
         encType="text/plain"
-        className="bg-neutral-0 shadow-[0_24px_34px_-20px_rgba(185,206,234,0.25)] rounded-lg py-10 px-5 mb-8 desktop:px-28 desktop:mb-14"
+        className="bg-neutral-0 shadow-[0_24px_34px_-20px_rgba(185,206,234,0.25)] rounded-lg py-10 px-5 mb-8 desktop:px-28 desktop:mb-14 mediumDesktop::px-56"
       >
         <h2 className="text-neutral-900 font-semibold text-center text-2xl mb-4 desktop:text-4xl desktop:mb-6">
           Waiting List
