@@ -1,8 +1,17 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 
-import { HubungiKami } from "./hubungiKami";
-import { FAQ } from "./faq";
+import { HubungiKami } from "./(home)/hubungiKami";
+import { FAQ } from "./(home)/faq";
+
+import EmtekaLogo from "@images/logo.png";
+import MobileImage from "@images/home/mobile.png";
+import DesktopImage from "@images/home/desktop.png";
+import OrnamentImage from "@images/home/ornament.png";
+import BranchingImage from "@images/home/branching.png";
+import FeedbackImage from "@images/home/feedback.png";
+import TrackingImage from "@images/home/tracking.png";
 
 export const metadata: Metadata = {
   title: "Snippo Emteka",
@@ -12,13 +21,13 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <section className="bg-secondary-500 relative h-[609px]">
-        <article className="absolute top-1/2 -translate-y-1/2 left-6 w-[284px]">
+      <section className="bg-secondary-500 relative overflow-hidden h-[724px]">
+        <article className="absolute top-1/4 -translate-y-1/4 left-6">
           <h1 className="text-neutral-50 font-semibold text-[40px] leading-[48px] mb-4">
             Buka Potensi Matematika Anda dengan Emteka
           </h1>
 
-          <p className="text-secondary-50 mb-8 leading-6">
+          <p className="text-secondary-50 mb-8 leading-6 w-10/12">
             Bersama Emteka, raih keberhasilan dalam pelajaran Matematika dengan
             cara yang lebih menyenangkan!
           </p>
@@ -29,14 +38,33 @@ export default function Home() {
           >
             Bergabung Bersama Kami
           </Link>
+
+          <Image
+            src={OrnamentImage}
+            alt=""
+            className="absolute top-1/2 -translate-y-1/2 -right-64"
+          />
+
+          <div className="absolute mt-6">
+            <Image
+              src={DesktopImage}
+              alt="Aplikasi Emteka Pada Perangkat Desktop"
+            />
+            <Image
+              src={MobileImage}
+              alt="Aplikasi Emteka Pada Perangkat Mobile"
+              className="absolute top-20"
+            />
+          </div>
         </article>
       </section>
 
       <section className="my-16">
         <article className="text-center mx-11">
-          <h2 className="text-neutral-900 font-bold text-[28px] mb-16">
-            Emteka
-          </h2>
+          <div className="flex justify-center items-center gap-x-4 mb-16">
+            <Image src={EmtekaLogo} alt="Logo Emteka" />
+            <h2 className="text-neutral-900 font-bold text-[28px]">Emteka</h2>
+          </div>
 
           <p className="text-neutral-900">
             Emteka adalah aplikasi asesmen berbasis web yang dirancang untuk
@@ -114,7 +142,13 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col gap-y-8 mt-16 mx-6">
-        <article className="shadow-[0_14px_24px_0_rgba(189,172,172,0.15)] rounded-lg py-4 px-3">
+        <article className="shadow-[0_3px_8px_rgba(0,0,0,0.25)] rounded-lg py-4 px-3">
+          <Image
+            src={BranchingImage}
+            alt="Fitur Branching"
+            className="object-cover object-center w-[140px] h-[140px] mb-4"
+          />
+
           <h3 className="text-neutral-900 font-bold text-lg mb-4">
             Fitur Branching
           </h3>
@@ -125,7 +159,13 @@ export default function Home() {
           </p>
         </article>
 
-        <article className="shadow-[0_14px_24px_0_rgba(189,172,172,0.15)] rounded-lg py-4 px-3">
+        <article className="shadow-[0_3px_8px_rgba(0,0,0,0.25)] rounded-lg py-4 px-3">
+          <Image
+            src={TrackingImage}
+            alt="Fitur Tracking"
+            className="object-cover object-center w-[140px] h-[140px] mb-4"
+          />
+
           <h3 className="text-neutral-900 font-bold text-lg mb-4">
             Fitur Tracking
           </h3>
@@ -136,7 +176,13 @@ export default function Home() {
           </p>
         </article>
 
-        <article className="shadow-[0_14px_24px_0_rgba(189,172,172,0.15)] rounded-lg py-4 px-3">
+        <article className="shadow-[0_3px_8px_rgba(0,0,0,0.25)] rounded-lg py-4 px-3">
+          <Image
+            src={FeedbackImage}
+            alt="Fitur Feedback"
+            className="object-cover object-center w-[140px] h-[140px] mb-4"
+          />
+
           <h3 className="text-neutral-900 font-bold text-lg mb-4">
             Fitur Feedback
           </h3>

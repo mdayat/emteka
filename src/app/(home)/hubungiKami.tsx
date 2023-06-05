@@ -1,6 +1,8 @@
 import Link from "next/link";
 
 import { Email } from "@components/icons/email";
+import { Instagram } from "@components/icons/instagram";
+import { LinkedIn } from "@components/icons/linkedIn";
 
 export function HubungiKami() {
   return (
@@ -11,16 +13,9 @@ export function HubungiKami() {
         encType="text/plain"
         className="bg-neutral-0 shadow-[0_24px_34px_-20px_rgba(185,206,234,0.25)] rounded-lg py-10 px-5 mb-8"
       >
-        <article className="text-center mb-8">
-          <h2 className="text-neutral-900 font-semibold text-2xl mb-4">
-            Hubungi Kami
-          </h2>
-
-          <p className="text-neutral-900">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae, in
-            tristique senectus dui pharetra sit.
-          </p>
-        </article>
+        <h2 className="text-neutral-900 font-semibold text-2xl text-center mb-8">
+          Hubungi Kami
+        </h2>
 
         <label htmlFor="nama" className="red-asterisk">
           Nama
@@ -102,7 +97,7 @@ export function HubungiKami() {
             target="_blank"
             className="bg-secondary-300 text-neutral-0 flex items-center gap-x-4 rounded-lg py-4 pl-6"
           >
-            <Email fill="#fff" />
+            <LinkedIn fill="#fff" />
             @emteka
           </Link>
         </li>
@@ -124,7 +119,7 @@ export function HubungiKami() {
             target="_blank"
             className="bg-secondary-300 text-neutral-0 flex items-center gap-x-4 rounded-lg py-4 pl-6"
           >
-            <Email fill="#fff" />
+            <Instagram fill="#fff" />
             @emteka.id
           </Link>
         </li>
