@@ -93,6 +93,24 @@ module.exports = {
       fontFamily: {
         poppins: ["var(--font-poppins)", "sans-serif"],
       },
+      transitionDuration: {
+        250: "250",
+      },
+      animation: {
+        fadeIn: "fadeIn 250ms ease-in",
+        fadeOut: "fadeOut 250ms ease-out",
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+
+        fadeOut: {
+          "0%": { opacity: "1" },
+          "100%": { opacity: "0" },
+        },
+      },
     },
   },
   plugins: [],
