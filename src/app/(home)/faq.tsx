@@ -35,9 +35,9 @@ export function FAQ() {
   }
 
   return (
-    <section className="mt-9 w-11/12 mx-auto">
+    <section className="mt-9 mx-6 desktop:mt-20 desktop:mx-20">
       <article>
-        <h2 className="text-neutral-900 font-bold text-center text-2xl mb-4">
+        <h2 className="text-neutral-900 font-semibold text-center text-2xl mb-4 desktop:text-4xl desktop:mb-6">
           FAQ
         </h2>
 
@@ -47,8 +47,8 @@ export function FAQ() {
               id={"first" as FAQAccordion}
               type="button"
               className={`${
-                openedAccordion === "first" ? "pt-3 pb-0" : "py-4"
-              } text-neutral-900 font-medium text-left w-full flex justify-between gap-x-4 px-4`}
+                openedAccordion === "first" ? "pt-2 pb-0" : "py-2 desktop:py-4"
+              } text-neutral-900 font-medium text-left w-full flex justify-between gap-x-4 px-4 desktop:text-lg`}
               onClick={openAccordion}
             >
               <span>Siapa yang dapat menggunakan Emteka?</span>
@@ -66,7 +66,7 @@ export function FAQ() {
               <p
                 className={`${
                   isMounted ? "animate-fadeIn" : "animate-fadeOut"
-                } text-[#75808A] text-sm mx-4 mt-1 mb-4`}
+                } text-[#75808A] text-sm mx-4 mt-1 mb-4 desktop:text-base desktop:mt-2`}
               >
                 Emteka diperuntukkan bagi siswa tingkat SMP dan SMA yang ingin
                 meningkatkan kemampuan Matematika dan/atau untuk mempersiapkan
@@ -84,8 +84,8 @@ export function FAQ() {
               id={"second" as FAQAccordion}
               type="button"
               className={`${
-                openedAccordion === "second" ? "pb-0" : "pb-4"
-              } text-neutral-900 font-medium text-left w-full flex justify-between gap-x-4 px-4`}
+                openedAccordion === "second" ? "pt-2 pb-0" : "py-2 desktop:py-4"
+              } text-neutral-900 font-medium text-left w-full flex justify-between gap-x-4 px-4 desktop:text-lg`}
               onClick={openAccordion}
             >
               <span>
@@ -105,7 +105,7 @@ export function FAQ() {
               <p
                 className={`${
                   isMounted ? "animate-fadeIn" : "animate-fadeOut"
-                } text-[#75808A] text-sm mx-4 mt-1 mb-4`}
+                } text-[#75808A] text-sm mx-4 mt-1 mb-4 desktop:text-base desktop:mt-2`}
               >
                 Pengalaman pembelajaran yang adaptif berarti, bahwa Emteka
                 secara cerdas menyesuaikan konten dan tantangan dari asesmen
@@ -123,8 +123,8 @@ export function FAQ() {
               id={"third" as FAQAccordion}
               type="button"
               className={`${
-                openedAccordion === "third" ? "pb-0" : "pb-4"
-              } text-neutral-900 font-medium text-left w-full flex justify-between gap-x-4 px-4`}
+                openedAccordion === "third" ? "pt-2 pb-0" : "py-2 desktop:py-4"
+              } text-neutral-900 font-medium text-left w-full flex justify-between gap-x-4 px-4 desktop:text-lg`}
               onClick={openAccordion}
             >
               <span>Bagaimana cara menghubungi support team Emteka?</span>
@@ -142,7 +142,7 @@ export function FAQ() {
               <p
                 className={`${
                   isMounted ? "animate-fadeIn" : "animate-fadeOut"
-                } text-[#75808A] text-sm mx-4 mt-1`}
+                } text-[#75808A] text-sm mx-4 mt-1 desktop:text-base desktop:mt-2`}
               >
                 Anda dapat menghubungi tim kami melalui formulir&nbsp;
                 <Link href="/#hubungi-kami" className="hover:underline">
