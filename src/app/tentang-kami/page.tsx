@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 import { Man } from "@components/icons/man";
+import { Navbar } from "@components/Navbar";
 
 export const metadata: Metadata = {
   title: "Tentang Emteka",
@@ -11,7 +12,12 @@ export const metadata: Metadata = {
 export default function TentangKami() {
   return (
     <div className="w-full h-full">
-      <div className="relative w-full">
+      <Navbar
+        background={"bg-neutral-0"}
+        text={"text-neutral-900"}
+        fill={"#ooo"}
+      />
+      <div className="relative w-full pt-20">
         <Image
           src="/Hero_Banner.png"
           alt="Hero Banner Image"
@@ -19,24 +25,14 @@ export default function TentangKami() {
           height={1440}
           className="w-full h-[220px] desktop:h-[403px] object-cover"
         />
-        <h1 className="text-3xl desktop:text-6xl absolute inset-0 flex items-center justify-center font-semibold text-neutral-0">
+        <h1 className="text-3xl desktop:text-6xl absolute inset-0 flex pt-10 items-center justify-center font-semibold text-neutral-0">
           Tentang Kami
         </h1>
       </div>
 
       <div className="w-full h-full px-8 desktop:flex desktop:flex-row-reverse desktop:px-14 mediumDesktop:px-24 largeDesktop:px-36">
         <div className="w-fit mx-auto my-14">
-          <div className="desktop:hidden">
-            <Man width={240} height={366} />
-          </div>
-
-          <div className="hidden desktop:flex largeDesktop:hidden">
-            <Man width={344} height={524} />
-          </div>
-
-          <div className="hidden largeDesktop:flex">
-            <Man width={395} height={603} />
-          </div>
+          <Man className="w-[240px] h-[366px] desktop:w-[344px] desktop:h-[524px] largeDesktop:w-[395px] largeDesktop:h-[603px]" />
         </div>
 
         <div className="h-fit items-center align-middle justify-center my-auto">

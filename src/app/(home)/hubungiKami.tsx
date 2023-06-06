@@ -11,7 +11,7 @@ export function HubungiKami() {
       className="bg-secondary-50 mt-9 py-10 px-6 desktop:mt-20 desktop:py-20 desktop:px-20"
     >
       <form
-        action="mailto:muhnurdayexp@gmail.com"
+        action="mailto:ravaneloe@gmail.com"
         method="post"
         encType="text/plain"
         className="bg-neutral-0 shadow-[0_24px_34px_-20px_rgba(185,206,234,0.25)] rounded-lg py-10 px-5 mb-8 desktop:px-28 desktop:mb-14 mediumDesktop::px-56"

@@ -1,6 +1,7 @@
 import type { InlineSVGProps } from "@interfaces/inlineSvg";
 
 export function Logo({
+  className = "",
   width = 24,
   height = 24,
   fill = "#090C18",
@@ -9,6 +10,7 @@ export function Logo({
     <svg
       width={width.toString()}
       height={height.toString()}
+      className={className}
       viewBox="0 0 21 27"
       fill={fill}
       xmlns="http://www.w3.org/2000/svg"

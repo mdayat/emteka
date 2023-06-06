@@ -1,50 +1,16 @@
-"use client";
-import { useState, useEffect } from "react";
-
 import { Logo } from "./icons/logo";
-import { Linkedin } from "./icons/linkedin";
-import { Insta } from "./icons/insta";
+import { LinkedIn } from "./icons/linkedIn";
+import { Instagram } from "./icons/instagram";
 import { ArrowDown } from "./icons/arrowDown";
 
 export function Footer() {
-  const [dimensions, setDimensions] = useState({
-    width: 0,
-    height: 0,
-    logoWidth: 0,
-    logoHeight: 0,
-  });
-
-  useEffect(() => {
-    const handleResize = () => {
-      const windowWidth = window.innerWidth;
-
-      if (windowWidth >= 1440) {
-        setDimensions({ width: 70, height: 86, logoWidth: 30, logoHeight: 30 });
-      } else if (windowWidth >= 1280) {
-        setDimensions({ width: 44, height: 55, logoWidth: 30, logoHeight: 30 });
-      } else if (windowWidth >= 1024) {
-        setDimensions({ width: 44, height: 55, logoWidth: 30, logoHeight: 30 });
-      } else {
-        setDimensions({ width: 25, height: 25, logoWidth: 20, logoHeight: 20 });
-      }
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  const { width, height, logoWidth, logoHeight } = dimensions;
-
   return (
     <div className="w-full h-full bg-secondary-500 text-neutral-50 py-5 px-8 largeDesktop:py-16 desktop:px-16 mediumDesktop:px-28">
       <div className=" desktop:flex desktop:justify-between">
         <div className="flex flex-col w-fit mediumDesktop:w-[60%] largeDesktop:w-[50%] h-fit mx-auto desktop:flex desktop:mx-0">
           <div className="flex flex-row mx-auto desktop:mx-0">
             <div className="w-fit h-fit py-3.5">
-              <Logo width={width} height={height} />
+              <Logo className="w-[25px] h-[25px] desktop:w-[44px] desktop:h-[55px] largeDesktop:w-[70px] largeDesktop:h-[86px]" />
             </div>
             <h1 className="text-xl desktop:text-4xl font-semibold pt-3 desktop:pt-[1.30rem] largeDesktop:pt-[1.50rem] largeDesktop:text-6xl ml-2">
               Emteka
@@ -57,8 +23,14 @@ export function Footer() {
           </div>
 
           <div className="w-fit h-fit mt-7 flex justify-center mx-auto desktop:mx-0 gap-x-5">
-            <Linkedin width={logoWidth} height={logoHeight} />
-            <Insta width={logoWidth} height={logoHeight} />
+            <LinkedIn
+              fill="#fff"
+              className="w-[20px] h-[20px] desktop:w-[30px] desktop:h-[30px]"
+            />
+            <Instagram
+              fill="#fff"
+              className="w-[20px] h-[20px] desktop:w-[30px] desktop:h-[30px]"
+            />
           </div>
         </div>
 
