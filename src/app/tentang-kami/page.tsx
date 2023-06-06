@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 
-import { Man } from "@components/icons/man";
 import { Navbar } from "@components/Navbar";
+
+import ManIllustrationImage from "@images/about/man_illustration.png";
 
 export const metadata: Metadata = {
   title: "Tentang Emteka",
@@ -31,9 +32,11 @@ export default function TentangKami() {
       </div>
 
       <div className="w-full h-full px-8 desktop:flex desktop:flex-row-reverse desktop:px-14 mediumDesktop:px-24 largeDesktop:px-36">
-        <div className="w-fit mx-auto my-14">
-          <Man className="w-[240px] h-[366px] desktop:w-[344px] desktop:h-[524px] largeDesktop:w-[395px] largeDesktop:h-[603px]" />
-        </div>
+        <Image
+          src={ManIllustrationImage}
+          alt=""
+          className="object-cover object-center w-[240px] h-[366px] my-14 desktop:w-[344px] desktop:h-[524px] largeDesktop:w-[395px] largeDesktop:h-[603px]"
+        />
 
         <div className="h-fit items-center align-middle justify-center my-auto">
           <h2 className="font-semibold text-2xl desktop:text-5xl largeDesktop:text-6xl ">

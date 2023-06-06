@@ -1,7 +1,7 @@
-import { Logo } from "./icons/logo";
-import { Instagram } from "@components/icons/instagram";
-import { LinkedIn } from "@components/icons/linkedIn";
-import { ArrowDown } from "./icons/arrowDown";
+import { ArrowDownIcon } from "src/app/(icons)/arrowDown";
+import { EmtekaIcon } from "src/app/(icons)/emteka";
+import { InstagramIcon } from "src/app/(icons)/instagram";
+import { LinkedInIcon } from "src/app/(icons)/linkedIn";
 
 export function Footer() {
   return (
@@ -10,7 +10,7 @@ export function Footer() {
         <div className="flex flex-col w-fit mediumDesktop:w-[60%] largeDesktop:w-[50%] h-fit mx-auto desktop:flex desktop:mx-0">
           <div className="flex flex-row mx-auto desktop:mx-0">
             <div className="w-fit h-fit py-3.5">
-              <Logo className="w-[25px] h-[25px] desktop:w-[44px] desktop:h-[55px] largeDesktop:w-[70px] largeDesktop:h-[86px]" />
+              <EmtekaIcon className="w-[25px] h-[25px] desktop:w-[44px] desktop:h-[55px] largeDesktop:w-[70px] largeDesktop:h-[86px]" />
             </div>
             <h1 className="text-xl desktop:text-4xl font-semibold pt-3 desktop:pt-[1.30rem] largeDesktop:pt-[1.50rem] largeDesktop:text-6xl ml-2">
               Emteka
@@ -23,14 +23,8 @@ export function Footer() {
           </div>
 
           <div className="w-fit h-fit mt-7 flex justify-center mx-auto desktop:mx-0 gap-x-5">
-            <LinkedIn
-              fill="#fff"
-              className="w-[20px] h-[20px] desktop:w-[30px] desktop:h-[30px]"
-            />
-            <Instagram
-              fill="#fff"
-              className="w-[20px] h-[20px] desktop:w-[30px] desktop:h-[30px]"
-            />
+            <LinkedInIcon className="fill-neutral-0 w-[20px] h-[20px] desktop:w-[30px] desktop:h-[30px]" />
+            <InstagramIcon className="fill-neutral-0 w-[20px] h-[20px] desktop:w-[30px] desktop:h-[30px]" />
           </div>
         </div>
 
@@ -38,7 +32,7 @@ export function Footer() {
           <div className="w-full desktop:w-fit h-fit desktop:mt-10 largeDesktop:mt-[4rem]">
             <p className="font-bold mb-5  largeDesktop:text-xl">Perusahaan</p>
             <p className="mb-3 text-lg">About Us</p>
-            <p className=" text-lg">Contact Us</p>
+            <p className="text-lg">Contact Us</p>
             <div className="w-full h-[1px] bg-neutral-100 my-7 desktop:hidden"></div>
           </div>
 
@@ -53,7 +47,7 @@ export function Footer() {
             <div className="flex justify-between">
               <p className="font-bold mb-5 largeDesktop:text-xl">Lokasi</p>
               <div className="desktop: hidden">
-                <ArrowDown fill="#FFFFFF" />
+                <ArrowDownIcon className="fill-neutral-0 w-6 h-6" />
               </div>
             </div>
             <p className="mb-3 underline text-lg">

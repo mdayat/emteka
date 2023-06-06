@@ -25,7 +25,7 @@ export function Hero() {
         </p>
 
         <Link
-          href="/#hubungi-kami"
+          href="/#waiting-list"
           className="bg-primary-300 text-neutral-900 font-medium inline-block text-xs leading-[18px] rounded-[30px] py-3 px-6 desktop:text-sm desktop:py-4 desktop:px-7"
         >
           Bergabung Bersama Kami

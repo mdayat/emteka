@@ -2,11 +2,10 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 import { Hero } from "./(home)/hero";
-import { Navbar } from "@components/Navbar";
-import { HubungiKami } from "./(home)/hubungiKami";
+import { WaitingList } from "./(home)/waitingList";
 import { FAQ } from "./(home)/faq";
 
-import EmtekaLogo from "@images/logo.png";
+import { EmtekaIcon } from "./(icons)/emteka";
 import BranchingImage from "@images/home/branching.png";
 import FeedbackImage from "@images/home/feedback.png";
 import TrackingImage from "@images/home/tracking.png";
@@ -19,16 +18,12 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <Navbar
-        background={"bg-secondary-500"}
-        text={"text-neutral-0"}
-        fill={"#fff"}
-      />
       <Hero />
+
       <section className="text-center my-16 mx-11 desktop:mx-20 desktop:my-20 mediumDesktop:mx-32 mediumDesktop:my-[120px] scroll-smooth">
         <article>
           <div className="flex justify-center items-center gap-x-4 mb-16 desktop:mb-8">
-            <Image src={EmtekaLogo} alt="Logo Emteka" />
+            <EmtekaIcon className="w-10 h-10 desktop:w-14 desktop:h-14" />
             <h2 className="text-neutral-900 font-bold text-[28px] desktop:text-[32px] mediumDesktop:text-4xl">
               Emteka
             </h2>
@@ -188,9 +183,7 @@ export default function Home() {
       </section>
 
       <FAQ />
-      <section id="waiting-list">
-        <HubungiKami />
-      </section>
+      <WaitingList />
     </>
   );
 }

@@ -14,7 +14,6 @@ export function useClickOutside<T extends HTMLElement>(callback: () => void) {
     }
 
     document.addEventListener("click", clickOutside);
-
     return () => {
       document.removeEventListener("click", clickOutside);
     };

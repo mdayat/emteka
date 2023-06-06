@@ -1,18 +1,20 @@
 "use client";
-import { useState } from "react";
-import Link from "next/link";
 
-import { Logo } from "./icons/logo";
-import { Menu } from "./icons/menu";
+import Link from "next/link";
+import { useState } from "react";
+
+import { EmtekaIcon } from "src/app/(icons)/emteka";
+import { MenuIcon } from "src/app/(icons)/menu";
 
 export function Navbar({ background, text, fill }: any) {
   const [navbar, setNavbar] = useState(false);
+
   return (
     <div className={`w-full h-fit fixed z-10 ${background}`}>
       <div className="flex px-5 desktop:px-20 mediumDesktop:px-32 justify-between mt-2">
         <div className="flex">
           <div className="w-fit h-fit py-3.5">
-            <Logo width={40} height={40} />
+            <EmtekaIcon className="w-6 h-6" />
           </div>
           <h1 className={`text-xl font-bold pt-5 ml-2 ${text}`}>Emteka</h1>
         </div>
@@ -39,7 +41,7 @@ export function Navbar({ background, text, fill }: any) {
           onClick={() => setNavbar(!navbar)}
           className="w-fit h-fit py-3.5 desktop:hidden"
         >
-          <Menu fill={fill} width={40} height={40} />
+          <MenuIcon className={`${fill} w-6 h-6`} />
         </div>
       </div>
 

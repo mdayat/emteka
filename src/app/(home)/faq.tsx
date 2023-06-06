@@ -4,9 +4,10 @@ import Link from "next/link";
 import { useState } from "react";
 import type { MouseEvent } from "react";
 
-import { ArrowDown } from "@components/icons/arrowDown";
 import { useClickOutside } from "@hooks/useClickOutside";
 import { useDelayedUnmount } from "@hooks/useDelayedUnmount";
+
+import { ArrowDownIcon } from "../(icons)/arrowDown";
 
 type FAQAccordion = "unopened" | "first" | "second" | "third" | "fourth";
 
@@ -54,7 +55,7 @@ export function FAQ() {
               <span>Siapa yang dapat menggunakan Emteka?</span>
 
               <span>
-                <ArrowDown
+                <ArrowDownIcon
                   className={`${
                     openedAccordion === "first" ? "-rotate-180" : ""
                   } transition-all duration-250`}
@@ -93,7 +94,7 @@ export function FAQ() {
               </span>
 
               <span>
-                <ArrowDown
+                <ArrowDownIcon
                   className={`${
                     openedAccordion === "second" ? "-rotate-180" : ""
                   } transition-all duration-250`}
@@ -130,7 +131,7 @@ export function FAQ() {
               <span>Bagaimana cara menghubungi support team Emteka?</span>
 
               <span>
-                <ArrowDown
+                <ArrowDownIcon
                   className={`${
                     openedAccordion === "third" ? "-rotate-180" : ""
                   } transition-all duration-250`}

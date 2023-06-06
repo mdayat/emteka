@@ -1,13 +1,13 @@
 import Link from "next/link";
 
-import { Email } from "@components/icons/email";
-import { Instagram } from "@components/icons/instagram";
-import { LinkedIn } from "@components/icons/linkedIn";
+import { LinkedInIcon } from "../(icons)/linkedIn";
+import { EmailIcon } from "../(icons)/email";
+import { InstagramIcon } from "../(icons)/instagram";
 
-export function HubungiKami() {
+export function WaitingList() {
   return (
     <section
-      id="hubungi-kami"
+      id="waiting-list"
       className="bg-secondary-50 mt-9 py-10 px-6 desktop:mt-20 desktop:py-20 desktop:px-20"
     >
       <form
@@ -87,7 +87,7 @@ export function HubungiKami() {
             target="_blank"
             className="bg-secondary-500 text-neutral-0 flex items-center gap-x-4 rounded-lg py-4 pl-6 desktop:h-[231px] desktop:flex-col desktop:justify-center desktop:gap-x-0 desktop:gap-y-4 desktop:py-0 desktop:pl-0"
           >
-            <LinkedIn fill="#fff" className="desktop:w-10 desktop:h-10" />
+            <LinkedInIcon className="fill-neutral-0 w-6 h-6 desktop:w-10 desktop:h-10" />
             @emteka
           </Link>
         </li>
@@ -98,7 +98,7 @@ export function HubungiKami() {
             target="_blank"
             className="bg-secondary-500 text-neutral-0 flex items-center gap-x-4 rounded-lg py-4 pl-6 desktop:h-[231px] desktop:flex-col desktop:justify-center desktop:gap-x-0 desktop:gap-y-4 desktop:py-0 desktop:pl-0"
           >
-            <Email fill="#fff" className="desktop:w-10 desktop:h-10" />
+            <EmailIcon className="fill-neutral-0 w-6 h-6 desktop:w-10 desktop:h-10" />
             emteka@gmail.com
           </Link>
         </li>
@@ -109,7 +109,7 @@ export function HubungiKami() {
             target="_blank"
             className="bg-secondary-500 text-neutral-0 flex items-center gap-x-4 rounded-lg py-4 pl-6 desktop:h-[231px] desktop:flex-col desktop:justify-center desktop:gap-x-0 desktop:gap-y-4 desktop:py-0 desktop:pl-0"
           >
-            <Instagram fill="#fff" className="desktop:w-10 desktop:h-10" />
+            <InstagramIcon className="fill-neutral-0 w-6 h-6 desktop:w-10 desktop:h-10" />
             @emteka.id
           </Link>
         </li>
