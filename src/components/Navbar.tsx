@@ -18,13 +18,13 @@ export function Navbar({ background, text, fill }: any) {
         </div>
 
         <div className="w-fit h-fit pt-5 desktop:flex gap-x-7 hidden">
-          <Link className="text-xl" href="/">
+          <Link className={`text-xl ${text}`} href="/">
             Home
           </Link>
-          <Link className="text-xl" href="/tentang-kami">
+          <Link className={`text-xl ${text}`} href="/tentang-kami">
             About Us
           </Link>
-          <Link className="text-xl" href="/">
+          <Link className={`text-xl ${text}`} href="/">
             Contact Us
           </Link>
         </div>

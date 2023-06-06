@@ -1,6 +1,6 @@
 import { Logo } from "./icons/logo";
-import { LinkedIn } from "./icons/linkedIn";
-import { Instagram } from "./icons/instagram";
+import { Instagram } from "@components/icons/instagram";
+import { LinkedIn } from "@components/icons/linkedIn";
 import { ArrowDown } from "./icons/arrowDown";
 
 export function Footer() {
