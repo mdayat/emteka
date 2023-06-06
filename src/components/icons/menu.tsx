@@ -1,6 +1,7 @@
 import type { InlineSVGProps } from "@interfaces/inlineSvg";
 
 export function Menu({
+  className = "",
   width = 24,
   height = 24,
   fill = "#090C18",
@@ -9,6 +10,7 @@ export function Menu({
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
+      className={className}
       width={width.toString()}
       height={height.toString()}
       fill={fill}
