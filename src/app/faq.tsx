@@ -7,7 +7,7 @@ import type { MouseEvent } from "react";
 import { useClickOutside } from "@hooks/useClickOutside";
 import { useDelayedUnmount } from "@hooks/useDelayedUnmount";
 
-import { ArrowDownIcon } from "../(icons)/arrowDown";
+import { ArrowDownIcon } from "./(icons)/arrowDown";
 
 type FAQAccordion = "unopened" | "first" | "second" | "third" | "fourth";
 
@@ -58,7 +58,7 @@ export function FAQ() {
                 <ArrowDownIcon
                   className={`${
                     openedAccordion === "first" ? "-rotate-180" : ""
-                  } transition-all duration-250`}
+                  } fill-neutral-900 w-6 h-6 transition-all duration-250`}
                 />
               </span>
             </button>
@@ -97,7 +97,7 @@ export function FAQ() {
                 <ArrowDownIcon
                   className={`${
                     openedAccordion === "second" ? "-rotate-180" : ""
-                  } transition-all duration-250`}
+                  } fill-neutral-900 w-6 h-6 transition-all duration-250`}
                 />
               </span>
             </button>
@@ -134,7 +134,7 @@ export function FAQ() {
                 <ArrowDownIcon
                   className={`${
                     openedAccordion === "third" ? "-rotate-180" : ""
-                  } transition-all duration-250`}
+                  } fill-neutral-900 w-6 h-6 transition-all duration-250`}
                 />
               </span>
             </button>

@@ -1,47 +1,45 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 
-import { Navbar } from "@components/Navbar";
-
 import ManIllustrationImage from "@images/about/man_illustration.png";
+import HeroImage from "@images/about/hero.jpg";
+import InovasiXIImage from "@images/about/inovasi_XI.png";
+import InovasiXVIIImage from "@images/about/inovasi_XVII.png";
 
 export const metadata: Metadata = {
   title: "Tentang Emteka",
-  description: "",
+  description:
+    "Furaha Systems adalah sebuah perusahaan yang dibangun atas dasar keprihatinan terhadap sistem pengembangan sumber daya manusia khususnya di Indonesia dan kepedulian akan percepatan implementasi teknologi perangkat lunak secara komprehensif sebagai upaya dalam mendukung pertumbuhan ekonomi di Indonesia.",
 };
 
 export default function TentangKami() {
   return (
-    <div className="w-full h-full">
-      <Navbar
-        background={"bg-neutral-0"}
-        text={"text-neutral-900"}
-        fill={"#ooo"}
-      />
-      <div className="relative w-full pt-20">
-        <Image
-          src="/Hero_Banner.png"
-          alt="Hero Banner Image"
-          width={1440}
-          height={1440}
-          className="w-full h-[220px] desktop:h-[403px] object-cover"
-        />
-        <h1 className="text-3xl desktop:text-6xl absolute inset-0 flex pt-10 items-center justify-center font-semibold text-neutral-0">
+    <>
+      <div className="relative grid place-items-center w-full h-[220px] mt-[60px] desktop:h-[403px]">
+        <h2 className="text-neutral-0 font-semibold text-[32px] desktop:text-5xl mediumDesktop:text-[56px]">
           Tentang Kami
-        </h1>
+        </h2>
+
+        <Image
+          src={HeroImage}
+          alt=""
+          fill
+          className="object-cover object-center -z-10"
+        />
       </div>
 
       <div className="w-full h-full px-8 desktop:flex desktop:flex-row-reverse desktop:px-14 mediumDesktop:px-24 largeDesktop:px-36">
         <Image
           src={ManIllustrationImage}
           alt=""
-          className="object-cover object-center w-[240px] h-[366px] my-14 desktop:w-[344px] desktop:h-[524px] largeDesktop:w-[395px] largeDesktop:h-[603px]"
+          className="object-cover object-center w-[240px] h-[366px] my-14 mx-auto desktop:w-[344px] desktop:h-[524px] largeDesktop:w-[395px] largeDesktop:h-[603px]"
         />
 
-        <div className="h-fit items-center align-middle justify-center my-auto">
-          <h2 className="font-semibold text-2xl desktop:text-5xl largeDesktop:text-6xl ">
+        <article className="h-fit items-center align-middle justify-center my-auto">
+          <h1 className="font-semibold text-2xl desktop:text-5xl largeDesktop:text-6xl ">
             Siapa Kami
-          </h2>
+          </h1>
+
           <p className="my-8 desktop:text-xl largeDesktop:pr-10">
             Furaha Systems adalah sebuah perusahaan yang dibangun atas dasar
             keprihatinan terhadap sistem pengembangan sumber daya manusia
@@ -49,7 +47,7 @@ export default function TentangKami() {
             teknologi perangkat lunak secara komprehensif sebagai upaya dalam
             mendukung pertumbuhan ekonomi di Indonesia.
           </p>
-        </div>
+        </article>
       </div>
 
       <div className="bg-secondary-50 w-full h-full py-20">
@@ -57,23 +55,20 @@ export default function TentangKami() {
           Penghargaan- Aplikasi Asesmen Inovasi Matematika Inovatif
         </h2>
 
-        <div className="px-10 desktop:flex desktop:justify-center desktop:gap-x-8">
+        <div className="flex flex-col justify-center items-center gap-y-10 desktop:flex-row desktop:gap-y-0 desktop:gap-x-8 px-10">
           <Image
-            src="/Lomba_XI.png"
-            alt="Gambar Lomba"
-            width={400}
-            height={400}
-            className="object-cover w-[245px] h-[82px] desktop:w-[306px] desktop:h-[112px] mx-auto mb-10 desktop:m-0"
+            src={InovasiXIImage}
+            alt="Inovasi Teknologi Tepat Guna"
+            className="object-cover object-center w-[245px] h-[82px] desktop:w-[306px] desktop:h-[112px]"
           />
+
           <Image
-            src="/Lomba_XVII.png"
-            alt="Gambar Lomba"
-            width={500}
-            height={500}
-            className="object-cover w-[300px] h-[82px] desktop:w-[413px] desktop:h-[112px] mx-auto desktop:m-0"
+            src={InovasiXVIIImage}
+            alt="Inovasi Teknologi Tepat Guna"
+            className="object-cover object-center w-[300px] h-[82px] desktop:w-[413px] desktop:h-[112px]"
           />
         </div>
       </div>
-    </div>
+    </>
   );
 }

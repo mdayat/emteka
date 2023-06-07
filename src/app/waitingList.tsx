@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-import { LinkedInIcon } from "../(icons)/linkedIn";
-import { EmailIcon } from "../(icons)/email";
-import { InstagramIcon } from "../(icons)/instagram";
+import { LinkedInIcon } from "./(icons)/linkedIn";
+import { EmailIcon } from "./(icons)/email";
+import { InstagramIcon } from "./(icons)/instagram";
 
 export function WaitingList() {
   return (

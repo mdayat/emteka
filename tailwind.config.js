@@ -99,6 +99,8 @@ module.exports = {
       animation: {
         fadeIn: "fadeIn 250ms ease-in",
         fadeOut: "fadeOut 250ms ease-out",
+        scaleIn: "scaleIn 250ms ease-in",
+        scaleOut: "scaleOut 250ms ease-out",
       },
       keyframes: {
         fadeIn: {
@@ -109,6 +111,16 @@ module.exports = {
         fadeOut: {
           "0%": { opacity: "1" },
           "100%": { opacity: "0" },
+        },
+
+        scaleIn: {
+          "0%": { opacity: "0", transform: "scale3d(0.75, 0.75, 0.75)" },
+          "100%": { opacity: "1", transform: "scale3d(1, 1, 1)" },
+        },
+
+        scaleOut: {
+          "0%": { opacity: "1", transform: "scale3d(1, 1, 1)" },
+          "100%": { opacity: "0", transform: "scale3d(0.75, 0.75, 0.75)" },
         },
       },
     },
