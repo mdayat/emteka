@@ -168,11 +168,11 @@ export default function Home() {
           src="https://www.youtube.com/embed/_JTp4JzZHbY"
           title="Cara Kerja Emteka"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          className="rounded-xl w-full h-[200px] desktop:h-[404px]"
+          className="rounded-xl w-full h-[200px] desktop:w-[868px] desktop:h-[404px] desktop:mx-auto"
         ></iframe>
       </section>
 
-      <section className="bg-secondary-500 text-center flex flex-col justify-center items-center rounded-xl mt-9 mx-6 h-[200px] desktop:mt-20 desktop:mx-20 desktop:h-[448px] mediumDesktop:mx-32">
+      <section className="bg-secondary-500 text-center flex flex-col justify-center items-center rounded-xl mt-9 mx-6 h-[200px] desktop:mt-20 desktop:w-[868px] desktop:h-[448px] desktop:mx-auto">
         <h4 className="text-neutral-0 font-semibold text-[32px] leading-[38px] w-10/12 mx-auto mb-2 desktop:font-extrabold desktop:text-[88px] desktop:leading-normal desktop:mb-2">
           Coming Soon
         </h4>

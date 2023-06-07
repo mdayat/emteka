@@ -13,8 +13,8 @@ export function Hero() {
   const { width } = useWindowSize();
 
   return (
-    <section className="bg-secondary-500 relative overflow-hidden h-[800px] desktop:h-[512px]">
-      <article className="absolute top-1/4 -translate-y-1/4 left-6 desktop:top-1/2 desktop:-translate-y-1/2 desktop:left-20 desktop:w-[518px] mediumDesktop:left-52 mt-8">
+    <section className="bg-secondary-500 relative overflow-hidden h-[727px] pt-[60px] desktop:h-[512px] desktop:pt-[96px]">
+      <article className="absolute left-6 desktop:top-1/2 desktop:-translate-y-1/2 desktop:left-20 desktop:w-[518px] mediumDesktop:left-52 mt-8">
         <h1 className="text-neutral-50 font-semibold text-[40px] leading-[48px] mb-4 desktop:text-[48px] desktop:leading-[58px] desktop:mb-6 mediumDesktop:text-[56px] mediumDesktop:leading-[68px]">
           Buka Potensi Matematika Anda dengan Emteka
         </h1>

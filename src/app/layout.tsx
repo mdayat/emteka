@@ -2,7 +2,7 @@ import { Poppins } from "next/font/google";
 import type { ReactNode } from "react";
 
 import { Navbar } from "./navbar";
-import { Footer } from "@components/Footer";
+import { Footer } from "./footer";
 
 import "../styles/globals.css";
 

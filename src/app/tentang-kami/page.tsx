@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function TentangKami() {
   return (
     <>
-      <div className="relative grid place-items-center w-full h-[220px] mt-[60px] desktop:h-[403px]">
+      <div className="relative grid place-items-center w-full h-[220px] mt-[60px] desktop:h-[403px] desktop:mt-[96px]">
         <h2 className="text-neutral-0 font-semibold text-[32px] desktop:text-5xl mediumDesktop:text-[56px]">
           Tentang Kami
         </h2>
