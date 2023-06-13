@@ -38,7 +38,6 @@ export function WaitingList() {
       body: JSON.stringify(form),
     });
     const content = await response.json();
-    console.log(content);
     alert(content.data.tableRange);
     setName("");
     setEmail("");
