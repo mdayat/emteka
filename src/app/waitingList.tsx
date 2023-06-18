@@ -4,9 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { FormEvent } from "react";
 
-import { LinkedInIcon } from "./(icons)/linkedIn";
-import { EmailIcon } from "./(icons)/email";
-import { InstagramIcon } from "./(icons)/instagram";
+import { LinkedInIcon } from "./(icons)/LinkedIn";
+import { EmailIcon } from "./(icons)/Email";
+import { InstagramIcon } from "./(icons)/Instagram";
 
 export function WaitingList() {
   const [name, setName] = useState("");

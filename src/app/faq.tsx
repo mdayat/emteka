@@ -7,7 +7,7 @@ import type { MouseEvent } from "react";
 import { useClickOutside } from "@hooks/useClickOutside";
 import { useDelayedUnmount } from "@hooks/useDelayedUnmount";
 
-import { ArrowDownIcon } from "./(icons)/arrowDown";
+import { ArrowDownIcon } from "./(icons)/ArrowDown";
 
 type FAQAccordion = "unopened" | "first" | "second" | "third" | "fourth";
 

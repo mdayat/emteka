@@ -5,7 +5,7 @@ import { Hero } from "./hero";
 import { WaitingList } from "./waitingList";
 import { FAQ } from "./faq";
 
-import { EmtekaIcon } from "./(icons)/emteka";
+import { EmtekaIcon } from "./(icons)/Emteka";
 import BranchingImage from "@images/home/branching.png";
 import FeedbackImage from "@images/home/feedback.png";
 import TrackingImage from "@images/home/tracking.png";

@@ -7,8 +7,8 @@ import { usePathname } from "next/navigation";
 import { useDelayedUnmount } from "@hooks/useDelayedUnmount";
 import { useClickOutside } from "@hooks/useClickOutside";
 
-import { EmtekaIcon } from "./(icons)/emteka";
-import { MenuIcon } from "./(icons)/menu";
+import { EmtekaIcon } from "./(icons)/Emteka";
+import { MenuIcon } from "./(icons)/Menu";
 
 export function Navbar() {
   const [isOpened, setIsOpened] = useState(false);

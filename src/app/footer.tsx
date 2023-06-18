@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-import { EmtekaIcon } from "./(icons)/emteka";
-import { LinkedInIcon } from "./(icons)/linkedIn";
-import { InstagramIcon } from "./(icons)/instagram";
+import { EmtekaIcon } from "./(icons)/Emteka";
+import { LinkedInIcon } from "./(icons)/LinkedIn";
+import { InstagramIcon } from "./(icons)/Instagram";
 
 export function Footer() {
   return (
