@@ -4,8 +4,9 @@ import type { Metadata } from "next";
 import { Hero } from "./(Home)/Hero";
 import { LatarBelakang } from "./(Home)/LatarBelakang";
 import { SolusiKami } from "./(Home)/SolusiKami";
-
+import { FAQ } from "./(Home)/FAQ";
 import { EmtekaIcon } from "./(icons)/Emteka";
+
 import FlowerSmall1 from "@images/home/flower_small_1.png";
 import FlowerSmall2 from "@images/home/flower_small_2.png";
 import FlowerLarge1 from "@images/home/flower_large_1.png";
@@ -89,6 +90,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <FAQ />
     </>
   );
 }
