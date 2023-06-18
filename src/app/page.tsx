@@ -2,8 +2,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 import { Hero } from "./(Home)/Hero";
-import { WaitingList } from "./waitingList";
-import { FAQ } from "./faq";
+import { LatarBelakang } from "./(Home)/LatarBelakang";
 
 import { EmtekaIcon } from "./(icons)/Emteka";
 import BranchingImage from "@images/home/branching.png";
@@ -21,75 +20,20 @@ export default function Home() {
     <>
       <Hero />
 
-      <section className="text-center my-16 mx-11 desktop:mx-20 desktop:my-20 mediumDesktop:mx-32 mediumDesktop:my-[120px] scroll-smooth">
-        <article>
-          <div className="flex justify-center items-center gap-x-4 mb-16 desktop:mb-8">
-            <EmtekaIcon className="w-10 h-10 desktop:w-14 desktop:h-14" />
-            <h2 className="text-neutral-900 font-bold text-[28px] desktop:text-[32px] mediumDesktop:text-4xl">
-              Emteka
-            </h2>
-          </div>
+      <article className="mt-14 mx-8 lg:w-[868px] lg:mx-auto">
+        <h2 className="text-neutral-900 font-semibold flex justify-center items-center gap-x-1 text-2xl mb-6 lg:text-[32px] lg:gap-x-2">
+          <EmtekaIcon className="w-8 h-8 lg:w-10 lg:h-10" /> Emteka
+        </h2>
 
-          <p className="text-neutral-900 desktop:text-lg">
-            Emteka adalah aplikasi asesmen berbasis web yang dirancang untuk
-            membantu Anda dalam mengukur dan memetakan kemampuan Matematika
-            secara menyeluruh. Emteka memberikan pengalaman pembelajaran yang
-            adaptif dan dipersonalisasi melalui fitur-fitur canggih.
-          </p>
-        </article>
-      </section>
+        <p className="text-neutral-800 text-center text-sm lg:text-base">
+          Emteka adalah aplikasi asesmen berbasis web yang dirancang untuk
+          membantu Anda dalam mengukur dan memetakan kemampuan Matematika secara
+          menyeluruh. Emteka memberikan pengalaman pembelajaran yang adaptif dan
+          dipersonalisasi melalui fitur-fitur canggih.
+        </p>
+      </article>
 
-      <section className="bg-secondary-50 py-10 desktop:py-20">
-        <article className="text-center mx-6 desktop:mx-20 mediumDesktop:mx-32">
-          <div>
-            <h2 className="text-neutral-900 font-semibold text-2xl mb-4 desktop:text-4xl desktop:mb-6 mediumDesktop:text-5xl">
-              Latar Belakang
-            </h2>
-
-            <p className="text-neutral-900 mb-8 desktop:text-lg desktop:mb-12">
-              Matematika adalah fondasi utama bagi perkembangan teknologi dan
-              kunci dalam memecahkan permasalahan sehari-hari. Namun, mengapa
-              begitu banyak dari siswa merasa dipersulit?
-            </p>
-          </div>
-
-          <ul className="grid gap-y-4 desktop:grid-cols-3 desktop:gap-y-0 desktop:gap-x-4">
-            <li className="bg-neutral-0 rounded-lg p-4 desktop:h-[320px] desktop:pb-0 desktop:py-6">
-              <div className="blue-ball text-neutral-0 font-semibold text-[32px]">
-                1
-              </div>
-
-              <p className="text-neutral-900 desktop:text-lg">
-                Metode pembelajaran yang tidak efektif akibat inkompetensi
-                pengajar dalam membangun dasar pemahaman Matematika yang kuat
-                pada siswa
-              </p>
-            </li>
-
-            <li className="bg-neutral-0 rounded-lg p-4 desktop:h-[320px] desktop:pb-0 desktop:py-6">
-              <div className="blue-ball text-neutral-0 font-semibold text-[32px]">
-                2
-              </div>
-
-              <p className="text-neutral-900 desktop:text-lg">
-                Kurangnya pemahaman Matematika secara terstruktur berakibat pada
-                kemampuan berpikir yang lemah
-              </p>
-            </li>
-
-            <li className="bg-neutral-0 rounded-lg p-4 desktop:h-[320px] desktop:pb-0 desktop:py-6">
-              <div className="blue-ball text-neutral-0 font-semibold text-[32px]">
-                3
-              </div>
-
-              <p className="text-neutral-900 desktop:text-lg">
-                Instrumen penilaian yang tidak akurat dalam mengukur dan
-                memetakan kemampuan Matematika siswa secara komprehensif
-              </p>
-            </li>
-          </ul>
-        </article>
-      </section>
+      <LatarBelakang />
 
       <section className="text-center mt-9 mx-6 desktop:mt-20 desktop:mx-20 mediumDesktop:mx-32">
         <article>
@@ -182,9 +126,6 @@ export default function Home() {
           kemajuan luar biasa!
         </p>
       </section>
-
-      <FAQ />
-      <WaitingList />
     </>
   );
 }

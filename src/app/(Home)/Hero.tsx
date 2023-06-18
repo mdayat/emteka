@@ -9,7 +9,7 @@ export function Hero() {
   return (
     <div className="bg-secondary-500 relative overflow-hidden pt-8">
       <div className="h-[580px] ml-8 lg:grid lg:grid-cols-2 lg:place-items-center lg:h-full lg:ml-16 xl:ml-20 2xl:ml-28">
-        <article className="grid grid-cols-12 pb-6 lg:block lg:w-[518px] lg:pb-0">
+        <article className="grid grid-cols-12 pb-6 lg:block lg:w-[518px] lg:pb-0 lg:mr-auto">
           <div className="col-span-10 w-11/12 my-auto lg:w-full">
             <h1 className="text-neutral-0 font-semibold text-[32px] leading-9 mb-4 lg:text-5xl">
               Buka Potensi Matematika Anda bersama Emteka
