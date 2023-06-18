@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 
-import { Hero } from "./hero";
+import { Hero } from "./(Home)/Hero";
 import { WaitingList } from "./waitingList";
 import { FAQ } from "./faq";
 
@@ -11,7 +11,7 @@ import FeedbackImage from "@images/home/feedback.png";
 import TrackingImage from "@images/home/tracking.png";
 
 export const metadata: Metadata = {
-  title: "Snippo Emteka",
+  title: "Emteka",
   description:
     "Emteka adalah aplikasi asesmen berbasis web yang dirancang untuk membantu Anda dalam mengukur dan memetakan kemampuan Matematika secara menyeluruh.",
 };

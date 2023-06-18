@@ -3,9 +3,9 @@ module.exports = {
   content: ["./src/app/**/*.{ts,tsx,mdx}"],
   theme: {
     screens: {
-      desktop: "1024px",
-      mediumDesktop: "1280px",
-      largeDesktop: "1440px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1440px",
     },
     colors: {
       transparent: "transparent",
