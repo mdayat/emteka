@@ -1,39 +1,34 @@
 import { NextRequest } from "next/server";
 import { google } from "googleapis";
-
-interface SheetForm {
-  name: string;
-  email: string;
-  profesi: string;
-  institusi: string;
-}
+import { type WaitingListData } from "src/types/waitingList";
 
 export async function POST(req: NextRequest) {
-  const body = (await req.json()) as SheetForm;
+  const { nama, email, institusi, profesi }: WaitingListData = await req.json();
+
+  const auth = new google.auth.GoogleAuth({
+    credentials: {
+      client_email: process.env.CLIENT_EMAIL,
+      private_key: process.env.PRIVATE_KEY?.replace(/\\n/g, "\n"),
+    },
+    scopes: [
+      "https://www.googleapis.com/auth/drive",
+      "https://www.googleapis.com/auth/drive.file",
+      "https://www.googleapis.com/auth/spreadsheets",
+    ],
+  });
+
+  const sheets = google.sheets({
+    auth,
+    version: "v4",
+  });
+
   try {
-    const auth = new google.auth.GoogleAuth({
-      credentials: {
-        client_email: process.env.CLIENT_EMAIL,
-        private_key: process.env.PRIVATE_KEY?.replace(/\\n/g, "\n"),
-      },
-      scopes: [
-        "https://www.googleapis.com/auth/drive",
-        "https://www.googleapis.com/auth/drive.file",
-        "https://www.googleapis.com/auth/spreadsheets",
-      ],
-    });
-
-    const sheets = google.sheets({
-      auth,
-      version: "v4",
-    });
-
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.SHEET_ID,
       range: "A2:D2",
       valueInputOption: "USER_ENTERED",
       requestBody: {
-        values: [[body.name, body.email, body.profesi, body.institusi]],
+        values: [[nama, email, profesi, institusi]],
       },
     });
 

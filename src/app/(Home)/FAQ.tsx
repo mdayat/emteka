@@ -1,8 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
-import type { MouseEvent } from "react";
+import { useState, type MouseEvent } from "react";
 
 import { ArrowDownIcon } from "../(icons)/ArrowDown";
 import { useClickOutside } from "@hooks/useClickOutside";

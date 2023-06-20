@@ -1,33 +1,26 @@
 "use client";
 
-import Link from "next/link";
-import { useState } from "react";
-import { FormEvent } from "react";
+import { useState, type FormEvent, type ChangeEvent } from "react";
 
-import { LinkedInIcon } from "./(icons)/LinkedIn";
-import { EmailIcon } from "./(icons)/Email";
-import { InstagramIcon } from "./(icons)/Instagram";
+import { type WaitingListData } from "src/types/waitingList";
 
 export function WaitingList() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [profesi, setProfesi] = useState("");
-  const [institusi, setInstitusi] = useState("");
+  const [waitingListData, setWaitingListData] = useState<WaitingListData>({
+    nama: "",
+    email: "",
+    profesi: "",
+    institusi: "",
+  });
 
-  console.log(name);
-  console.log(email);
-  console.log(profesi);
-  console.log(institusi);
+  function mutateInput(event: ChangeEvent<HTMLInputElement>) {
+    setWaitingListData({
+      ...waitingListData,
+      [event.currentTarget.name]: event.currentTarget.value,
+    });
+  }
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    const form = {
-      name,
-      email,
-      profesi,
-      institusi,
-    };
 
     const response = await fetch("/api/submit", {
       method: "POST",
@@ -35,14 +28,11 @@ export function WaitingList() {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(form),
+      body: JSON.stringify(waitingListData),
     });
+
     const content = await response.json();
     alert(content.data.tableRange);
-    setName("");
-    setEmail("");
-    setProfesi("");
-    setInstitusi("");
   };
   return (
     <section
@@ -63,8 +53,8 @@ export function WaitingList() {
 
         <input
           required
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          value={waitingListData.nama}
+          onChange={mutateInput}
           type="text"
           id="nama"
           name="nama"
@@ -78,8 +68,8 @@ export function WaitingList() {
 
         <input
           required
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          value={waitingListData.email}
+          onChange={mutateInput}
           type="email"
           id="email"
           name="email"
@@ -93,8 +83,8 @@ export function WaitingList() {
 
         <input
           required
-          value={profesi}
-          onChange={(e) => setProfesi(e.target.value)}
+          value={waitingListData.profesi}
+          onChange={mutateInput}
           type="text"
           id="profesi"
           name="profesi"
@@ -108,8 +98,8 @@ export function WaitingList() {
 
         <input
           required
-          value={institusi}
-          onChange={(e) => setInstitusi(e.target.value)}
+          value={waitingListData.institusi}
+          onChange={mutateInput}
           type="institusi"
           id="institusi"
           name="institusi"
@@ -124,41 +114,6 @@ export function WaitingList() {
           Submit
         </button>
       </form>
-
-      <ul className="grid gap-y-4 desktop:grid-cols-3 desktop:gap-y-0 desktop:gap-x-6">
-        <li>
-          <Link
-            href="https://www.linkedin.com/company/emteka-id/"
-            target="_blank"
-            className="bg-secondary-500 text-neutral-0 flex items-center gap-x-4 rounded-lg py-4 pl-6 desktop:h-[231px] desktop:flex-col desktop:justify-center desktop:gap-x-0 desktop:gap-y-4 desktop:py-0 desktop:pl-0"
-          >
-            <LinkedInIcon className="fill-neutral-0 w-6 h-6 desktop:w-10 desktop:h-10" />
-            @emteka
-          </Link>
-        </li>
-
-        <li className="desktop:">
-          <Link
-            href="mailto:emteka@gmail.com"
-            target="_blank"
-            className="bg-secondary-500 text-neutral-0 flex items-center gap-x-4 rounded-lg py-4 pl-6 desktop:h-[231px] desktop:flex-col desktop:justify-center desktop:gap-x-0 desktop:gap-y-4 desktop:py-0 desktop:pl-0"
-          >
-            <EmailIcon className="fill-neutral-0 w-6 h-6 desktop:w-10 desktop:h-10" />
-            emteka@gmail.com
-          </Link>
-        </li>
-
-        <li className="desktop:">
-          <Link
-            href="https://www.instagram.com/emteka_frh/"
-            target="_blank"
-            className="bg-secondary-500 text-neutral-0 flex items-center gap-x-4 rounded-lg py-4 pl-6 desktop:h-[231px] desktop:flex-col desktop:justify-center desktop:gap-x-0 desktop:gap-y-4 desktop:py-0 desktop:pl-0"
-          >
-            <InstagramIcon className="fill-neutral-0 w-6 h-6 desktop:w-10 desktop:h-10" />
-            @emteka.id
-          </Link>
-        </li>
-      </ul>
     </section>
   );
 }

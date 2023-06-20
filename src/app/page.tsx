@@ -1,10 +1,11 @@
 import Image from "next/image";
-import type { Metadata } from "next";
+import { type Metadata } from "next";
 
 import { Hero } from "./(Home)/Hero";
 import { LatarBelakang } from "./(Home)/LatarBelakang";
 import { SolusiKami } from "./(Home)/SolusiKami";
 import { FAQ } from "./(Home)/FAQ";
+import { WaitingList } from "./(Home)/WaitingList";
 import { EmtekaIcon } from "./(icons)/Emteka";
 
 import FlowerSmall1 from "@images/home/flower_small_1.png";
@@ -92,6 +93,7 @@ export default function Home() {
       </div>
 
       <FAQ />
+      <WaitingList />
     </>
   );
 }
