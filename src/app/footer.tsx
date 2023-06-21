@@ -6,15 +6,15 @@ import { InstagramIcon } from "./(icons)/Instagram";
 
 export function Footer() {
   return (
-    <footer className="bg-secondary-500 p-6 desktop:py-10 desktop:px-20">
-      <div className="desktop:flex desktop:justify-between desktop:gap-x-6">
-        <div className="flex flex-col justify-center items-center gap-y-6 px-6 mb-6 desktop:justify-start desktop:items-start desktop:px-0 desktop:mb-0 desktop:w-[262px]">
-          <h2 className="text-neutral-0 font-semibold flex justify-between items-center desktop:text-xl desktop:gap-x-1">
-            <EmtekaIcon className="w-6 h-6 desktop:w-10 desktop:h-10" />
+    <footer className="bg-secondary-500 p-6 lg:py-10 lg:px-20">
+      <div className="lg:flex lg:justify-between lg:gap-x-6">
+        <div className="flex flex-col justify-center items-center gap-y-6 px-6 mb-6 lg:justify-start lg:items-start lg:px-0 lg:mb-0 lg:w-[262px]">
+          <h2 className="text-neutral-0 font-semibold flex justify-between items-center lg:text-xl lg:gap-x-1">
+            <EmtekaIcon className="w-6 h-6 lg:w-10 lg:h-10" />
             Emteka
           </h2>
 
-          <p className="text-neutral-200 text-center text-sm border-b border-neutral-200 pb-6 desktop:text-left desktop:border-none desktop:pb-0">
+          <p className="text-neutral-200 text-center text-sm border-b border-neutral-200 pb-6 lg:text-left lg:border-none lg:pb-0">
             Buka Potensi Matematika mu bersama Emteka!
           </p>
 
@@ -24,7 +24,7 @@ export function Footer() {
                 href="https://www.linkedin.com/company/emteka-id/"
                 target="_blank"
               >
-                <LinkedInIcon className="fill-neutral-0 w-7 h-7 desktop:w-8 desktop:h-8" />
+                <LinkedInIcon className="fill-neutral-0 w-7 h-7 lg:w-8 lg:h-8" />
               </Link>
             </li>
 
@@ -33,14 +33,14 @@ export function Footer() {
                 href="https://www.instagram.com/emteka_frh/"
                 target="_blank"
               >
-                <InstagramIcon className="fill-neutral-0 w-7 h-7 desktop:w-8 desktop:h-8" />
+                <InstagramIcon className="fill-neutral-0 w-7 h-7 lg:w-8 lg:h-8" />
               </Link>
             </li>
           </ul>
         </div>
 
-        <div className="desktop:flex desktop:justify-between desktop:gap-x-8">
-          <div className="border-b border-neutral-200 pb-6 mb-6 desktop:border-none desktop:pb-0 desktop:mb-0">
+        <div className="lg:flex lg:justify-between lg:gap-x-8">
+          <div className="border-b border-neutral-200 pb-6 mb-6 lg:border-none lg:pb-0 lg:mb-0">
             <h3 className="text-neutral-0 font-medium mb-3">Link</h3>
 
             <ul className="flex flex-col gap-y-2">
@@ -70,7 +70,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="border-b border-neutral-200 pb-6 mb-6 desktop:border-none desktop:pb-0 desktop:mb-0">
+          <div className="border-b border-neutral-200 pb-6 mb-6 lg:border-none lg:pb-0 lg:mb-0">
             <h3 className="text-neutral-0 font-medium mb-3">Kontak</h3>
 
             <ul className="flex flex-col gap-y-2">
@@ -96,7 +96,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="border-b border-neutral-200 pb-6 desktop:border-none desktop:pb-0 desktop:w-[224px]">
+          <div className="border-b border-neutral-200 pb-6 lg:border-none lg:pb-0 lg:w-[224px]">
             <h3 className="text-neutral-0 font-medium mb-3">Lokasi</h3>
 
             <Link
@@ -111,7 +111,7 @@ export function Footer() {
         </div>
       </div>
 
-      <p className="text-neutral-200 text-center text-sm mt-6 desktop:mt-10">
+      <p className="text-neutral-200 text-center text-sm mt-6 lg:mt-10">
         &copy; {new Date().getFullYear()} Emteka. All Rights Reserved
       </p>
     </footer>
