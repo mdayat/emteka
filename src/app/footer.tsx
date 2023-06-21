@@ -6,7 +6,7 @@ import { InstagramIcon } from "./(icons)/Instagram";
 
 export function Footer() {
   return (
-    <footer className="bg-secondary-500 p-6 lg:py-10 lg:px-20">
+    <footer className="bg-secondary-500 py-6 px-8 lg:px-16 xl:px-20 2xl:px-28">
       <div className="lg:flex lg:justify-between lg:gap-x-6">
         <div className="flex flex-col justify-center items-center gap-y-6 px-6 mb-6 lg:justify-start lg:items-start lg:px-0 lg:mb-0 lg:w-[262px]">
           <h2 className="text-neutral-0 font-semibold flex justify-between items-center lg:text-xl lg:gap-x-1">

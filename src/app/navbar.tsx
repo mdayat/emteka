@@ -40,7 +40,7 @@ export function Navbar() {
           <h2
             className={`${
               pathname === "/" ? "text-neutral-0" : "text-neutral-900"
-            } font-medium flex justify-between items-center gap-x-1 lg:text-xl`}
+            } font-semibold flex justify-between items-center gap-x-1 lg:text-xl`}
           >
             <EmtekaIcon className="w-6 h-6 lg:w-8 lg:h-8" />
             Emteka
