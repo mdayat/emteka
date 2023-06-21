@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 @layer components {
+  .btn-primary {
+    @apply bg-primary-300 text-neutral-800 font-medium block text-xs rounded-3xl py-2 px-4 lg:text-sm lg:py-3 lg:px-6;
+  }
+
+  .waiting-list-input {
+    @apply bg-[#F9FAFF] placeholder:text-neutral-250 placeholder:text-sm border-secondary-200 border text-sm outline-none block rounded-md w-full py-3 px-4 lg:placeholder:text-base lg:text-base lg:rounded-lg lg:py-4 lg:px-6;
+  }
+
   .red-asterisk {
     @apply after:content-['*'] after:text-error-400 after:ml-1;
   }
@@ -10,7 +18,4 @@
   .blue-ball {
     @apply bg-secondary-500 rounded-full w-10 h-10 lg:w-12 lg:h-12;
   }
-}
-
-@layer utilities {
 }

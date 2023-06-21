@@ -85,8 +85,10 @@ export default function Home() {
         </div>
       </div>
 
-      <FAQ />
-      <WaitingList />
+      <div className="lg:grid lg:grid-cols-2 lg:gap-x-6 lg:mx-16 xl:gap-x-8 xl:w-[1200px] xl:mx-auto 2xl:gap-x-10">
+        <FAQ />
+        <WaitingList />
+      </div>
     </>
   );
 }

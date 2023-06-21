@@ -34,7 +34,7 @@ export function FAQ() {
   }
 
   return (
-    <div className="mt-14 mx-8 lg:w-[868px] lg:mx-auto">
+    <div className="mt-14 mx-8 lg:order-2 lg:mx-0 lg:pt-6">
       <h2 className="text-neutral-900 font-semibold text-center text-2xl mb-4 lg:text-[32px] lg:mb-6">
         FAQ
       </h2>

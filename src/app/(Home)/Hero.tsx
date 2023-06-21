@@ -7,7 +7,7 @@ import OrnamentImage from "@images/home/ornament.png";
 
 export function Hero() {
   return (
-    <div className="bg-secondary-500 relative overflow-hidden h-[calc(100vh-60px)] mt-[60px] pt-8 pl-8 lg:grid lg:grid-cols-2 lg:place-items-center lg:h-[calc(100vh-80px)] lg:pt-0 lg:mt-20 lg:px-16 xl:px-20 2xl:px-28">
+    <div className="bg-secondary-500 relative overflow-hidden h-[calc(100vh-60px)] mt-[60px] pt-8 pl-8 lg:grid lg:grid-cols-2 lg:place-items-center lg:h-[calc(100vh-76px)] lg:pt-0 lg:mt-[76px] lg:px-16 xl:px-20 2xl:px-28">
       <article className="w-[310px] lg:w-[518px] lg:mr-auto">
         <div className="col-span-10 w-11/12 my-auto lg:w-full">
           <h1 className="text-neutral-0 font-semibold text-[32px] leading-9 mb-4 lg:text-5xl">
@@ -19,10 +19,7 @@ export function Hero() {
             cara yang lebih menyenangkan!
           </p>
 
-          <Link
-            href="/#waiting-list"
-            className="bg-primary-300 text-neutral-900 font-medium inline-block text-xs py-3 px-4 rounded-3xl lg:text-sm lg:py-4 lg:px-6"
-          >
+          <Link href="/#waiting-list" className="btn-primary w-fit">
             Bergabung Bersama Kami
           </Link>
         </div>
