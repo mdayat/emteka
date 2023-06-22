@@ -6,7 +6,7 @@ import { LatarBelakang } from "./(Home)/LatarBelakang";
 import { SolusiKami } from "./(Home)/SolusiKami";
 import { FAQ } from "./(Home)/FAQ";
 import { WaitingList } from "./(Home)/WaitingList";
-import { EmtekaIcon } from "./(icons)/Emteka";
+import { EmtekaIcon } from "./(icons)/emteka";
 
 import FlowerSmall1 from "@images/home/flower_small_1.png";
 import FlowerSmall2 from "@images/home/flower_small_2.png";

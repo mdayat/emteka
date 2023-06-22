@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState, type MouseEvent } from "react";
 
-import { ArrowDownIcon } from "../(icons)/ArrowDown";
+import { ArrowDownIcon } from "../(icons)/arrowDown";
 import { useClickOutside } from "@hooks/useClickOutside";
 import { useDelayedUnmount } from "@hooks/useDelayedUnmount";
 
