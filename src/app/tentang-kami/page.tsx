@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { type Metadata } from "next";
 import Image from "next/image";
 
 import ManIllustrationImage from "@images/about/man_illustration.png";
@@ -15,8 +15,8 @@ export const metadata: Metadata = {
 export default function TentangKami() {
   return (
     <>
-      <div className="relative grid place-items-center w-full h-[220px] mt-[60px] desktop:h-[403px] desktop:mt-[96px]">
-        <h2 className="text-neutral-0 font-semibold text-[32px] desktop:text-5xl mediumDesktop:text-[56px]">
+      <div className="relative grid place-items-center w-full h-[220px] mt-[60px] lg:h-[403px] lg:mt-[76px]">
+        <h2 className="text-neutral-0 font-semibold text-[32px] lg:text-4xl xl:text-5xl">
           Tentang Kami
         </h2>
 
@@ -28,19 +28,19 @@ export default function TentangKami() {
         />
       </div>
 
-      <div className="w-full h-full px-8 desktop:flex desktop:flex-row-reverse desktop:px-14 mediumDesktop:px-24 largeDesktop:px-36">
+      <div className="mt-14 mx-8 lg:flex lg:flex-row-reverse lg:justify-between lg:items-center lg:w-[868px] lg:mx-auto">
         <Image
           src={ManIllustrationImage}
           alt=""
-          className="object-cover object-center w-[240px] h-[366px] my-14 mx-auto desktop:w-[344px] desktop:h-[524px] largeDesktop:w-[395px] largeDesktop:h-[603px]"
+          className="object-cover object-center mb-8 mx-auto w-56 lg:shrink-0 lg:w-64 lg:mb-0 lg:mx-0"
         />
 
-        <article className="h-fit items-center align-middle justify-center my-auto">
-          <h1 className="font-semibold text-2xl desktop:text-5xl largeDesktop:text-6xl ">
+        <article className="lg:w-[500px]">
+          <h1 className="text-neutral-900 font-semibold text-2xl mb-4 lg:text-[32px]">
             Siapa Kami
           </h1>
 
-          <p className="my-8 desktop:text-xl largeDesktop:pr-10">
+          <p className="text-neutral-800 text-sm lg:text-base">
             Furaha Systems adalah sebuah perusahaan yang dibangun atas dasar
             keprihatinan terhadap sistem pengembangan sumber daya manusia
             khususnya di Indonesia dan kepedulian akan percepatan implementasi
@@ -50,23 +50,25 @@ export default function TentangKami() {
         </article>
       </div>
 
-      <div className="bg-secondary-50 w-full h-full py-20">
-        <h2 className="text-2xl desktop:text-4xl desktop:px-14 mediumDesktop:px-44 font-semibold text-center px-3 mb-10">
-          Penghargaan- Aplikasi Asesmen Inovasi Matematika Inovatif
-        </h2>
+      <div className="bg-secondary-50 mt-14 py-6 lg:py-14">
+        <div className="mx-8 lg:w-[868px] lg:mx-auto">
+          <h2 className="text-neutral-900 font-semibold text-center text-2xl mb-6 lg:text-[32px] lg:mb-8">
+            Penghargaan - Aplikasi Asesmen Inovasi Matematika Inovatif
+          </h2>
 
-        <div className="flex flex-col justify-center items-center gap-y-10 desktop:flex-row desktop:gap-y-0 desktop:gap-x-8 px-10">
-          <Image
-            src={InovasiXIImage}
-            alt="Inovasi Teknologi Tepat Guna"
-            className="object-cover object-center w-[245px] h-[82px] desktop:w-[306px] desktop:h-[112px]"
-          />
+          <div className="grid place-items-center lg:flex lg:justify-center lg:items-center">
+            <Image
+              src={InovasiXIImage}
+              alt="Inovasi Teknologi Tepat Guna X!"
+              className="object-cover object-center mb-4 w-[245px] lg:w-[306px] lg:mb-0 lg:ml-auto"
+            />
 
-          <Image
-            src={InovasiXVIIImage}
-            alt="Inovasi Teknologi Tepat Guna"
-            className="object-cover object-center w-[300px] h-[82px] desktop:w-[413px] desktop:h-[112px]"
-          />
+            <Image
+              src={InovasiXVIIImage}
+              alt="Inovasi Teknologi Tepat Guna XVIII"
+              className="object-cover object-center w-[300px] lg:w-[413px] lg:mr-auto"
+            />
+          </div>
         </div>
       </div>
     </>

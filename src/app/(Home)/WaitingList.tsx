@@ -35,7 +35,7 @@ export function WaitingList() {
     alert(content.data.tableRange);
   };
   return (
-    <div id="waiting-list" className="pt-14">
+    <div id="waiting-list" className="pt-14 mb-14 lg:mb-0">
       <div className="bg-neutral-0 rounded-lg mx-8 py-6 px-4 shadow-[0_0_4px_0_rgba(0,0,0,0.25)] lg:order-1 lg:mx-0 xl:px-6">
         <article className="mb-6">
           <h2 className="text-neutral-900 font-semibold text-center text-2xl mb-4 desktop:text-4xl desktop:mb-6">

@@ -35,32 +35,34 @@ export function Navbar() {
         <div
           className={`${
             pathname === "/" ? "bg-secondary-500" : "bg-neutral-0"
-          } flex justify-between items-center py-4 px-8 lg:px-16 xl:px-20 2xl:px-28`}
+          }`}
         >
-          <h2
-            className={`${
-              pathname === "/" ? "text-neutral-0" : "text-neutral-900"
-            } font-semibold flex justify-between items-center gap-x-1 lg:text-xl`}
-          >
-            <EmtekaIcon className="w-6 h-6 lg:w-8 lg:h-8" />
-            Emteka
-          </h2>
-
-          <button
-            ref={buttonRef}
-            onClick={openMenu}
-            type="button"
-            aria-label="Navigation Menu"
-            className="lg:hidden"
-          >
-            <MenuIcon
+          <div className="flex justify-between items-center py-4 mx-8 lg:mx-16 xl:w-[1200px] xl:mx-auto">
+            <h2
               className={`${
-                pathname === "/" ? "fill-neutral-0" : "fill-neutral-900"
-              } w-7 h-7`}
-            />
-          </button>
+                pathname === "/" ? "text-neutral-0" : "text-neutral-900"
+              } font-semibold flex justify-between items-center gap-x-1 lg:text-xl`}
+            >
+              <EmtekaIcon className="w-6 h-6 lg:w-8 lg:h-8" />
+              Emteka
+            </h2>
 
-          <DesktopNavbar pathname={pathname} />
+            <button
+              ref={buttonRef}
+              onClick={openMenu}
+              type="button"
+              aria-label="Navigation Menu"
+              className="lg:hidden"
+            >
+              <MenuIcon
+                className={`${
+                  pathname === "/" ? "fill-neutral-0" : "fill-neutral-900"
+                } w-7 h-7`}
+              />
+            </button>
+
+            <DesktopNavbar pathname={pathname} />
+          </div>
         </div>
 
         {isOpened ? (
