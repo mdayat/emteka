@@ -21,10 +21,10 @@
     "baseUrl": ".",
     "paths": {
       "@components/*": ["src/components/*"],
+      "@icons/*": ["src/components/icons/*"],
       "@hooks/*": ["src/hooks/*"],
       "@interfaces/*": ["src/interfaces/*"],
-      "@images/*": ["public/images/*"],
-      "@icons/*": ["src/components/icons/*"]
+      "@images/*": ["public/images/*"]
     },
     "plugins": [
       {

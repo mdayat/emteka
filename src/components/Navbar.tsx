@@ -1,19 +1,16 @@
-"use client";
-
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
-import { usePathname } from "next/navigation";
 
+import { Emteka } from "./icons/Emteka";
+import { Menu } from "./icons/Menu";
 import { useDelayedUnmount } from "@hooks/useDelayedUnmount";
 import { useClickOutside } from "@hooks/useClickOutside";
-
-import { EmtekaIcon } from "./(icons)/emteka";
-import { MenuIcon } from "./(icons)/menu";
 
 export function Navbar() {
   const [isOpened, setIsOpened] = useState(false);
   const { isMounted, setIsMounted, animationOnUnmount } = useDelayedUnmount();
-  const pathname = usePathname();
+  const { pathname } = useRouter();
 
   const buttonRef = useClickOutside<HTMLButtonElement>(() =>
     animationOnUnmount(() => setIsOpened(false), 250)
@@ -43,7 +40,7 @@ export function Navbar() {
                 pathname === "/" ? "text-neutral-0" : "text-neutral-900"
               } font-semibold flex justify-between items-center gap-x-1 lg:text-xl`}
             >
-              <EmtekaIcon className="w-6 h-6 lg:w-8 lg:h-8" />
+              <Emteka className="w-6 h-6 lg:w-8 lg:h-8" />
               Emteka
             </h2>
 
@@ -54,7 +51,7 @@ export function Navbar() {
               aria-label="Navigation Menu"
               className="lg:hidden"
             >
-              <MenuIcon
+              <Menu
                 className={`${
                   pathname === "/" ? "fill-neutral-0" : "fill-neutral-900"
                 } w-7 h-7`}
@@ -89,7 +86,7 @@ function DesktopNavbar({ pathname }: { pathname: string }) {
                   : "text-neutral-900"
               }`}
             >
-              Home
+              Beranda
             </Link>
           </li>
 
@@ -108,7 +105,8 @@ function DesktopNavbar({ pathname }: { pathname: string }) {
 
           <li>
             <Link
-              href="/#waiting-list"
+              href="/#mailing-list"
+              scroll={false}
               className={`${
                 pathname === "/" ? "text-neutral-0" : "text-neutral-900"
               }`}
@@ -152,7 +150,7 @@ function MobileNavbar({
               pathname === "/" ? "font-semibold" : ""
             } text-neutral-900 font-medium inline-block text-sm pt-4 pb-2 px-6`}
           >
-            Home
+            Beranda
           </Link>
         </li>
 
@@ -163,13 +161,14 @@ function MobileNavbar({
               pathname === "/tentang-kami" ? "font-semibold" : ""
             } text-neutral-900 font-medium inline-block text-sm py-2 px-6`}
           >
-            About Us
+            Tentang Kami
           </Link>
         </li>
 
         <li>
           <Link
-            href="/#waiting-list"
+            href="/#mailing-list"
+            scroll={false}
             className="text-neutral-900 font-medium inline-block text-sm pt-2 pb-4 px-6"
           >
             Waiting List

@@ -1,9 +1,7 @@
-"use client";
-
 import Link from "next/link";
 import { useState, type MouseEvent } from "react";
 
-import { ArrowDownIcon } from "../(icons)/arrowDown";
+import { ArrowDown } from "@components/icons/ArrowDown";
 import { useClickOutside } from "@hooks/useClickOutside";
 import { useDelayedUnmount } from "@hooks/useDelayedUnmount";
 
@@ -51,7 +49,7 @@ export function FAQ() {
           onClick={openAccordion}
         >
           Siapa yang dapat menggunakan Emteka?
-          <ArrowDownIcon
+          <ArrowDown
             className={`${
               openedAccordion === "first" ? "-rotate-180 ease-in" : "ease-out"
             } fill-neutral-900 flex-shrink-0 w-6 h-6 transition duration-250`}
@@ -85,7 +83,7 @@ export function FAQ() {
           onClick={openAccordion}
         >
           Apa yang dimaksud dengan pengalaman pembelajaran yang adaptif?
-          <ArrowDownIcon
+          <ArrowDown
             className={`${
               openedAccordion === "second" ? "-rotate-180 ease-in" : "ease-out"
             } fill-neutral-900 flex-shrink-0 w-6 h-6 transition duration-250`}
@@ -118,7 +116,7 @@ export function FAQ() {
           onClick={openAccordion}
         >
           Bagaimana cara menghubungi support team Emteka?
-          <ArrowDownIcon
+          <ArrowDown
             className={`${
               openedAccordion === "third" ? "-rotate-180 ease-in" : "ease-out"
             } fill-neutral-900 flex-shrink-0 w-6 h-6 transition duration-250`}

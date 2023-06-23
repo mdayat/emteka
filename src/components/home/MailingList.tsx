@@ -1,13 +1,10 @@
-"use client";
-
 import { useState, type FormEvent, type ChangeEvent } from "react";
 
-import { type WaitingListData } from "src/types/waitingList";
+import { Success } from "@components/icons/Success";
+import type { MailingListData } from "@interfaces/mailingList";
 
-import { Success } from "../(icons)/succes";
-
-export function WaitingList() {
-  const [waitingListData, setWaitingListData] = useState<WaitingListData>({
+export function MailingList() {
+  const [mailingList, setMailingList] = useState<MailingListData>({
     nama: "",
     email: "",
     profesi: "",
@@ -16,8 +13,8 @@ export function WaitingList() {
   const [openModal, setOpenModal] = useState(false);
 
   function mutateInput(event: ChangeEvent<HTMLInputElement>) {
-    setWaitingListData({
-      ...waitingListData,
+    setMailingList({
+      ...mailingList,
       [event.currentTarget.name]: event.currentTarget.value,
     });
   }
@@ -25,16 +22,16 @@ export function WaitingList() {
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    await fetch("/api/submit", {
+    await fetch("/api/mailing-list", {
       method: "POST",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(waitingListData),
+      body: JSON.stringify(mailingList),
     });
     setOpenModal(true);
-    setWaitingListData({
+    setMailingList({
       nama: "",
       email: "",
       profesi: "",
@@ -42,7 +39,7 @@ export function WaitingList() {
     });
   };
   return (
-    <div id="waiting-list" className="pt-14 mb-14 lg:mb-0">
+    <div id="mailing-list" className="pt-14 mb-14 lg:mb-0">
       <div
         className={
           openModal
@@ -52,20 +49,21 @@ export function WaitingList() {
       >
         <div className="bg-neutral-0 p-10 rounded-md shadow-md">
           <div className="mx-auto w-fit">
-            <Success />
+            <Success className="fill-success-600 w-16 h-16 lg:w-20 lg:h-20" />
           </div>
           <h1 className="font-bold text-center text-lg my-5">Selamat!</h1>
           <p className="text-center">Anda telah masuk Waiting List Emteka.</p>
           <div className="flex justify-between mt-5">
             <button
               onClick={() => setOpenModal(!openModal)}
-              className="mx-auto w-fit bg-secondary-300 hover:bg-secondary-500 active:bg-secondary-300 rounded-lg py-3 px-5 text-neutral-0"
+              className="btn-primary block mx-auto"
             >
               Kembali
             </button>
           </div>
         </div>
       </div>
+
       <div className="bg-neutral-0 rounded-lg mx-8 py-6 px-4 shadow-[0_0_4px_0_rgba(0,0,0,0.25)] lg:order-1 lg:mx-0 xl:px-6">
         <article className="mb-6">
           <h2 className="text-neutral-900 font-semibold text-center text-2xl mb-4 desktop:text-4xl desktop:mb-6">
@@ -89,7 +87,7 @@ export function WaitingList() {
 
           <input
             required
-            value={waitingListData.nama}
+            value={mailingList.nama}
             onChange={mutateInput}
             type="text"
             id="nama"
@@ -107,7 +105,7 @@ export function WaitingList() {
 
           <input
             required
-            value={waitingListData.email}
+            value={mailingList.email}
             onChange={mutateInput}
             type="email"
             id="email"
@@ -125,7 +123,7 @@ export function WaitingList() {
 
           <input
             required
-            value={waitingListData.profesi}
+            value={mailingList.profesi}
             onChange={mutateInput}
             type="text"
             id="profesi"
@@ -143,7 +141,7 @@ export function WaitingList() {
 
           <input
             required
-            value={waitingListData.institusi}
+            value={mailingList.institusi}
             onChange={mutateInput}
             type="institusi"
             id="institusi"

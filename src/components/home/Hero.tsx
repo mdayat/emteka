@@ -8,7 +8,7 @@ import OrnamentImage from "@images/home/ornament.png";
 export function Hero() {
   return (
     <div className="bg-secondary-500 relative overflow-hidden mt-[60px] lg:mt-[76px]">
-      <div className="h-[calc(100vh-60px)] pt-8 ml-8 lg:grid lg:grid-cols-2 lg:place-items-center lg:h-[calc(100vh-76px)] lg:pt-0 lg:mx-16 xl:w-[1200px] xl:mx-auto">
+      <div className="h-[540px] pt-8 ml-8 lg:grid lg:grid-cols-2 lg:place-items-center lg:h-[calc(100vh-76px)] lg:pt-0 lg:mx-16 xl:w-[1200px] xl:mx-auto">
         <article className="w-[310px] lg:w-[518px] lg:mr-auto">
           <div className="col-span-10 w-11/12 my-auto lg:w-full">
             <h1 className="text-neutral-0 font-semibold text-[32px] leading-9 mb-4 lg:text-4xl xl:text-5xl">
@@ -20,7 +20,11 @@ export function Hero() {
               dengan cara yang lebih menyenangkan!
             </p>
 
-            <Link href="/#waiting-list" className="btn-primary w-fit">
+            <Link
+              href="/#mailing-list"
+              className="btn-primary w-fit"
+              scroll={false}
+            >
               Bergabung Bersama Kami
             </Link>
           </div>

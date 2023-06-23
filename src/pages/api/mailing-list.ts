@@ -1,9 +1,17 @@
-import { NextRequest } from "next/server";
 import { google } from "googleapis";
-import { type WaitingListData } from "src/types/waitingList";
+import type { NextApiRequest, NextApiResponse } from "next";
 
-export async function POST(req: NextRequest) {
-  const { nama, email, institusi, profesi }: WaitingListData = await req.json();
+import type { MailingListData } from "@interfaces/mailingList";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  if (req.method !== "POST") {
+    res.status(405).send({ error: "Method Not Allowed" });
+  }
+
+  const { nama, email, institusi, profesi }: MailingListData = req.body;
 
   const auth = new google.auth.GoogleAuth({
     credentials: {
@@ -32,9 +40,9 @@ export async function POST(req: NextRequest) {
       },
     });
 
-    return new Response(JSON.stringify(response), { status: 200 });
+    res.status(200).json({ response });
   } catch (err: any) {
     console.log(err);
-    return new Response(null, { status: 400, statusText: "Bad Request" });
+    res.status(400).send({ error: "Bad Request" });
   }
 }

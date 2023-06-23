@@ -1,20 +1,22 @@
-import { type Metadata } from "next";
 import Image from "next/image";
+import Head from "next/head";
 
 import ManIllustrationImage from "@images/about/man_illustration.png";
 import HeroImage from "@images/about/hero.jpg";
 import InovasiXIImage from "@images/about/inovasi_XI.png";
 import InovasiXVIIImage from "@images/about/inovasi_XVII.png";
 
-export const metadata: Metadata = {
-  title: "Tentang Emteka",
-  description:
-    "Furaha Systems adalah sebuah perusahaan yang dibangun atas dasar keprihatinan terhadap sistem pengembangan sumber daya manusia khususnya di Indonesia dan kepedulian akan percepatan implementasi teknologi perangkat lunak secara komprehensif sebagai upaya dalam mendukung pertumbuhan ekonomi di Indonesia.",
-};
-
 export default function TentangKami() {
   return (
     <>
+      <Head>
+        <title>Tentang Emteka</title>
+        <meta
+          name="description"
+          content="Furaha Systems adalah sebuah perusahaan yang dibangun atas dasar keprihatinan terhadap sistem pengembangan sumber daya manusia khususnya di Indonesia dan kepedulian akan percepatan implementasi teknologi perangkat lunak secara komprehensif sebagai upaya dalam mendukung pertumbuhan ekonomi di Indonesia."
+        />
+      </Head>
+
       <div className="relative grid place-items-center w-full h-[220px] mt-[60px] lg:h-[403px] lg:mt-[76px]">
         <h2 className="text-neutral-0 font-semibold text-[32px] lg:text-4xl xl:text-5xl">
           Tentang Kami

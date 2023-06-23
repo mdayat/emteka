@@ -1,32 +1,34 @@
 import Image from "next/image";
-import { type Metadata } from "next";
+import Head from "next/head";
 
-import { Hero } from "./(Home)/Hero";
-import { LatarBelakang } from "./(Home)/LatarBelakang";
-import { SolusiKami } from "./(Home)/SolusiKami";
-import { FAQ } from "./(Home)/FAQ";
-import { WaitingList } from "./(Home)/WaitingList";
-import { EmtekaIcon } from "./(icons)/emteka";
+import { Hero } from "@components/home/Hero";
+import { Emteka } from "@components/icons/Emteka";
+import { LatarBelakang } from "@components/home/LatarBelakang";
+import { SolusiKami } from "@components/home/SolusiKami";
+import { MailingList } from "@components/home/MailingList";
+import { FAQ } from "@components/home/FAQ";
 
 import FlowerSmall1 from "@images/home/flower_small_1.png";
 import FlowerSmall2 from "@images/home/flower_small_2.png";
 import FlowerLarge1 from "@images/home/flower_large_1.png";
 import FlowerLarge2 from "@images/home/flower_large_2.png";
 
-export const metadata: Metadata = {
-  title: "Emteka",
-  description:
-    "Emteka adalah aplikasi asesmen berbasis web yang dirancang untuk membantu Anda dalam mengukur dan memetakan kemampuan Matematika secara menyeluruh.",
-};
-
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Emteka</title>
+        <meta
+          name="description"
+          content="Emteka adalah aplikasi asesmen berbasis web yang dirancang untuk membantu Anda dalam mengukur dan memetakan kemampuan Matematika secara menyeluruh."
+        />
+      </Head>
+
       <Hero />
 
       <article className="mt-14 mx-8 lg:w-[868px] lg:mx-auto">
         <h2 className="text-neutral-900 font-semibold flex justify-center items-center gap-x-1 text-2xl mb-6 lg:text-[32px] lg:gap-x-2">
-          <EmtekaIcon className="w-8 h-8 lg:w-10 lg:h-10" /> Emteka
+          <Emteka className="w-8 h-8 lg:w-10 lg:h-10" /> Emteka
         </h2>
 
         <p className="text-neutral-800 text-center text-sm lg:text-base">
@@ -87,7 +89,7 @@ export default function Home() {
 
       <div className="lg:grid lg:grid-cols-2 lg:gap-x-6 lg:mx-16 lg:mb-14 xl:gap-x-8 xl:w-[1200px] xl:mx-auto 2xl:gap-x-10">
         <FAQ />
-        <WaitingList />
+        <MailingList />
       </div>
     </>
   );

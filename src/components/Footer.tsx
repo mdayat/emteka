@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-import { EmtekaIcon } from "./(icons)/emteka";
-import { LinkedInIcon } from "./(icons)/linkedIn";
-import { InstagramIcon } from "./(icons)/instagram";
+import { Emteka } from "./icons/Emteka";
+import { Instagram } from "./icons/Instagram";
+import { LinkedIn } from "./icons/LinkedIn";
 
 export function Footer() {
   return (
@@ -11,7 +11,7 @@ export function Footer() {
         <div className="lg:flex lg:justify-between lg:gap-x-6">
           <div className="flex flex-col justify-center items-center gap-y-6 px-6 mb-6 lg:justify-start lg:items-start lg:px-0 lg:mb-0 lg:w-[262px]">
             <h2 className="text-neutral-0 font-semibold flex justify-between items-center lg:text-xl lg:gap-x-1">
-              <EmtekaIcon className="w-6 h-6 lg:w-10 lg:h-10" />
+              <Emteka className="w-6 h-6 lg:w-10 lg:h-10" />
               Emteka
             </h2>
 
@@ -25,7 +25,7 @@ export function Footer() {
                   href="https://www.linkedin.com/company/emteka-id/"
                   target="_blank"
                 >
-                  <LinkedInIcon className="fill-neutral-0 w-7 h-7 lg:w-8 lg:h-8" />
+                  <LinkedIn className="fill-neutral-0 w-7 h-7 lg:w-8 lg:h-8" />
                 </Link>
               </li>
 
@@ -34,7 +34,7 @@ export function Footer() {
                   href="https://www.instagram.com/emteka_frh/"
                   target="_blank"
                 >
-                  <InstagramIcon className="fill-neutral-0 w-7 h-7 lg:w-8 lg:h-8" />
+                  <Instagram className="fill-neutral-0 w-7 h-7 lg:w-8 lg:h-8" />
                 </Link>
               </li>
             </ul>
@@ -62,8 +62,9 @@ export function Footer() {
 
                 <li>
                   <Link
-                    href="/#waiting-list"
+                    href="/#mailing-list"
                     className="text-neutral-200 text-sm block"
+                    scroll={false}
                   >
                     Waiting List
                   </Link>

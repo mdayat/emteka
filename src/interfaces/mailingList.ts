@@ -1,8 +1,8 @@
-interface WaitingListData {
+interface MailingListData {
   nama: string;
   email: string;
   profesi: string;
   institusi: string;
 }
 
-export type { WaitingListData };
+export type { MailingListData };
