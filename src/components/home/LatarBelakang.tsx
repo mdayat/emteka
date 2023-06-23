@@ -15,7 +15,7 @@ export function LatarBelakang() {
 
       <div className="mx-8 lg:w-[868px] lg:mx-auto">
         <ul className="grid gap-y-6 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-6">
-          <li className="bg-neutral-0 shadow-[0_0_8px_rgba(0,0,0,0.25)] rounded-lg py-3 px-4">
+          <li className="bg-neutral-0 card-transition shadow-[0_0_8px_rgba(0,0,0,0.25)] rounded-lg py-3 px-4">
             <div className="text-neutral-0 blue-ball flex-shrink-0 font-semibold grid place-items-center mx-auto mb-2 lg:text-lg lg:mb-3">
               1
             </div>
@@ -27,7 +27,7 @@ export function LatarBelakang() {
             </p>
           </li>
 
-          <li className="bg-neutral-0 shadow-[0_0_8px_rgba(0,0,0,0.25)] rounded-lg py-3 px-4">
+          <li className="bg-neutral-0 card-transition shadow-[0_0_8px_rgba(0,0,0,0.25)] rounded-lg py-3 px-4">
             <div className="text-neutral-0 blue-ball flex-shrink-0 font-semibold grid place-items-center mx-auto mb-2 lg:text-lg lg:mb-3">
               2
             </div>
@@ -38,7 +38,7 @@ export function LatarBelakang() {
             </p>
           </li>
 
-          <li className="bg-neutral-0 shadow-[0_0_8px_rgba(0,0,0,0.25)] rounded-lg py-3 px-4">
+          <li className="bg-neutral-0 card-transition shadow-[0_0_8px_rgba(0,0,0,0.25)] rounded-lg py-3 px-4">
             <div className="text-neutral-0 blue-ball flex-shrink-0 font-semibold grid place-items-center mx-auto mb-2 lg:text-lg lg:mb-3">
               3
             </div>

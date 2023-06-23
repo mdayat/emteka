@@ -7,6 +7,10 @@
     @apply bg-primary-300 text-neutral-800 font-medium block text-xs rounded-3xl py-2 px-4 lg:text-sm lg:py-3 lg:px-6;
   }
 
+  .card-transition {
+    @apply hover:-translate-y-4 hover:ease-in transition duration-250 ease-out;
+  }
+
   .waiting-list-input {
     @apply bg-[#F9FAFF] placeholder:text-neutral-250 placeholder:text-sm border-secondary-200 border text-sm outline-none block rounded-md w-full py-3 px-4 lg:placeholder:text-base lg:text-base lg:rounded-lg lg:py-4 lg:px-6;
   }

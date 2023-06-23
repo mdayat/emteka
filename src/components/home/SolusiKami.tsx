@@ -20,7 +20,7 @@ export function SolusiKami() {
       </article>
 
       <div className="grid gap-y-6 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-6">
-        <article className="shadow-[0_0_8px_rgba(0,0,0,0.25)] rounded-lg py-3 px-4">
+        <article className="card-transition shadow-[0_0_8px_rgba(0,0,0,0.25)] rounded-lg py-3 px-4">
           <Image
             src={BranchingImage}
             alt="Fitur Branching"
@@ -37,7 +37,7 @@ export function SolusiKami() {
           </p>
         </article>
 
-        <article className="shadow-[0_0_8px_rgba(0,0,0,0.25)] rounded-lg py-3 px-4">
+        <article className="card-transition shadow-[0_0_8px_rgba(0,0,0,0.25)] rounded-lg py-3 px-4">
           <Image
             src={TrackingImage}
             alt="Fitur Tracking"
@@ -54,7 +54,7 @@ export function SolusiKami() {
           </p>
         </article>
 
-        <article className="shadow-[0_0_8px_rgba(0,0,0,0.25)] rounded-lg py-3 px-4">
+        <article className="card-transition shadow-[0_0_8px_rgba(0,0,0,0.25)] rounded-lg py-3 px-4">
           <Image
             src={FeedbackImage}
             alt="Fitur Feedback"

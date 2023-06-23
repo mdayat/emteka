@@ -6,7 +6,7 @@ import HeroImage from "@images/about/hero.jpg";
 import InovasiXIImage from "@images/about/inovasi_XI.png";
 import InovasiXVIIImage from "@images/about/inovasi_XVII.png";
 
-export default function TentangKami() {
+export default function AboutUs() {
   return (
     <>
       <Head>

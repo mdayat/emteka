@@ -82,7 +82,7 @@ function DesktopNavbar({ pathname }: { pathname: string }) {
               href="/"
               className={`${
                 pathname === "/"
-                  ? "text-neutral-0 font-semibold"
+                  ? "text-neutral-0 font-bold"
                   : "text-neutral-900"
               }`}
             >
@@ -92,10 +92,10 @@ function DesktopNavbar({ pathname }: { pathname: string }) {
 
           <li>
             <Link
-              href="/tentang-kami"
+              href="/about-us"
               className={`${
-                pathname === "/tentang-kami"
-                  ? "text-neutral-900 font-semibold"
+                pathname === "/about-us"
+                  ? "text-neutral-900 font-bold"
                   : "text-neutral-0"
               }`}
             >
@@ -147,7 +147,7 @@ function MobileNavbar({
           <Link
             href="/"
             className={`${
-              pathname === "/" ? "font-semibold" : ""
+              pathname === "/" ? "font-bold" : ""
             } text-neutral-900 font-medium inline-block text-sm pt-4 pb-2 px-6`}
           >
             Beranda
@@ -156,9 +156,9 @@ function MobileNavbar({
 
         <li>
           <Link
-            href="/tentang-kami"
+            href="/about-us"
             className={`${
-              pathname === "/tentang-kami" ? "font-semibold" : ""
+              pathname === "/about-us" ? "font-bold" : ""
             } text-neutral-900 font-medium inline-block text-sm py-2 px-6`}
           >
             Tentang Kami

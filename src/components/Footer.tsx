@@ -53,7 +53,7 @@ export function Footer() {
 
                 <li>
                   <Link
-                    href="/tentang-kami"
+                    href="/about-us"
                     className="text-neutral-200 text-sm block"
                   >
                     About Us

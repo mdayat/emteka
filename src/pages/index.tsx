@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Head from "next/head";
 
 import { Hero } from "@components/home/Hero";
@@ -7,6 +8,7 @@ import { LatarBelakang } from "@components/home/LatarBelakang";
 import { SolusiKami } from "@components/home/SolusiKami";
 import { MailingList } from "@components/home/MailingList";
 import { FAQ } from "@components/home/FAQ";
+import { WhatsAppColored } from "@components/icons/WhatsAppColored";
 
 import FlowerSmall1 from "@images/home/flower_small_1.png";
 import FlowerSmall2 from "@images/home/flower_small_2.png";
@@ -23,6 +25,10 @@ export default function Home() {
           content="Emteka adalah aplikasi asesmen berbasis web yang dirancang untuk membantu Anda dalam mengukur dan memetakan kemampuan Matematika secara menyeluruh."
         />
       </Head>
+
+      <Link href="https://wa.me/6282211000129" target="_blank">
+        <WhatsAppColored className="w-10 h-10 fixed bottom-4 right-4 z-50 lg:w-12 lg:h-12 lg:bottom-6 lg:right-6" />
+      </Link>
 
       <Hero />
 
