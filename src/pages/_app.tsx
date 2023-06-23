@@ -24,13 +24,11 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="favicon.svg" type="image/svg" />
       </Head>
 
-      <Navbar />
-
       <div className={`${poppins.variable} font-poppins`}>
+        <Navbar />
         <Component {...pageProps} />
+        <Footer />
       </div>
-
-      <Footer />
     </>
   );
 }
