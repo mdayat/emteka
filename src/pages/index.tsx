@@ -24,6 +24,35 @@ export default function Home() {
           name="description"
           content="Emteka adalah aplikasi asesmen berbasis web yang dirancang untuk membantu Anda dalam mengukur dan memetakan kemampuan Matematika secara menyeluruh."
         />
+
+        <meta property="og:title" content="Emteka" />
+        <meta
+          property="og:description"
+          content="Emteka adalah aplikasi asesmen berbasis web yang dirancang untuk membantu Anda dalam mengukur dan memetakan kemampuan Matematika secara menyeluruh."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/public/favicon.svg" />
+        <meta property="og:url" content="https://www.emteka.id/" />
+
+        <meta property="twitter:title" content="Emteka" />
+        <meta
+          property="twitter:description"
+          content="Emteka adalah aplikasi asesmen berbasis web yang dirancang untuk membantu Anda dalam mengukur dan memetakan kemampuan Matematika secara menyeluruh."
+        />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:image" content="/public/favicon.svg" />
+        <meta property="twitter:url" content="https://www.emteka.id/" />
+        <meta property="twitter:domain" content="emteka.id" />
+
+        <link type="preload" href="https://www.youtube.com/embed/_JTp4JzZHbY" />
+        <link
+          type="preconnect"
+          href="https://www.youtube.com/embed/_JTp4JzZHbY"
+        />
+        <link
+          rel="dns-prefetch"
+          href="https://www.youtube.com/embed/_JTp4JzZHbY"
+        />
       </Head>
 
       <Link href="https://wa.me/6282211000129" target="_blank">
@@ -71,9 +100,9 @@ export default function Home() {
         />
 
         <article className="flex flex-col justify-center items-center mb-8 mx-auto lg:w-[712px]">
-          <h3 className="text-neutral-0 font-semibold uppercase text-[32px] lg:text-5xl lg:mb-4">
+          <h2 className="text-neutral-0 font-semibold uppercase text-[32px] lg:text-5xl lg:mb-4">
             Coming Soon
-          </h3>
+          </h2>
 
           <p className="text-neutral-100 font-medium text-center text-xs mx-8 lg:text-base">
             Segera hadir! Tetap terhubung dan jadilah yang pertama merasakan

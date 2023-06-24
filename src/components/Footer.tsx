@@ -10,10 +10,10 @@ export function Footer() {
       <div className="mx-8 lg:mx-16 xl:w-[1200px] xl:mx-auto">
         <div className="lg:flex lg:justify-between lg:gap-x-6">
           <div className="flex flex-col justify-center items-center gap-y-6 px-6 mb-6 lg:justify-start lg:items-start lg:px-0 lg:mb-0 lg:w-[262px]">
-            <h2 className="text-neutral-0 font-semibold flex justify-between items-center lg:text-xl lg:gap-x-1">
+            <strong className="text-neutral-0 font-semibold flex justify-between items-center lg:text-xl lg:gap-x-1">
               <Emteka className="w-6 h-6 lg:w-10 lg:h-10" />
               Emteka
-            </h2>
+            </strong>
 
             <p className="text-neutral-200 text-center text-sm border-b border-neutral-200 pb-6 lg:text-left lg:border-none lg:pb-0">
               Buka Potensi Matematika mu bersama Emteka!

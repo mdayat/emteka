@@ -30,41 +30,49 @@ export function Hero() {
           </div>
 
           <Image
+            src={OrnamentImage}
             priority
             alt=""
             className="object-cover object-center absolute top-8 -right-[264px] lg:hidden"
-            src={OrnamentImage}
           />
         </article>
 
         <div className="absolute bottom-0 right-0 lg:hidden">
           <div className="absolute z-10 w-[136px] -top-40 right-40">
             <Image
-              priority
-              alt=""
-              className="object-cover object-center"
               src={MobileImage}
+              priority
+              alt="Aplikasi Emteka Pada Device Mobile"
+              className="object-cover object-center"
             />
           </div>
 
           <div className="absolute -bottom-60 -right-72 w-[532px] h-[460px]">
             <Image
+              src={DesktopImage}
               priority
               fill
-              alt=""
+              alt="Aplikasi Emteka Pada Device Desktop"
               className="object-cover object-center"
-              src={DesktopImage}
             />
           </div>
         </div>
 
         <div className="hidden lg:relative lg:flex lg:justify-between lg:items-center">
           <div className="relative mt-auto left-16">
-            <Image src={MobileImage} alt="" priority />
+            <Image
+              src={MobileImage}
+              priority
+              alt="Aplikasi Emteka Pada Device Mobile"
+            />
           </div>
 
           <div>
-            <Image src={DesktopImage} alt="" priority />
+            <Image
+              src={DesktopImage}
+              priority
+              alt="Aplikasi Emteka Pada Device Desktop"
+            />
           </div>
         </div>
       </div>
