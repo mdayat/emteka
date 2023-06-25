@@ -19,13 +19,16 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Emteka</title>
+        <title>Emteka - Asesmen Matematika Terstruktur</title>
         <meta
           name="description"
           content="Emteka adalah aplikasi asesmen berbasis web yang dirancang untuk membantu Anda dalam mengukur dan memetakan kemampuan Matematika secara menyeluruh."
         />
 
-        <meta property="og:title" content="Emteka" />
+        <meta
+          property="og:title"
+          content="Emteka - Asesmen Matematika Terstruktur"
+        />
         <meta
           property="og:description"
           content="Emteka adalah aplikasi asesmen berbasis web yang dirancang untuk membantu Anda dalam mengukur dan memetakan kemampuan Matematika secara menyeluruh."
@@ -34,7 +37,10 @@ export default function Home() {
         <meta property="og:image" content="/public/favicon.svg" />
         <meta property="og:url" content="https://www.emteka.id/" />
 
-        <meta property="twitter:title" content="Emteka" />
+        <meta
+          property="twitter:title"
+          content="Emteka - Asesmen Matematika Terstruktur"
+        />
         <meta
           property="twitter:description"
           content="Emteka adalah aplikasi asesmen berbasis web yang dirancang untuk membantu Anda dalam mengukur dan memetakan kemampuan Matematika secara menyeluruh."
