@@ -1,7 +1,7 @@
 import { google } from "googleapis";
 import type { NextApiRequest, NextApiResponse } from "next";
 
-import type { MailingListData } from "@interfaces/mailingList";
+import type { MailingListData } from "@customTypes/mailingList";
 
 export default async function handler(
   req: NextApiRequest,

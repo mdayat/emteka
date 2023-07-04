@@ -23,7 +23,7 @@
       "@components/*": ["src/components/*"],
       "@icons/*": ["src/components/icons/*"],
       "@hooks/*": ["src/hooks/*"],
-      "@interfaces/*": ["src/interfaces/*"],
+      "@customTypes/*": ["src/types/*"],
       "@images/*": ["public/images/*"]
     },
     "plugins": [

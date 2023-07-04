@@ -1,7 +1,7 @@
 import { useState, type FormEvent, type ChangeEvent } from "react";
 
 import { Success } from "@components/icons/Success";
-import type { MailingListData } from "@interfaces/mailingList";
+import type { MailingListData } from "@customTypes/mailingList";
 
 export function MailingList() {
   const [mailingList, setMailingList] = useState<MailingListData>({
