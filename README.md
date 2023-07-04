@@ -24,7 +24,36 @@ Please write a clear and concise commit message, and follow the conventions belo
 ---
 
 ## Branch Naming
+Branch names consist of branch types, ticket numbers, and names.
 
+- For _branch_ related to feature creation, prefix it with _ticket number_ (`EMT-22`), followed by _branch types_ (`feature`), and its names (`signup`) and separate each of them with `/`. (e.g. `EMT-22/feature/signup`)
+- For _branch_ related to bug fixing, prefix it with _ticket number_ (`EMT-22`), followed by _branch types_ (`fix`), and its names (`signup-validation`) and separate each of them with `/`. (e.g. `EMT-22/fix/signup-validation`)
+- For _branch_ related to testing, prefix it with _ticket number_ (`EMT-22`), followed by _branch types_ (`test`), and its names (`signup`) and separate each of them with `/`. (e.g. `EMT-22/feature/signup`)
 ---
 
 ## Pull Request Naming
+Pull request consist of two parts:
+1. Name: pull request's name should give an overview of what the pull request is about,
+> <details>
+>   <summary>Example</summary>
+>
+>   ### fix: fixing signup validation
+> </details>
+
+2. Description: pull request's description should tell reviewers about which problem/ticket you are working on, what have you done, and what the reviewers should know.
+>  <details>
+>    <summary>Example</summary>
+>
+>    ### Ticket:
+>    Your ticket link
+>
+>    ### What has changed:
+>    1. Fix signup validation
+>    2. Add error handling at signup validation
+>
+>    ### What reviewer should know
+>    The failed validation was caused by missing `required` property on the input tag
+>    ```html
+>      <input required></input>
+>    ```
+>  </details>
