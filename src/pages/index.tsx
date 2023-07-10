@@ -14,6 +14,9 @@ import FlowerSmall1 from "@images/home/flower_small_1.png";
 import FlowerSmall2 from "@images/home/flower_small_2.png";
 import FlowerLarge1 from "@images/home/flower_large_1.png";
 import FlowerLarge2 from "@images/home/flower_large_2.png";
+import { Button } from "@components/Button";
+import { Menu } from "@components/icons/Menu";
+import { ArrowRight } from "@components/icons/ArrowRight";
 
 export default function Home() {
   return (
@@ -132,6 +135,14 @@ export default function Home() {
         <FAQ />
         <MailingList />
       </div>
+
+      <Button
+        // disabled
+        leftIcon={<Menu />}
+        rightIcon={<ArrowRight />}
+        variety="primary"
+        size="medium"
+      />
     </>
   );
 }
