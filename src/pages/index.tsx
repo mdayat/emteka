@@ -140,22 +140,33 @@ export default function Home() {
         <li>
           <p>Primary</p>
           <Button
-            // disabled
+            disabled
             leftIcon={<Menu />}
             rightIcon={<ArrowRight />}
             variant="primary"
-            size="medium"
+            size="small"
           />
         </li>
 
         <li>
           <p>Secondary</p>
           <Button
-            // disabled
+            disabled
             leftIcon={<Menu />}
             rightIcon={<ArrowRight />}
             variant="secondary"
-            size="medium"
+            size="small"
+          />
+        </li>
+
+        <li>
+          <p>Tertiary</p>
+          <Button
+            disabled
+            leftIcon={<Menu />}
+            rightIcon={<ArrowRight />}
+            variant="tertiary"
+            size="small"
           />
         </li>
       </ul>
