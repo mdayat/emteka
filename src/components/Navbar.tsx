@@ -121,7 +121,7 @@ function DesktopNavbar({ pathname }: { pathname: string }) {
         aria-disabled
         disabled
         type="button"
-        className="btn-primary hidden cursor-not-allowed lg:block lg:px-16"
+        className="btn-yellow hidden cursor-not-allowed lg:block lg:px-16"
       >
         Join us
       </button>

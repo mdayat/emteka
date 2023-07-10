@@ -22,7 +22,7 @@ export function Hero() {
 
             <Link
               href="/#mailing-list"
-              className="btn-primary w-fit"
+              className="btn-yellow w-fit"
               scroll={false}
             >
               Bergabung Bersama Kami
