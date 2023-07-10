@@ -136,13 +136,29 @@ export default function Home() {
         <MailingList />
       </div>
 
-      <Button
-        // disabled
-        leftIcon={<Menu />}
-        rightIcon={<ArrowRight />}
-        variety="primary"
-        size="medium"
-      />
+      <ul className="flex flex-col justify-between gap-y-4 items-start m-10">
+        <li>
+          <p>Primary</p>
+          <Button
+            // disabled
+            leftIcon={<Menu />}
+            rightIcon={<ArrowRight />}
+            variant="primary"
+            size="medium"
+          />
+        </li>
+
+        <li>
+          <p>Secondary</p>
+          <Button
+            // disabled
+            leftIcon={<Menu />}
+            rightIcon={<ArrowRight />}
+            variant="secondary"
+            size="medium"
+          />
+        </li>
+      </ul>
     </>
   );
 }
