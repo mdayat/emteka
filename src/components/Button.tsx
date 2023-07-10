@@ -72,7 +72,9 @@ function setVariantStyle(variant: ButtonVariant, size: ButtonSize): string {
       return `${paddingSize} btn-tertiary py-2.5`;
     }
 
-    case "ghost":
-      return "btn-ghost";
+    case "ghost": {
+      const paddingSize = size === "small" ? "px-3" : "px-4";
+      return `${paddingSize} btn-ghost py-2.5`;
+    }
   }
 }

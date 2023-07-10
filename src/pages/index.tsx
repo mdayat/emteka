@@ -14,9 +14,6 @@ import FlowerSmall1 from "@images/home/flower_small_1.png";
 import FlowerSmall2 from "@images/home/flower_small_2.png";
 import FlowerLarge1 from "@images/home/flower_large_1.png";
 import FlowerLarge2 from "@images/home/flower_large_2.png";
-import { Button } from "@components/Button";
-import { Menu } from "@components/icons/Menu";
-import { ArrowRight } from "@components/icons/ArrowRight";
 
 export default function Home() {
   return (
@@ -135,41 +132,6 @@ export default function Home() {
         <FAQ />
         <MailingList />
       </div>
-
-      <ul className="flex flex-col justify-between gap-y-4 items-start m-10">
-        <li>
-          <p>Primary</p>
-          <Button
-            disabled
-            leftIcon={<Menu />}
-            rightIcon={<ArrowRight />}
-            variant="primary"
-            size="small"
-          />
-        </li>
-
-        <li>
-          <p>Secondary</p>
-          <Button
-            disabled
-            leftIcon={<Menu />}
-            rightIcon={<ArrowRight />}
-            variant="secondary"
-            size="small"
-          />
-        </li>
-
-        <li>
-          <p>Tertiary</p>
-          <Button
-            disabled
-            leftIcon={<Menu />}
-            rightIcon={<ArrowRight />}
-            variant="tertiary"
-            size="small"
-          />
-        </li>
-      </ul>
     </>
   );
 }

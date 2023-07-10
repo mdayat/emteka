@@ -16,6 +16,7 @@
   }
 
   .btn-ghost {
+    @apply text-secondary-300 [&_svg]:fill-secondary-300 hover:text-secondary-400 hover:[&_svg]:fill-secondary-400 hover:underline active:text-secondary-300 active:[&_svg]:fill-secondary-400 disabled:text-neutral-200 [&_svg]:disabled:fill-neutral-200 disabled:pointer-events-none bg-transparent transition-all duration-250;
   }
 
   .btn-primary {
