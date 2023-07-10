@@ -56,7 +56,7 @@ export function MailingList() {
           <div className="flex justify-between mt-5">
             <button
               onClick={() => setOpenModal(!openModal)}
-              className="btn-primary block mx-auto"
+              className="btn-yellow block mx-auto"
             >
               Kembali
             </button>
@@ -150,7 +150,7 @@ export function MailingList() {
             className="waiting-list-input mt-2 mb-6"
           />
 
-          <button type="submit" className="btn-primary mx-auto px-8 lg:w-full">
+          <button type="submit" className="btn-yellow mx-auto px-8 lg:w-full">
             Submit
           </button>
         </form>
