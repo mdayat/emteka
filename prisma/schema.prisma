@@ -1,0 +1,126 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id         String          @id @unique @default(uuid())
+  kelas      enum_kelas?
+  kurikulum  enum_kurikulum?
+  institusi  String?
+  updated_at DateTime        @default(now()) @updatedAt
+  created_at DateTime        @default(now())
+  Assesment  Assesment[]
+  NilaiSoal  NilaiSoal[]
+
+  @@map("user")
+}
+
+model Assesment {
+  id          String   @id @unique @default(uuid())
+  user_id     User     @relation(fields: [userId], references: [id])
+  material_id Material @relation(fields: [materialId], references: [id])
+  created_at  DateTime @default(now())
+  userId      String
+  materialId  String
+
+  @@map("assesment")
+}
+
+model Material {
+  id                  String          @id @unique @default(uuid())
+  related_material_id RelatedMaterial @relation(fields: [relatedMaterialId], references: [id])
+  soal_id             Soal            @relation(fields: [soalId], references: [id])
+  deskripsi           String
+  topik               enum_topic
+  kelas               enum_kelas
+  kurikulum           enum_kurikulum
+  created_at          DateTime        @default(now())
+  updated_at          DateTime        @default(now()) @updatedAt
+  Assesment           Assesment[]
+  relatedMaterialId   String          @unique
+  soalId              String          @unique
+
+  @@map("material")
+}
+
+model RelatedMaterial {
+  id       String    @id @unique @default(uuid())
+  material Material?
+
+  @@map("related_material")
+}
+
+
+model Soal {
+  id                String                 @id @unique @default(uuid())
+  material_id       Material?
+  opsi_id           Opsi?
+  pertanyaan        String
+  tingkat_kesulitan enum_tingkat_kesulitan
+  tipe              enum_tipe_soal
+  created_at        DateTime               @default(now())
+  updated_at        DateTime               @default(now()) @updatedAt
+  NilaiSoal         NilaiSoal[]
+
+  @@map("soal")
+}
+
+model NilaiSoal {
+  id      String  @id @unique @default(uuid())
+  soal_id Soal    @relation(fields: [soalId], references: [id])
+  user_id User    @relation(fields: [userId], references: [id])
+  nilai   Decimal
+  soalId  String
+  userId  String
+
+  @@map("nilai_soal")
+}
+
+model Opsi {
+  id         String  @id @unique @default(uuid())
+  soal_id    Soal    @relation(fields: [soalId], references: [id])
+  opsi_benar Boolean
+  soalId     String  @unique
+
+  @@map("opsi")
+}
+
+enum enum_kelas {
+  Kelas_12
+  Kelas_11
+  Kelas_10
+}
+
+enum enum_kurikulum {
+  merdeka
+  k13_darurat
+  k13
+}
+
+enum enum_topic {
+  trigonometri
+  geometri
+}
+
+enum enum_tingkat_kesulitan {
+  C1
+  C2
+  C3
+  C4
+  C5
+  C6
+}
+
+enum enum_tipe_soal {
+  utama
+  prerequisite_dasar
+  prerequisite_turunan
+}
