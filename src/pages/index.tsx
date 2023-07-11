@@ -14,8 +14,12 @@ import FlowerSmall1 from "@images/home/flower_small_1.png";
 import FlowerSmall2 from "@images/home/flower_small_2.png";
 import FlowerLarge1 from "@images/home/flower_large_1.png";
 import FlowerLarge2 from "@images/home/flower_large_2.png";
+import { Toggle } from "@components/Toggle";
+import { useState } from "react";
 
 export default function Home() {
+  const [switched, setSwitched] = useState(false);
+
   return (
     <>
       <Head>
@@ -131,6 +135,15 @@ export default function Home() {
       <div className="lg:grid lg:grid-cols-2 lg:gap-x-6 lg:mx-16 lg:mb-14 xl:gap-x-8 xl:w-[1200px] xl:mx-auto 2xl:gap-x-10">
         <FAQ />
         <MailingList />
+      </div>
+
+      <div className="m-10">
+        <Toggle
+          // disabled
+          switched={switched}
+          setSwitched={setSwitched}
+          label="Check Email"
+        />
       </div>
     </>
   );
