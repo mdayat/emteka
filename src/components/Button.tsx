@@ -33,7 +33,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     const iconGap = size === "small" ? "gap-x-1.5" : "gap-x-2";
     const iconStyle =
       leftIcon || rightIcon
-        ? `${iconSize} ${iconGap} flex justify-between item-center [&_svg]:shrink-0 [&_svg]:disabled:fill-neutral-200`
+        ? `${iconSize} ${iconGap} flex justify-between item-center [&_svg]:shrink-0`
         : "block";
 
     return (
@@ -59,7 +59,7 @@ function setVariantStyle(variant: ButtonVariant, size: ButtonSize): string {
   switch (variant) {
     case "primary": {
       const paddingSize = size === "small" ? "px-3" : "px-4";
-      return `${paddingSize} btn-primary-1 py-2.5`;
+      return `${paddingSize} btn-primary py-2.5`;
     }
 
     case "secondary": {

@@ -8,7 +8,7 @@
   }
 
   .btn-secondary {
-    @apply text-secondary-300 border-secondary-300 [&_svg]:fill-secondary-300 hover:text-secondary-400 hover:border-secondary-400 hover:[&_svg]:fill-secondary-400 active:text-secondary-300 active:border-secondary-400 active:[&_svg]:fill-secondary-400 active:bg-secondary-400/20 active:shadow-[inset_0_4px_8px_0_rgba(0,0,0,0.2)] disabled:text-neutral-200 [&_svg]:disabled:fill-neutral-200 disabled:border-neutral-300 disabled:pointer-events-none bg-transparent border-2 transition-all duration-250;
+    @apply text-secondary-300 border-secondary-300 [&_svg]:fill-secondary-300 hover:text-secondary-400 hover:border-secondary-400 hover:[&_svg]:fill-secondary-400 active:text-secondary-300 active:border-secondary-400 active:[&_svg]:fill-secondary-400 active:bg-secondary-400/20 active:shadow-[inset_0_4px_8px_0_rgba(0,0,0,0.2)] disabled:text-neutral-300 [&_svg]:disabled:fill-neutral-300 disabled:border-neutral-300 disabled:pointer-events-none bg-transparent border-2 transition-all duration-250;
   }
 
   .btn-tertiary {
@@ -16,7 +16,7 @@
   }
 
   .btn-ghost {
-    @apply text-secondary-300 [&_svg]:fill-secondary-300 hover:text-secondary-400 hover:[&_svg]:fill-secondary-400 hover:underline active:text-secondary-300 active:[&_svg]:fill-secondary-400 disabled:text-neutral-200 [&_svg]:disabled:fill-neutral-200 disabled:pointer-events-none bg-transparent transition-all duration-250;
+    @apply text-secondary-300 [&_svg]:fill-secondary-300 hover:text-secondary-400 hover:[&_svg]:fill-secondary-400 hover:underline active:text-secondary-300 active:[&_svg]:fill-secondary-400 disabled:text-neutral-300 [&_svg]:disabled:fill-neutral-300 disabled:pointer-events-none bg-transparent transition-all duration-250;
   }
 
   .btn-yellow {
