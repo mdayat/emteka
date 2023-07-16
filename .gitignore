@@ -17,7 +17,11 @@
 
 # misc
 .DS_Store
+.idea/
 *.pem
+
+# playground env
+/src/pages/playground
 
 # debug
 npm-debug.log*
