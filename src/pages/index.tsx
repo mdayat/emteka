@@ -2,24 +2,20 @@ import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
 
-import { Hero } from "@components/home/Hero";
+import { Hero } from "src/features/home/Hero";
 import { Emteka } from "@components/icons/Emteka";
-import { LatarBelakang } from "@components/home/LatarBelakang";
-import { SolusiKami } from "@components/home/SolusiKami";
-import { MailingList } from "@components/home/MailingList";
-import { FAQ } from "@components/home/FAQ";
+import { LatarBelakang } from "src/features/home/LatarBelakang";
+import { SolusiKami } from "src/features/home/SolusiKami";
+import { MailingList } from "src/features/home/MailingList";
+import { FAQ } from "src/features/home/FAQ";
 import { WhatsAppColored } from "@components/icons/WhatsAppColored";
 
 import FlowerSmall1 from "@images/home/flower_small_1.png";
 import FlowerSmall2 from "@images/home/flower_small_2.png";
 import FlowerLarge1 from "@images/home/flower_large_1.png";
 import FlowerLarge2 from "@images/home/flower_large_2.png";
-import { Toggle } from "@components/Toggle";
-import { useState } from "react";
 
 export default function Home() {
-  const [switched, setSwitched] = useState(false);
-
   return (
     <>
       <Head>
@@ -135,15 +131,6 @@ export default function Home() {
       <div className="lg:grid lg:grid-cols-2 lg:gap-x-6 lg:mx-16 lg:mb-14 xl:gap-x-8 xl:w-[1200px] xl:mx-auto 2xl:gap-x-10">
         <FAQ />
         <MailingList />
-      </div>
-
-      <div className="m-10">
-        <Toggle
-          // disabled
-          switched={switched}
-          setSwitched={setSwitched}
-          label="Check Email"
-        />
       </div>
     </>
   );

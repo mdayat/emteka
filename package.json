@@ -14,6 +14,7 @@
     "check-all": "next lint && prettier --check . && tsc"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.15",
     "@prisma/client": "4.16.2",
     "googleapis": "^118.0.0",
     "next": "13.4.4",
