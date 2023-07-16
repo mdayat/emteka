@@ -3,6 +3,7 @@ module.exports = {
   content: [
     "./src/pages/**/*.{ts,tsx,mdx}",
     "./src/components/**/*.{ts,tsx,mdx}",
+    "./src/features/**/*.{ts,tsx,mdx}",
   ],
   theme: {
     screens: {
