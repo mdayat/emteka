@@ -39,7 +39,7 @@ export function MailingList() {
     });
   };
   return (
-    <div id="mailing-list" className="pt-14 mb-14 lg:mb-0">
+    <div id="mailing-list" className="pt-14 mb-14 old-lg:mb-0">
       <div
         className={
           openModal
@@ -49,7 +49,7 @@ export function MailingList() {
       >
         <div className="bg-neutral-0 p-10 rounded-md shadow-md">
           <div className="mx-auto w-fit">
-            <Success className="fill-success-600 w-16 h-16 lg:w-20 lg:h-20" />
+            <Success className="fill-success-600 w-16 h-16 old-lg:w-20 old-lg:h-20" />
           </div>
           <h1 className="font-bold text-center text-lg my-5">Selamat!</h1>
           <p className="text-center">Anda telah masuk Waiting List Emteka.</p>
@@ -64,13 +64,13 @@ export function MailingList() {
         </div>
       </div>
 
-      <div className="bg-neutral-0 rounded-lg mx-8 py-6 px-4 shadow-[0_0_4px_0_rgba(0,0,0,0.25)] lg:order-1 lg:mx-0 xl:px-6">
+      <div className="bg-neutral-0 rounded-lg mx-8 py-6 px-4 shadow-[0_0_4px_0_rgba(0,0,0,0.25)] old-lg:order-1 old-lg:mx-0 xl:px-6">
         <article className="mb-6">
           <h2 className="text-neutral-900 font-semibold text-center text-2xl mb-4 desktop:text-4xl desktop:mb-6">
             Waiting List
           </h2>
 
-          <p className="text-neutral-800 text-center text-sm lg:text-base">
+          <p className="text-neutral-800 text-center text-sm old-lg:text-base">
             Tertarik dengan Emteka? Isi Form di bawah ini dan jangan lewatkan
             kesempatan untuk menjadi salah satu yang pertama merasakan aplikasi
             asesmen Matematika terbaru ini!
@@ -80,7 +80,7 @@ export function MailingList() {
         <form onSubmit={handleSubmit}>
           <label
             htmlFor="nama"
-            className="red-asterisk font-medium text-sm lg:text-base"
+            className="red-asterisk font-medium text-sm old-lg:text-base"
           >
             Nama
           </label>
@@ -98,7 +98,7 @@ export function MailingList() {
 
           <label
             htmlFor="email"
-            className="red-asterisk font-medium text-sm lg:text-base"
+            className="red-asterisk font-medium text-sm old-lg:text-base"
           >
             Email
           </label>
@@ -116,7 +116,7 @@ export function MailingList() {
 
           <label
             htmlFor="profesi"
-            className="red-asterisk font-medium text-sm lg:text-base"
+            className="red-asterisk font-medium text-sm old-lg:text-base"
           >
             Profesi
           </label>
@@ -134,7 +134,7 @@ export function MailingList() {
 
           <label
             htmlFor="institusi"
-            className="red-asterisk font-medium text-sm lg:text-base"
+            className="red-asterisk font-medium text-sm old-lg:text-base"
           >
             Institusi
           </label>
@@ -150,7 +150,10 @@ export function MailingList() {
             className="waiting-list-input mt-2 mb-6"
           />
 
-          <button type="submit" className="btn-yellow mx-auto px-8 lg:w-full">
+          <button
+            type="submit"
+            className="btn-yellow mx-auto px-8 old-lg:w-full"
+          >
             Submit
           </button>
         </form>

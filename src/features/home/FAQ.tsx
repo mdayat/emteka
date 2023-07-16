@@ -32,8 +32,8 @@ export function FAQ() {
   }
 
   return (
-    <div className="mt-14 mx-8 lg:order-2 lg:mx-0 lg:pt-6">
-      <h2 className="text-neutral-900 font-semibold text-center text-2xl mb-4 lg:text-[32px] lg:mb-6">
+    <div className="mt-14 mx-8 old-lg:order-2 old-lg:mx-0 old-lg:pt-6">
+      <h2 className="text-neutral-900 font-semibold text-center text-2xl mb-4 old-lg:text-[32px] old-lg:mb-6">
         FAQ
       </h2>
 
@@ -44,8 +44,8 @@ export function FAQ() {
           className={`${
             openedAccordion === "first"
               ? ""
-              : "pb-4 border-b border-b-neutral-900 lg:pb-5"
-          } text-neutral-900 font-medium text-left flex justify-between text-sm w-full lg:text-base`}
+              : "pb-4 border-b border-b-neutral-900 old-lg:pb-5"
+          } text-neutral-900 font-medium text-left flex justify-between text-sm w-full old-lg:text-base`}
           onClick={openAccordion}
         >
           Siapa yang dapat menggunakan Emteka?
@@ -60,7 +60,7 @@ export function FAQ() {
           <p
             className={`${
               isMounted ? "animate-fadeIn" : "animate-fadeOut"
-            } text-neutral-300 text-xs border-b border-b-neutral-900 pb-4 mt-2 lg:text-sm lg:pb-5 lg:mt-3`}
+            } text-neutral-300 text-xs border-b border-b-neutral-900 pb-4 mt-2 old-lg:text-sm old-lg:pb-5 old-lg:mt-3`}
           >
             Emteka diperuntukkan bagi siswa tingkat SMP dan SMA yang ingin
             meningkatkan kemampuan Matematika dan/atau untuk mempersiapkan
@@ -78,8 +78,8 @@ export function FAQ() {
           className={`${
             openedAccordion === "second"
               ? ""
-              : "pb-4 border-b border-b-neutral-900 lg:pb-5"
-          } text-neutral-900 font-medium text-left flex justify-between text-sm w-full pt-4 lg:text-base lg:pt-5`}
+              : "pb-4 border-b border-b-neutral-900 old-lg:pb-5"
+          } text-neutral-900 font-medium text-left flex justify-between text-sm w-full pt-4 old-lg:text-base old-lg:pt-5`}
           onClick={openAccordion}
         >
           Apa yang dimaksud dengan pengalaman pembelajaran yang adaptif?
@@ -94,7 +94,7 @@ export function FAQ() {
           <p
             className={`${
               isMounted ? "animate-fadeIn" : "animate-fadeOut"
-            } text-neutral-300 text-xs border-b border-b-neutral-900 pb-4 mt-2 lg:text-sm lg:pb-5 lg:mt-3`}
+            } text-neutral-300 text-xs border-b border-b-neutral-900 pb-4 mt-2 old-lg:text-sm old-lg:pb-5 old-lg:mt-3`}
           >
             Pengalaman pembelajaran yang adaptif berarti, bahwa Emteka secara
             cerdas menyesuaikan konten dan tantangan dari asesmen berdasarkan
@@ -111,8 +111,8 @@ export function FAQ() {
           className={`${
             openedAccordion === "third"
               ? ""
-              : "pb-4 border-b border-b-neutral-900 lg:pb-5"
-          } text-neutral-900 font-medium text-left flex justify-between text-sm w-full pt-4 lg:text-base lg:pt-5`}
+              : "pb-4 border-b border-b-neutral-900 old-lg:pb-5"
+          } text-neutral-900 font-medium text-left flex justify-between text-sm w-full pt-4 old-lg:text-base old-lg:pt-5`}
           onClick={openAccordion}
         >
           Bagaimana cara menghubungi support team Emteka?
@@ -127,7 +127,7 @@ export function FAQ() {
           <p
             className={`${
               isMounted ? "animate-fadeIn" : "animate-fadeOut"
-            } text-neutral-300 text-xs border-b border-b-neutral-900 pb-4 mt-2 lg:text-sm lg:pb-5 lg:mt-3`}
+            } text-neutral-300 text-xs border-b border-b-neutral-900 pb-4 mt-2 old-lg:text-sm old-lg:pb-5 old-lg:mt-3`}
           >
             Anda dapat menghubungi tim kami melalui media sosial Emteka&nbsp;
             <Link
