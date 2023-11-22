@@ -117,14 +117,9 @@ function DesktopNavbar({ pathname }: { pathname: string }) {
         </ul>
       </nav>
 
-      <button
-        aria-disabled
-        disabled
-        type="button"
-        className="btn-yellow hidden cursor-not-allowed lg:block lg:px-16"
-      >
-        Join us
-      </button>
+      <a href="https://app.emteka.id" className="btn-yellow lg:block lg:px-16">
+        Try Our App
+      </a>
     </>
   );
 }
