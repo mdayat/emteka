@@ -5,7 +5,7 @@ export default function Document() {
     <Html lang="id" className="scroll-smooth">
       <Head />
 
-      <body className="bg-secondary-400">
+      <body className="bg-default">
         <Main />
         <NextScript />
       </body>
