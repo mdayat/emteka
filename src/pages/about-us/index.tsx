@@ -40,9 +40,9 @@ export default function AboutUs() {
         <meta property="twitter:domain" content="emteka.id" />
       </Head>
 
-      {/* <div className="relative">
+      <div className="relative overflow-x-clip">
         <div className="w-[477px] h-[477px] absolute -top-60 -right-60 opacity-50 bg-[#FFE600] rounded-full blur-[200px]" />
-      </div> */}
+      </div>
 
       <WhatsappButton />
 
@@ -66,9 +66,8 @@ export default function AboutUs() {
         </p>
       </div>
 
-
       <Image className="w-1 my-6 mx-auto" src={Divider} alt={""} />
-      
+
       <div className="flex flex-col mx-auto gap-4 max-w-3xl text-neutral-0 font-karla">
         <h4 className="text-2xl font-bold text-center">
           Didirikannya Emteka juga didasari oleh adanya{" "}

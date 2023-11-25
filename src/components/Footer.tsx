@@ -5,11 +5,17 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className=" pt-8 pb-[130px] font-karla">
+    <footer className=" pt-8 pb-[130px] max-h-80 font-karla overflow-y-clip">
+      <div className="relative overflow-x-clip">
+        <div className="w-[477px] h-[477px] absolute top-32 -right-32 opacity-50 bg-[#FFE600] rounded-full blur-[200px]" />
+      </div>
+      <div className="relative overflow-x-clip">
+        <div className="w-[477px] h-[477px] absolute -bottom-60 -left-60 opacity-50 bg-[#FFE600] rounded-full blur-[200px]" />
+      </div>
       <hr className="mx-auto w-4/5 mb-8 h-0.5 border-[#D4D7DC80]" />
       <div className="flex mx-20 justify-between">
         <div className="gap-4">
-          <Image src={EmtekaLogo} alt={""} className="w-28" />  
+          <Image src={EmtekaLogo} alt={""} className="w-28" />
           <p className="text-[40px] text-neutral-0 font-bold max-w-md">
             <span className="text-primary-400">Matematika</span> ternyata
             gampang, lho!
@@ -52,7 +58,10 @@ export function Footer() {
               </Link>
             </li>
             <li className="font-normal text-neutral-200">
-              <Link target="_blank" href="https://www.linkedin.com/company/emteka-id/">
+              <Link
+                target="_blank"
+                href="https://www.linkedin.com/company/emteka-id/"
+              >
                 Linkedin
               </Link>
             </li>
