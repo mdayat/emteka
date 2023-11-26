@@ -37,15 +37,15 @@ export function Footer() {
           </ul>
           <ul className="text-xl">
             <li className="font-bold mb-4">Halaman</li>
-              <li className="font-normal text-neutral-200 mb-2">
-                <Link href="/">Home</Link>
-              </li>
-              <li className="font-normal text-neutral-200 mb-2">
-                <Link href="/about-us">Tentang Kami</Link>
-              </li>
-              <li className="font-normal text-neutral-200">
-                <Link href="/roadmap">Roadmap</Link>
-              </li>
+            <li className="font-normal text-neutral-200 mb-2">
+              <Link href="/">Home</Link>
+            </li>
+            <li className="font-normal text-neutral-200 mb-2">
+              <Link href="/about-us">Tentang Kami</Link>
+            </li>
+            <li className="font-normal text-neutral-200">
+              <Link href="/roadmap">Roadmap</Link>
+            </li>
           </ul>
           <ul className="text-xl">
             <li className="text-xl font-bold mb-4">Sosial Media</li>
