@@ -29,17 +29,9 @@ export function Navbar() {
   return (
     <>
       <div className="fixed top-0 left-0 right-0 z-20">
-        <div
-          className={`${
-            pathname === "/" ? "bg-secondary-500" : "bg-neutral-0"
-          }`}
-        >
+        <div className="bg-[#4075FFBF] backdrop-blur-md">
           <div className="flex justify-between items-center py-4 mx-8 lg:mx-16 xl:w-[1200px] xl:mx-auto">
-            <strong
-              className={`${
-                pathname === "/" ? "text-neutral-0" : "text-neutral-900"
-              } font-semibold flex justify-between items-center gap-x-1 lg:text-xl`}
-            >
+            <strong className="text-neutral-0 font-semibold flex justify-between items-center gap-x-1 lg:text-xl">
               <Emteka className="w-6 h-6 lg:w-8 lg:h-8" />
               Emteka
             </strong>
@@ -51,11 +43,7 @@ export function Navbar() {
               aria-label="Navigation Menu"
               className="lg:hidden"
             >
-              <Menu
-                className={`${
-                  pathname === "/" ? "fill-neutral-0" : "fill-neutral-900"
-                } w-7 h-7`}
-              />
+              <Menu className="fill-neutral-0  w-7 h-7" />
             </button>
 
             <DesktopNavbar pathname={pathname} />
@@ -83,7 +71,7 @@ function DesktopNavbar({ pathname }: { pathname: string }) {
               className={`${
                 pathname === "/"
                   ? "text-neutral-0 font-bold"
-                  : "text-neutral-900"
+                  : "text-neutral-200"
               }`}
             >
               Beranda
@@ -95,8 +83,8 @@ function DesktopNavbar({ pathname }: { pathname: string }) {
               href="/about-us"
               className={`${
                 pathname === "/about-us"
-                  ? "text-neutral-900 font-bold"
-                  : "text-neutral-0"
+                  ? "text-neutral-0 font-bold"
+                  : "text-neutral-200"
               }`}
             >
               Tentang Kami
@@ -105,13 +93,13 @@ function DesktopNavbar({ pathname }: { pathname: string }) {
 
           <li>
             <Link
-              href="/#mailing-list"
+              href="/roadmap"
               scroll={false}
               className={`${
-                pathname === "/" ? "text-neutral-0" : "text-neutral-900"
+                pathname === "/roadmap" ? "text-neutral-0 font-bold" : "text-neutral-200"
               }`}
             >
-              Waiting List
+              Roadmap
             </Link>
           </li>
         </ul>
@@ -162,11 +150,11 @@ function MobileNavbar({
 
         <li>
           <Link
-            href="/#mailing-list"
+            href="/roadmap"
             scroll={false}
             className="text-neutral-900 font-medium inline-block text-sm pt-2 pb-4 px-6"
           >
-            Waiting List
+            Roadmap
           </Link>
         </li>
       </ul>
