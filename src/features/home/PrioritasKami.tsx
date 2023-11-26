@@ -1,3 +1,9 @@
+import Image from "next/image";
+
+import MenuBook from "../../components/icons/menu_book.svg";
+import Psykolog from "../../components/icons/psychology.svg";
+import Pages from "../../components/icons/pages.svg";
+
 export function PrioritasKami() {
   return (
     <div className="font-karla mt-10 w-[80%] mx-auto">
@@ -11,9 +17,59 @@ export function PrioritasKami() {
       </p>
 
       <div className="flex justify-between">
-        <div className="w-[325px] h-[208px] py-[32px] px-[16px] border-solid border-2 border-secondary-200 rounded-xl">
-          <div className="w-fit mx-auto rounded-full bg-secondary-400 p-3"></div>
+        <div className="w-[330px] h-[270px] py-[28px] px-[16px] border-solid border-2 border-secondary-200 rounded-xl bg-secondary-600">
+          <div className="w-fit mx-auto rounded-full bg-secondary-400 p-3">
+            <Image
+              src={MenuBook}
+              alt="Menu Book SVG"
+              className="text-primary-400 fill-primary-400"
+            />
+          </div>
+          <p className="text-xl font font-semibold text-center mt-3">
+            Memberi pemahaman yang dibutuhkan
+          </p>
+          <p className="text-center mt-3 text-sm">
+            Tinjau apa yang belum kamu kuasai! Kami akan berikan mulai dari
+            prasyarat materi
+          </p>
         </div>
+
+        <div className="w-[330px] h-[270px] py-[28px] px-[16px] border-solid border-2 border-secondary-200 rounded-xl bg-secondary-600">
+          <div className="w-fit mx-auto rounded-full bg-secondary-400 p-3">
+            <Image
+              src={Psykolog}
+              alt="Psycholog SVG"
+              className="text-primary-400 fill-primary-400"
+            />
+          </div>
+          <p className="text-xl font font-semibold text-center mt-3">
+            Menemukan potensi yang hilang
+          </p>
+          <p className="text-center mt-3 text-sm">
+            Temukan mata rantai matematika mu yang hilang secara akurat
+          </p>
+        </div>
+
+        <div className="w-[330px] h-[270px] py-[28px] px-[16px] border-solid border-2 border-secondary-200 rounded-xl bg-secondary-600">
+          <div className="w-fit mx-auto rounded-full bg-secondary-400 p-5">
+            <Image
+              src={Pages}
+              alt="Pages SVG"
+              className="text-primary-400 fill-primary-400"
+            />
+          </div>
+          <p className="text-xl font font-semibold text-center mt-3">
+            Pemetaan kemampuan secara menyeluruh
+          </p>
+          <p className="text-center mt-3 text-sm">
+            Tidak ada letih! Kami memberikan dukungan penuh untuk perjalanan
+            matematika mu
+          </p>
+        </div>
+      </div>
+
+      <div className="w-fit mx-auto">
+        <div className="fle"></div>
       </div>
     </div>
   );
