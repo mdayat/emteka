@@ -24,8 +24,8 @@ export function Footer() {
         <div className="flex gap-16 text-neutral-0">
           <ul className="text-xl">
             <li className="text-xl font-bold mb-4">Hubungi Kami</li>
-            <li className="font-normal text-neutral-200">
-              <Link target="_blank" href="wa.me/6282211000129">
+            <li className="font-normal text-neutral-200 mb-2">
+              <Link target="_blank" href="https://wa.me/6282211000129">
                 0822 1100 0129
               </Link>
             </li>
@@ -37,19 +37,19 @@ export function Footer() {
           </ul>
           <ul className="text-xl">
             <li className="font-bold mb-4">Halaman</li>
-            <li className="font-normal text-neutral-200">
-              <Link href="/">Home</Link>
-            </li>
-            <li className="font-normal text-neutral-200">
-              <Link href="/about-us">About us</Link>
-            </li>
-            <li className="font-normal text-neutral-200">
-              <Link href="/roadmap">Roadmap</Link>
-            </li>
+              <li className="font-normal text-neutral-200 mb-2">
+                <Link href="/">Home</Link>
+              </li>
+              <li className="font-normal text-neutral-200 mb-2">
+                <Link href="/about-us">Tentang Kami</Link>
+              </li>
+              <li className="font-normal text-neutral-200">
+                <Link href="/roadmap">Roadmap</Link>
+              </li>
           </ul>
           <ul className="text-xl">
             <li className="text-xl font-bold mb-4">Sosial Media</li>
-            <li className="font-normal text-neutral-200">
+            <li className="font-normal text-neutral-200 mb-2">
               <Link
                 target="_blank"
                 href="https://www.instagram.com/emteka_frh/"
