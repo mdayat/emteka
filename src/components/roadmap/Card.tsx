@@ -49,17 +49,14 @@ const Card = () => {
             yang memberikan panduan pribadi dalam pembelajaran Anda.
           </p>
         </article>
-      </section>
 
-      <div className="absolute right-[34.3rem] -z-10 top-[47.9rem]">
-        <div
-          className="relative"
-          // style={{ backgroundImage: "url(/images/roadmap/effect_card.png)" }}
-        >
-          <EffectCard className="w-[400px] h-[400px] absolute -right-[215px] -mt-40" />
-          <DoubleArrow className="w-10 h-10 rotate-90 fill-primary-400 absolute" />
+        <div className="absolute ml-[27rem] -z-10 -bottom-2">
+          <div className="relative">
+            <EffectCard className="w-[400px] h-[400px] absolute -right-[215px] -mt-40" />
+            <DoubleArrow className="w-10 h-10 rotate-90 fill-primary-400 absolute" />
+          </div>
         </div>
-      </div>
+      </section>
 
       <section className="relative mt-[60px] mb-2 flex gap-x-12 flex-wrap justify-center">
         <article className="bg-secondary-500 w-[400px] pt-4 pb-8 px-8 rounded-lg border-[3px] border-secondary-200/40">
@@ -105,17 +102,13 @@ const Card = () => {
             dapat berinteraksi, berdiskusi, dan belajar bersama.
           </p>
         </article>
-      </section>
-
-      <div className="absolute left-[32.4rem] -z-10 top-[80rem]">
-        <div
-          className="relative"
-          // style={{ backgroundImage: "url(/images/roadmap/effect_card.png)" }}
-        >
-          <EffectCard className="w-[400px] h-[400px] absolute -right-[215px] -mt-40" />
-          <DoubleArrow className="w-10 h-10 rotate-90 fill-primary-400 absolute" />
+        <div className="absolute mr-[30rem] -z-10 -bottom-2">
+          <div className="relative">
+            <EffectCard className="w-[400px] h-[400px] absolute -right-[215px] -mt-40" />
+            <DoubleArrow className="w-10 h-10 rotate-90 fill-primary-400 absolute" />
+          </div>
         </div>
-      </div>
+      </section>
 
       <section className="relative mt-[60px] flex gap-x-12 flex-wrap justify-center">
         <article className="bg-secondary-500 w-[400px] pt-4 pb-8 px-8 rounded-lg border-[3px] border-secondary-200/40">
