@@ -40,7 +40,7 @@ export default function RoadMapPage() {
         </p>
 
         <Link
-          href="mailto:info@furahasystems.com"
+          href="mailto:info@emteka.id"
           className="bg-primary-400 px-8 font-semibold py-[10px] rounded-full text-sm"
         >
           Tertarik untuk bekerja sama?
