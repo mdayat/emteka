@@ -3,6 +3,7 @@ import Image from "next/image";
 import MenuBook from "../../components/icons/menu_book.svg";
 import Psykolog from "../../components/icons/psychology.svg";
 import Pages from "../../components/icons/pages.svg";
+import CheckIcone from "../../components/icons/check_circle.svg";
 
 export function PrioritasKami() {
   return (
@@ -68,9 +69,26 @@ export function PrioritasKami() {
         </div>
       </div>
 
-      <div className="w-fit mx-auto">
-        <div className="fle"></div>
+      <div className="w-fit mx-auto mt-5">
+        <div className="flex justify-between gap-x-5">
+          <div className="rounded-full bg-secondary-600 py-2 px-3 flex gap-x-2">
+            <Image src={CheckIcone} alt="Check Icon" />
+            <p className="font-semibold tracking-widest">Personalized</p>
+          </div>
+
+          <div className="rounded-full bg-secondary-600 py-2 px-3 flex gap-x-2">
+            <Image src={CheckIcone} alt="Check Icon" />
+            <p className="font-semibold tracking-widest">Accurate</p>
+          </div>
+
+          <div className="rounded-full bg-secondary-600 py-2 px-3 flex gap-x-2">
+            <Image src={CheckIcone} alt="Check Icon" />
+            <p className="font-semibold tracking-widest">Engaging</p>
+          </div>
+        </div>
       </div>
+
+      <div className="w-full h-[2px] bg-neutral-200 mt-16"></div>
     </div>
   );
 }
