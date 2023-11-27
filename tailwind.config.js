@@ -128,8 +128,8 @@ module.exports = {
         },
       },
       backgroundImage: {
-        'default': "url('/images/background.png')"
-      }
+        default: "url('/images/background.png')",
+      },
     },
   },
   plugins: [],

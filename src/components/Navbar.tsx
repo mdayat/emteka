@@ -96,7 +96,9 @@ function DesktopNavbar({ pathname }: { pathname: string }) {
               href="/roadmap"
               scroll={false}
               className={`${
-                pathname === "/roadmap" ? "text-neutral-0 font-bold" : "text-neutral-200"
+                pathname === "/roadmap"
+                  ? "text-neutral-0 font-bold"
+                  : "text-neutral-200"
               }`}
             >
               Roadmap
