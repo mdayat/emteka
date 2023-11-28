@@ -9,7 +9,7 @@ export function Hero() {
     <div className="bg-secondary-500 relative overflow-hidden mt-[60px] old-lg:mt-[76px] font-karla">
       <Image src={Effect01} alt="Glowing Effect" className="absolute right-0" />
       <Image src={Effect02} alt="Glowing Effect" className="absolute left-0" />
-      <div className="w-[65%] mx-auto mt-10">
+      <div className="w-[840px] mx-auto mt-10">
         <div className="flex justify-between">
           <p className="text-[40px] font-semibold text-neutral-0">
             Alat Ukur Kemampuan Matematika Anda
@@ -19,9 +19,11 @@ export function Hero() {
               Tidak Perlu Lagi Khawatir dalam menghadapi persoalan Matematika di
               setiap pembelajaran sekolah
             </p>
-            <button className="bg-primary-300 text-neutral-900 rounded-full py-2.5 px-8 font-semibold mt-5">
-              Coba Sekarang
-            </button>
+            <a href="https://app.emteka.id/" target="_blank">
+              <button className="bg-primary-300 text-neutral-900 rounded-full py-2.5 px-8 font-semibold mt-5">
+                Coba Sekarang
+              </button>
+            </a>
           </div>
         </div>
         <div className="relative">

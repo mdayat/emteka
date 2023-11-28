@@ -7,7 +7,7 @@ import CheckIcone from "../../components/icons/check_circle.svg";
 
 export function PrioritasKami() {
   return (
-    <div className="font-karla mt-10 w-[80%] mx-auto">
+    <div className="font-karla mt-10 w-[1100px] mx-auto">
       <h2 className="text-[40px] font-semibold text-neutral-0 text-center">
         Prioritas Kami
       </h2>

@@ -1,6 +1,6 @@
 export function Berlangganan() {
   return (
-    <div className="font-karla mt-10 w-[80%] mx-auto pb-[10rem]">
+    <div className="font-karla mt-10 w-[1100px] mx-auto pb-[10rem]">
       <h2 className="text-[40px] font-semibold text-neutral-0 text-center mb-10">
         Jadilah Orang Pertama Yang Tau
       </h2>

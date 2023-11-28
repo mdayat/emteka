@@ -16,7 +16,7 @@ import ThirdMain from "@images/home/Emteka_Screen_04.png";
 export function LatarBelakang() {
   return (
     <article className="bg-secondary-500 relative overflow-hidden font-karla">
-      <div className="w-[75%] mx-auto mt-10">
+      <div className="w-[1000px] mx-auto mt-10">
         <div className="flex">
           <p className="text-[30px] font-semibold text-neutral-0 tracking-widest w-[60%]">
             Cara mengukur kemampuan matematika Anda
@@ -27,7 +27,7 @@ export function LatarBelakang() {
             </button>
             <a href="https://youtu.be/_JTp4JzZHbY" target="_blank">
               <button className="bg-primary-300 text-neutral-900 rounded-full py-2.5 px-8 font-semibold mt-5 h-fit">
-                Coba Sekarang
+                Tonton Vidio
               </button>
             </a>
           </div>
