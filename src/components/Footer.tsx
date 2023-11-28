@@ -5,15 +5,15 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className=" pt-8 pb-[130px] max-h-80 font-karla overflow-y-clip">
+    <footer className="pt-8 pb-[130px] max-h-80 font-karla overflow-y-clip w-full">
       <div className="relative overflow-x-clip">
         <div className="w-[477px] h-[477px] absolute top-32 -right-32 opacity-50 bg-[#FFE600] rounded-full blur-[200px]" />
       </div>
       <div className="relative overflow-x-clip">
         <div className="w-[477px] h-[477px] absolute -bottom-60 -left-60 opacity-50 bg-[#FFE600] rounded-full blur-[200px]" />
       </div>
-      <hr className="mx-auto w-4/5 mb-8 h-0.5 border-[#D4D7DC80]" />
-      <div className="flex mx-20 justify-between">
+      <hr className="mx-auto w-[1200px] mb-8 h-0.5 border-[#D4D7DC80]" />
+      <div className="flex px-20 mx-auto items-center justify-between w-[1480px]">
         <div className="gap-4">
           <Image src={EmtekaLogo} alt={""} className="w-28" />
           <p className="text-[40px] text-neutral-0 font-bold max-w-md">
