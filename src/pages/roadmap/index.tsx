@@ -40,7 +40,7 @@ export default function RoadMapPage() {
       <div className="relative overflow-x-clip flex flex-col justify-center items-center">
         <div className="w-[477px] h-[477px] absolute -top-[14rem] opacity-50 bg-[#FFE600] rounded-full blur-[200px] -z-10" />
       </div>
-      <main className="y-[75px] mx-auto w-3/4">
+      <main className="y-[75px] mx-auto w-3/4 font-karla">
         <section className="flex flex-col gap-y-4 text-center mt-[150px] mx-auto w-[738px] mb-8">
           <h1 className="text-5xl font-semibold text-neutral-0">
             Ikuti Jalan Produk Ini
@@ -75,9 +75,9 @@ export default function RoadMapPage() {
             Tertarik untuk bekerja sama?
           </Link>
         </section>
-
-        <WhatsappButton />
       </main>
+
+      <WhatsappButton />
     </>
   );
 }
