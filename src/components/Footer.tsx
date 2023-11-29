@@ -13,7 +13,7 @@ export function Footer() {
         <div className="w-[477px] h-[477px] absolute -bottom-60 -left-60 opacity-50 bg-[#FFE600] rounded-full blur-[200px]" />
       </div>
       <hr className="mx-auto w-[1200px] mb-8 h-0.5 border-[#D4D7DC80]" />
-      <div className="flex px-20 mx-auto items-center justify-between w-[1480px]">
+      <div className="flex px-20 mx-auto items-center justify-between xl:max-w-[1480px]">
         <div className="gap-4">
           <Image src={EmtekaLogo} alt={""} className="w-28" />
           <p className="text-[40px] text-neutral-0 font-bold max-w-md">
