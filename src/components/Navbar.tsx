@@ -94,7 +94,7 @@ function DesktopNavbar({ pathname }: { pathname: string }) {
           <li>
             <Link
               href="/roadmap"
-              scroll={false}
+              // scroll={false}
               className={`${
                 pathname === "/roadmap"
                   ? "text-neutral-0 font-bold"
@@ -107,9 +107,18 @@ function DesktopNavbar({ pathname }: { pathname: string }) {
         </ul>
       </nav>
 
-      <a href="https://app.emteka.id" className="btn-yellow lg:block lg:px-16">
-        Try Our App
-      </a>
+      <div className="flex items-center gap-x-6">
+        <a href="#" className="lg:block font-karla font-lg text-neutral-0">
+          Masuk
+        </a>
+
+        <a
+          href="https://app.emteka.id"
+          className="btn-yellow lg:block lg:px-8 font-karla font-semibold"
+        >
+          Coba Sekarang
+        </a>
+      </div>
     </>
   );
 }

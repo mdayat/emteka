@@ -1,11 +1,10 @@
-import Link from "next/link";
 import Head from "next/head";
 
 import { Hero } from "src/features/home/Hero";
 import { LatarBelakang } from "src/features/home/LatarBelakang";
 import { PrioritasKami } from "src/features/home/PrioritasKami";
 import { Berlangganan } from "src/features/home/Berlangganan";
-import { WhatsAppColored } from "@components/icons/WhatsAppColored";
+import { WhatsappButton } from "@components/whatsappButton";
 
 export default function Home() {
   return (
@@ -53,9 +52,7 @@ export default function Home() {
         />
       </Head>
 
-      <Link href="https://wa.me/6282211000129" target="_blank">
-        <WhatsAppColored className="w-10 h-10 fixed bottom-4 right-4 z-50 old-lg:w-12 old-lg:h-12 old-lg:bottom-6 old-lg:right-6" />
-      </Link>
+      <WhatsappButton />
 
       <div className="bg-secondary-500 font-karla text-neutral-0">
         <Hero />
