@@ -104,12 +104,12 @@ export function LatarBelakang() {
         </div>
 
         <div className="h-fit relative">
-          <Image
-            src={Effect01}
-            alt="Effect Image"
-            className="absolute top-1 z-20 -right-1"
-          />
           <div className="w-[1000px] mx-auto">
+            <Image
+              src={Effect01}
+              alt="Effect Image"
+              className="absolute top-1 z-40 -right-1 object-cover"
+            />
             <div className="flex justify-between w-full">
               <div className="flex flex-row-reverse justify-between">
                 <div className="mt-0.5 w-[40%] flex">

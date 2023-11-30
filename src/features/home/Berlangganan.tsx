@@ -12,12 +12,12 @@ export function Berlangganan() {
 
       <input
         type="text"
-        className="border-2 border-neutral-100 w-[40%] bg-transparent p-2 rounded-md mx-auto justify-center flex mt-10"
+        className="border-2 border-neutral-100 outline-0 w-[40%] bg-transparent p-2 rounded-md mx-auto justify-center flex mt-10"
         placeholder="Email Anda"
       />
       <input
         type="text"
-        className="border-2 border-neutral-100 w-[40%] bg-transparent p-2 rounded-md mx-auto justify-center flex mt-3"
+        className="border-2 border-neutral-100 outline-0 w-[40%] bg-transparent p-2 rounded-md mx-auto justify-center flex mt-3"
         placeholder="Nomor Whatsapp"
       />
 
