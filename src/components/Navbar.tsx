@@ -135,14 +135,14 @@ function MobileNavbar({
       <ul
         className={`${
           isMounted ? "animate-scaleIn" : "animate-scaleOut"
-        } bg-neutral-0 flex flex-col lg:hidden w-full`}
+        } bg-secondary-300 flex flex-col lg:hidden w-full`}
       >
         <li>
           <Link
             href="/"
             className={`${
               pathname === "/" ? "font-bold" : ""
-            } text-neutral-900 font-medium inline-block text-sm pt-4 pb-2 px-6`}
+            } text-neutral-0 font-medium inline-block text-sm pt-4 pb-2 px-6`}
           >
             Beranda
           </Link>
@@ -153,7 +153,7 @@ function MobileNavbar({
             href="/about-us"
             className={`${
               pathname === "/about-us" ? "font-bold" : ""
-            } text-neutral-900 font-medium inline-block text-sm py-2 px-6`}
+            } text-neutral-0 font-medium inline-block text-sm py-2 px-6`}
           >
             Tentang Kami
           </Link>
@@ -163,7 +163,7 @@ function MobileNavbar({
           <Link
             href="/roadmap"
             scroll={false}
-            className="text-neutral-900 font-medium inline-block text-sm pt-2 pb-4 px-6"
+            className="text-neutral-0 font-medium inline-block text-sm pt-2 pb-4 px-6"
           >
             Roadmap
           </Link>
