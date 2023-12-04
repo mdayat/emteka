@@ -1,12 +1,12 @@
 import Image from "next/legacy/image";
 
 import { DoubleArrow } from "@icons/DoubleArrow";
-import { EffectCard } from "./Effect_Card";
+import EffectCardImage from "@images/roadmap/effect_card.png";
 
-const Card = () => {
+const CardDesktop = () => {
   return (
     <>
-      <section className="flex gap-x-12 flex-wrap justify-center relative mb-2">
+      <section className="flex flex-col xl:flex-row gap-x-12 xl:flex-wrap justify-center relative mb-2">
         <article className="bg-secondary-500 w-[400px] pt-4 pb-8 px-8 rounded-lg border-[3px] border-secondary-200/40">
           <div className="relative -ml-8 w-[400px] h-[190px] mb-8">
             <Image
@@ -52,13 +52,15 @@ const Card = () => {
 
         <div className="absolute ml-[27rem] -z-10 -bottom-2">
           <div className="relative">
-            <EffectCard className="w-[400px] h-[400px] absolute -right-[215px] -mt-40" />
+            <div className="w-[400px] h-[400px] absolute -right-[235px] -mt-40">
+              <Image src={EffectCardImage} alt="" layout="fill" />
+            </div>
             <DoubleArrow className="w-10 h-10 rotate-90 fill-primary-400 absolute" />
           </div>
         </div>
       </section>
 
-      <section className="relative mt-[60px] mb-2 flex gap-x-12 flex-wrap justify-center">
+      <section className="flex flex-col xl:flex-row relative mt-[60px] mb-2 gap-x-12 xl:flex-wrap justify-center">
         <article className="bg-secondary-500 w-[400px] pt-4 pb-8 px-8 rounded-lg border-[3px] border-secondary-200/40">
           <div className="relative -ml-8 w-[400px] h-[190px] mb-8">
             <Image
@@ -104,7 +106,9 @@ const Card = () => {
         </article>
         <div className="absolute mr-[30rem] -z-10 -bottom-2">
           <div className="relative">
-            <EffectCard className="w-[400px] h-[400px] absolute -right-[215px] -mt-40" />
+            <div className="w-[400px] h-[400px] absolute -right-[215px] -mt-40">
+              <Image src={EffectCardImage} alt="" layout="fill" />
+            </div>
             <DoubleArrow className="w-10 h-10 rotate-90 fill-primary-400 absolute" />
           </div>
         </div>
@@ -159,4 +163,4 @@ const Card = () => {
   );
 };
 
-export { Card };
+export { CardDesktop };

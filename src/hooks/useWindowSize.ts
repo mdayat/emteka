@@ -18,5 +18,5 @@ export function useWindowSize() {
     };
   }, []);
 
-  return { width };
+  return width;
 }
