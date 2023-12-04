@@ -7,12 +7,12 @@ import CheckIcone from "../../components/icons/check_circle.svg";
 
 export function PrioritasKami() {
   return (
-    <div className="font-karla mt-0 xl:mt-10 xl:w-[1100px] mx-auto">
+    <div className="font-karla mt-0 xl:mt-10 xl:w-[1100px] mx-auto px-4">
       <h2 className="text-[30px] xl:text-[40px] font-semibold mb-4 text-neutral-0 text-center">
         Prioritas Kami
       </h2>
 
-      <p className="text-center text-sm old-lg:text-base px-3 mb-5">
+      <p className="text-center text-sm old-lg:text-base mb-5">
         Matematika tidak lagi menjadi mimpi buruk. Kami telah sediakan
         solusinya!
       </p>

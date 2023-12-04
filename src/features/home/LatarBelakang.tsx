@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import Bookmark from "../../components/icons/collections_bookmark.svg";
 import GreenCheck from "../../components/icons/green_check_circle.svg";
@@ -13,22 +14,25 @@ import BottomLeft from "@images/home/Emteka_Screen_02_3.png";
 import SecondMain from "@images/home/Emteka_Screen_03_1.png";
 import SecondBottom from "@images/home/Emteka_Screen_03_2.png";
 
-import Effect01 from "@images/home/Effect_01.png";
+import Effect02 from "@images/home/Effect_02.png";
 
 import ThirdMain from "@images/home/Emteka_Screen_04.png";
 export function LatarBelakang() {
   return (
     <article className="bg-secondary-500 relative overflow-hidden font-karla">
       <div className="mt-10">
-        <div className="xl:flex xl:w-[1000px] mx-auto ">
+        <div className="xl:flex xl:w-[1000px] mx-auto px-4 xl:px-0">
           <p className="text-[30px] font-semibold text-neutral-0 text-center tracking-widest xl:w-[60%]">
             Cara mengukur kemampuan matematika Anda
           </p>
           <div className="flex gap-x-5 mx-auto w-fit">
-            <button className="bg-transparent border-2 border-solid border-primary-100 text-primary-100 py-2.5 px-3 rounded-full mt-5 h-fit flex">
+            <Link
+              href="#01pilihan-materi"
+              className="bg-transparent border-2 border-solid border-primary-100 text-primary-100 py-2.5 px-3 rounded-full mt-5 h-fit flex"
+            >
               <Image src={Arrow} alt="Arrow SVG" className="mr-3" />
               Lihat Di bawah
-            </button>
+            </Link>
             <a href="https://youtu.be/_JTp4JzZHbY" target="_blank">
               <button className="bg-primary-300 text-neutral-900 rounded-full py-3 px-4 font-semibold mt-5 h-fit">
                 Tonton Vidio
@@ -37,8 +41,11 @@ export function LatarBelakang() {
           </div>
         </div>
 
-        <div className="mt-20 h-fit mx-auto xl:w-[1000px] px-3">
-          <div className="xl:flex xl:justify-between w-full">
+        <div
+          className="pt-[6rem] h-fit mx-auto xl:w-[1000px] px-4"
+          id="01pilihan-materi"
+        >
+          <div className="xl:flex xl:justify-between w-full px-4 xl:px-0">
             <div className="xl:flex xl:justify-between">
               <div className="mt-0.5 xl:w-[40%] flex">
                 <Image
@@ -103,14 +110,14 @@ export function LatarBelakang() {
           </div>
         </div>
 
-        <div className="h-fit relative mt-20 xl:mt-0 px-3">
+        <div className="h-fit relative mt-20 xl:mt-0 px-4">
           <div className="xl:w-[1000px] mx-auto flex flex-col-reverse">
             <Image
-              src={Effect01}
+              src={Effect02}
               alt="Effect Image"
-              className="absolute top-1 z-40 -right-1 object-cover"
+              className="absolute top-1 rotate-180 -right-1 object-cover"
             />
-            <div className="xl:flex xl:justify-between w-full">
+            <div className="xl:flex xl:justify-between w-full px-4 xl:px-0">
               <div className="xl:flex xl:flex-row-reverse justify-between">
                 <div className="mt-0.5 xl:w-[40%] flex">
                   <Image src={Edit} alt="Edit SVG" className="w-12 h-12" />
@@ -159,7 +166,7 @@ export function LatarBelakang() {
           </div>
         </div>
 
-        <div className="h-fit mx-auto xl:w-[1000px] px-3">
+        <div className="h-fit mx-auto xl:w-[1000px] px-4">
           <div className="xl:flex xl:justify-between w-full">
             <div className="xl:flex xl:justify-between">
               <div className="mt-0.5 xl:w-[40%] flex">
@@ -224,7 +231,7 @@ export function LatarBelakang() {
           </div>
         </div>
 
-        <div className="w-[90%] mx-auto xl:w-full h-[2px] bg-neutral-200 mt-16"></div>
+        <div className="w-[80%] mx-auto h-[2px] bg-neutral-200 mt-16"></div>
       </div>
     </article>
   );
