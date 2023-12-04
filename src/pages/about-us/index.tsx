@@ -46,29 +46,29 @@ export default function AboutUs() {
 
       <WhatsappButton />
 
-      <div className="flex flex-col items-center justify-center max-h-fit mt-16 pt-[77px] font-karla">
+      <div className="relative flex flex-col items-center justify-center max-h-fit mt-32 xl:mt-16 px-4 xl:px-0 pt-[77px] font-karla">
         <Image priority src={HeroImage} alt="" className="w-[790px]" />
         <Image
           priority
           src={LogoFuraha}
           alt=""
-          className="w-28 relative -top-72"
+          className="w-28 absolute top-0 xl:relative xl:-top-72"
         />
         <Image
           priority
           src={Title}
           alt=""
-          className="w-[503px] relative bottom-20 drop-shadow-md"
+          className="w-4/5 xl:w-[503px] relative mt-5 xl:mt-0 bottom-0 xl:bottom-20 drop-shadow-md"
         />
-        <p className="text-center max-w-xl -mt-16 text-neutral-0">
+        <p className="text-center max-w-xl xl:-mt-16 text-neutral-0">
           Ini dimulai dari semangat tim Furaha Systems untuk mendukung kemajuan
           dan pengembangan SDM Indonesia melalui Inovasi.
         </p>
       </div>
 
-      <Image className="w-1 my-6 mx-auto" src={Divider} alt={""} />
+      <Image className="w-0.5 xl:w-1 my-6 mx-auto" src={Divider} alt={""} />
 
-      <div className="flex flex-col mx-auto gap-4 max-w-3xl text-neutral-0 font-karla">
+      <div className="flex flex-col mx-auto gap-4 w-full xl:max-w-3xl px-4 xl:px-0 text-neutral-0 font-karla">
         <h4 className="text-2xl font-bold text-center">
           Didirikannya Emteka juga didasari oleh adanya{" "}
           <span className="text-primary-400">
@@ -82,11 +82,11 @@ export default function AboutUs() {
         </p>
       </div>
 
-      <Image className="w-1 my-6 mx-auto" src={Divider} alt={""} />
+      <Image className="w-0.5 xl:w-1 my-6 mx-auto" src={Divider} alt={""} />
 
-      <div className="flex flex-row gap-16 justify-center text-neutral-0 font-karla">
+      <div className="flex flex-col lg:flex-row gap-16 justify-center text-neutral-0 font-karla px-4 xl:px-0 items-center xl:items-start">
         <Image priority src={HeroImage2} alt="" className="w-[400px]" />
-        <div className="flex flex-col">
+        <div className="flex flex-col items-center text-center xl:text-start xl:items-start">
           <Image priority src={LogoFuraha} alt="" className="w-28" />
           <p className="mt-4 font-normal text-xl max-w-lg">
             <span className="text-primary-400 font-bold">Furaha Systems</span>{" "}
@@ -106,12 +106,14 @@ export default function AboutUs() {
         </div>
       </div>
 
-      <Image className="w-1 my-6 mx-auto" src={Divider} alt={""} />
+      <Image className="w-0.5 xl:w-1 my-6 mx-auto" src={Divider} alt={""} />
 
       <div className="flex flex-col gap-8 items-center font-karla mb-[104px]">
-        <h1 className="text-5xl font-bold text-neutral-0">Penghargaan</h1>
-        <div className="flex flex-row gap-6">
-          <div className="flex flex-col items-center justify-center py-8 px-4 gap-6 h-[199px] w-[357px] rounded-2xl bg-secondary-500 border-2 border-[#F2F6FF40]">
+        <h1 className="text-4xl xl:text-5xl font-bold text-neutral-0">
+          Penghargaan
+        </h1>
+        <div className="flex flex-col xl:flex-row gap-6">
+          <div className="flex flex-col items-center justify-center py-8 px-4 gap-6 h-[199px] w-full xl:w-[357px] rounded-2xl bg-secondary-500 border-2 border-[#F2F6FF40]">
             <Image
               src={Penghargaan1}
               alt={""}
@@ -121,7 +123,7 @@ export default function AboutUs() {
               Kota Tangerang Selatan. Tahun 2023
             </p>
           </div>
-          <div className="flex flex-col items-center justify-center py-8 px-4 gap-6 h-[199px] w-[357px] rounded-2xl bg-secondary-500 border-2 border-[#F2F6FF40]">
+          <div className="flex flex-col items-center justify-center py-8 px-4 gap-6 h-[199px] w-full xl:w-[357px] rounded-2xl bg-secondary-500 border-2 border-[#F2F6FF40]">
             <Image
               src={Penghargaan2}
               alt={""}
