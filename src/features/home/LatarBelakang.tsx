@@ -20,27 +20,27 @@ export function LatarBelakang() {
   return (
     <article className="bg-secondary-500 relative overflow-hidden font-karla">
       <div className="mt-10">
-        <div className="flex w-[1000px] mx-auto ">
-          <p className="text-[30px] font-semibold text-neutral-0 tracking-widest w-[60%]">
+        <div className="xl:flex xl:w-[1000px] mx-auto ">
+          <p className="text-[30px] font-semibold text-neutral-0 text-center tracking-widest xl:w-[60%]">
             Cara mengukur kemampuan matematika Anda
           </p>
-          <div className="flex gap-x-5">
-            <button className="bg-transparent border-2 border-solid border-primary-100 text-primary-100 py-2.5 px-7 rounded-full mt-5 h-fit flex">
+          <div className="flex gap-x-5 mx-auto w-fit">
+            <button className="bg-transparent border-2 border-solid border-primary-100 text-primary-100 py-2.5 px-3 rounded-full mt-5 h-fit flex">
               <Image src={Arrow} alt="Arrow SVG" className="mr-3" />
               Lihat Di bawah
             </button>
             <a href="https://youtu.be/_JTp4JzZHbY" target="_blank">
-              <button className="bg-primary-300 text-neutral-900 rounded-full py-2.5 px-8 font-semibold mt-5 h-fit">
+              <button className="bg-primary-300 text-neutral-900 rounded-full py-3 px-4 font-semibold mt-5 h-fit">
                 Tonton Vidio
               </button>
             </a>
           </div>
         </div>
 
-        <div className="mt-20 h-fit mx-auto w-[1000px]">
-          <div className="flex justify-between w-full">
-            <div className="flex justify-between">
-              <div className="mt-0.5 w-[40%] flex">
+        <div className="mt-20 h-fit mx-auto xl:w-[1000px] px-3">
+          <div className="xl:flex xl:justify-between w-full">
+            <div className="xl:flex xl:justify-between">
+              <div className="mt-0.5 xl:w-[40%] flex">
                 <Image
                   src={Bookmark}
                   alt="Bookmark SVG"
@@ -77,7 +77,7 @@ export function LatarBelakang() {
                 </div>
               </div>
 
-              <div className="relative -mt-7">
+              <div className="relative xl:-mt-7 mt-10">
                 <Image
                   src={Circle}
                   alt="Circle Effect"
@@ -91,28 +91,28 @@ export function LatarBelakang() {
                 <Image
                   src={TopRight}
                   alt="Circle Effect"
-                  className="absolute top-0 -right-20 z-10 w-[45%] h-[45%] object-contain"
+                  className="absolute top-2 -right-4 xl:-right-20 z-10 w-[45%] h-[45%] object-contain"
                 />
                 <Image
                   src={BottomLeft}
                   alt="Circle Effect"
-                  className="absolute bottom-36 -left-10 z-10 w-[45%] h-[45%] object-contain"
+                  className="absolute bottom-4 -left-3 xl:-left-10 z-10 w-[45%] h-[45%] object-contain"
                 />
               </div>
             </div>
           </div>
         </div>
 
-        <div className="h-fit relative">
-          <div className="w-[1000px] mx-auto">
+        <div className="h-fit relative mt-20 xl:mt-0 px-3">
+          <div className="xl:w-[1000px] mx-auto flex flex-col-reverse">
             <Image
               src={Effect01}
               alt="Effect Image"
               className="absolute top-1 z-40 -right-1 object-cover"
             />
-            <div className="flex justify-between w-full">
-              <div className="flex flex-row-reverse justify-between">
-                <div className="mt-0.5 w-[40%] flex">
+            <div className="xl:flex xl:justify-between w-full">
+              <div className="xl:flex xl:flex-row-reverse justify-between">
+                <div className="mt-0.5 xl:w-[40%] flex">
                   <Image src={Edit} alt="Edit SVG" className="w-12 h-12" />
                   <div className="ml-5">
                     <p className="-mb-1">02</p>
@@ -137,7 +137,7 @@ export function LatarBelakang() {
                   </div>
                 </div>
 
-                <div className="relative -mt-7">
+                <div className="relative xl:-mt-7 mt-10">
                   <Image
                     src={Circle}
                     alt="Circle Effect"
@@ -151,7 +151,7 @@ export function LatarBelakang() {
                   <Image
                     src={SecondBottom}
                     alt="Circle Effect"
-                    className="absolute bottom-52 -left-10 z-10 w-[45%] h-[45%] object-contain"
+                    className="absolute bottom-8 xl:bottom-52 -left-4 z-10 w-[45%] h-[45%] object-contain"
                   />
                 </div>
               </div>
@@ -159,10 +159,10 @@ export function LatarBelakang() {
           </div>
         </div>
 
-        <div className="h-fit mx-auto w-[1000px]">
-          <div className="flex justify-between w-full">
-            <div className="flex justify-between">
-              <div className="mt-0.5 w-[40%] flex">
+        <div className="h-fit mx-auto xl:w-[1000px] px-3">
+          <div className="xl:flex xl:justify-between w-full">
+            <div className="xl:flex xl:justify-between">
+              <div className="mt-0.5 xl:w-[40%] flex">
                 <Image
                   src={Bookmark}
                   alt="Bookmark SVG"
@@ -208,7 +208,7 @@ export function LatarBelakang() {
                 </div>
               </div>
 
-              <div className="relative -mt-7">
+              <div className="relative xl:-mt-7 mt-10">
                 <Image
                   src={Circle}
                   alt="Circle Effect"
@@ -217,13 +217,14 @@ export function LatarBelakang() {
                 <Image
                   src={ThirdMain}
                   alt="Circle Effect"
-                  className="absolute top-16"
+                  className="absolute top-10 xl:top-16"
                 />
               </div>
             </div>
           </div>
         </div>
-        <div className="w-full h-[2px] bg-neutral-200"></div>
+
+        <div className="w-[90%] mx-auto xl:w-full h-[2px] bg-neutral-200 mt-16"></div>
       </div>
     </article>
   );

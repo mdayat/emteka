@@ -28,9 +28,9 @@ export function Navbar() {
 
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 z-20">
+      <div className="fixed top-0 left-0 right-0 z-20 w-full">
         <div className="bg-[#4075FFBF] backdrop-blur-md">
-          <div className="flex justify-between items-center py-4 mx-8 lg:mx-16 xl:max-w-[1480px] xl:mx-auto xl:px-20">
+          <div className="flex justify-between items-center py-4 mx-3 lg:mx-16 xl:max-w-[1480px] xl:mx-auto xl:px-20">
             <strong className="text-neutral-0 font-semibold flex justify-between items-center gap-x-1 lg:text-xl">
               <Emteka className="w-6 h-6 lg:w-8 lg:h-8" />
               Emteka
@@ -135,7 +135,7 @@ function MobileNavbar({
       <ul
         className={`${
           isMounted ? "animate-scaleIn" : "animate-scaleOut"
-        } bg-neutral-0 flex flex-col lg:hidden`}
+        } bg-neutral-0 flex flex-col lg:hidden w-full`}
       >
         <li>
           <Link
