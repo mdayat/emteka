@@ -7,18 +7,18 @@ import CheckIcone from "../../components/icons/check_circle.svg";
 
 export function PrioritasKami() {
   return (
-    <div className="font-karla mt-10 w-[1100px] mx-auto">
-      <h2 className="text-[40px] font-semibold text-neutral-0 text-center">
+    <div className="font-karla mt-0 xl:mt-10 xl:w-[1100px] mx-auto">
+      <h2 className="text-[30px] xl:text-[40px] font-semibold mb-4 text-neutral-0 text-center">
         Prioritas Kami
       </h2>
 
-      <p className="text-center text-sm old-lg:text-base mb-5">
+      <p className="text-center text-sm old-lg:text-base px-3 mb-5">
         Matematika tidak lagi menjadi mimpi buruk. Kami telah sediakan
         solusinya!
       </p>
 
-      <div className="flex justify-between">
-        <div className="w-[330px] h-[270px] py-[28px] px-[16px] border-solid border-2 border-secondary-200 rounded-xl bg-secondary-600">
+      <div className="xl:flex xl:justify-between px-5 xl:px-0">
+        <div className="w-full xl:w-[330px] h-full xl:h-[270px] py-[28px] mx-auto px-[16px] border-solid border-2 border-secondary-200 rounded-xl bg-secondary-600">
           <div className="w-fit mx-auto rounded-full bg-secondary-400 p-3">
             <Image
               src={MenuBook}
@@ -35,7 +35,7 @@ export function PrioritasKami() {
           </p>
         </div>
 
-        <div className="w-[330px] h-[270px] py-[28px] px-[16px] border-solid border-2 border-secondary-200 rounded-xl bg-secondary-600">
+        <div className="w-full xl:w-[330px] h-full xl:h-[270px] py-[28px] mx-auto my-5 xl:my-0 px-[16px] border-solid border-2 border-secondary-200 rounded-xl bg-secondary-600">
           <div className="w-fit mx-auto rounded-full bg-secondary-400 p-3">
             <Image
               src={Psykolog}
@@ -51,7 +51,7 @@ export function PrioritasKami() {
           </p>
         </div>
 
-        <div className="w-[330px] h-[270px] py-[28px] px-[16px] border-solid border-2 border-secondary-200 rounded-xl bg-secondary-600">
+        <div className="w-full xl:w-[330px] h-full xl:h-[270px] py-[28px] mx-auto px-[16px] border-solid border-2 border-secondary-200 rounded-xl bg-secondary-600">
           <div className="w-fit mx-auto rounded-full bg-secondary-400 p-5">
             <Image
               src={Pages}
@@ -70,25 +70,27 @@ export function PrioritasKami() {
       </div>
 
       <div className="w-fit mx-auto mt-5">
-        <div className="flex justify-between gap-x-5">
+        <div className="flex flex-wrap  justify-center xl:justify-between gap-x-2 gap-y-2 xl:gap-x-5 text-center">
           <div className="rounded-full bg-secondary-600 py-2 px-3 flex gap-x-2">
-            <Image src={CheckIcone} alt="Check Icon" />
-            <p className="font-semibold tracking-widest">Personalized</p>
+            <Image src={CheckIcone} alt="Check Icon" className="w-5 h-5" />
+            <p className="font-semibold tracking-widest text-sm">
+              Personalized
+            </p>
           </div>
 
           <div className="rounded-full bg-secondary-600 py-2 px-3 flex gap-x-2">
-            <Image src={CheckIcone} alt="Check Icon" />
-            <p className="font-semibold tracking-widest">Accurate</p>
+            <Image src={CheckIcone} alt="Check Icon" className="w-5 h-5" />
+            <p className="font-semibold tracking-widest text-sm">Accurate</p>
           </div>
 
           <div className="rounded-full bg-secondary-600 py-2 px-3 flex gap-x-2">
-            <Image src={CheckIcone} alt="Check Icon" />
-            <p className="font-semibold tracking-widest">Engaging</p>
+            <Image src={CheckIcone} alt="Check Icon" className="w-5 h-5" />
+            <p className="font-semibold tracking-widest text-sm">Engaging</p>
           </div>
         </div>
       </div>
 
-      <div className="w-full h-[2px] bg-neutral-200 mt-16"></div>
+      <div className="w-[90%] mx-auto xl:w-full h-[2px] bg-neutral-200 mt-16"></div>
     </div>
   );
 }
