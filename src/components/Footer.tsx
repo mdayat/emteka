@@ -144,10 +144,9 @@ function FooterMobile() {
               Pamulang, Kota Tangerang Selatan
             </li>
           </ul>
-          <hr className="mx-auto w-full h-0.5  border-neutral-0" />
         </div>
 
-        <div className="mt-5 mx-auto">
+        <div className="mt-12 mx-auto">
           <p className="text-sm font-karla text-neutral-0">
             &copy; 2023 Emteka. All Rights Reserved
           </p>
