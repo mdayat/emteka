@@ -69,7 +69,7 @@ export default function AboutUs() {
 
         <Image className="w-1 my-6 mx-auto" src={Divider} alt={""} />
 
-        <div className="flex flex-col mx-auto gap-4 w-full xl:max-w-3xl px-4 xl:px-0 text-neutral-0 font-karla">
+        <article className="flex flex-col mx-auto gap-4 w-full xl:max-w-3xl px-4 xl:px-0 text-neutral-0 font-karla">
           <h4 className="text-2xl font-bold text-center">
             Didirikannya Emteka juga didasari oleh adanya{" "}
             <span className="text-primary-400">
@@ -81,7 +81,7 @@ export default function AboutUs() {
             Oleh karena itu, Furaha Systems menghadirkan Emteka untuk membantu
             mereka mencapai potensi terbaik dalam belajar Matematika!
           </p>
-        </div>
+        </article>
 
         <Image className="w-1 my-6 mx-auto" src={Divider} alt={""} />
 

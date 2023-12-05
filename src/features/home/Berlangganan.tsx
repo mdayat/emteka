@@ -1,6 +1,6 @@
 export function Berlangganan() {
   return (
-    <div className="font-karla mt-10 xl:w-[1100px] mx-auto pb-[10rem] px-4 xl:px-0">
+    <article className="font-karla mt-10 xl:w-[1100px] mx-auto pb-[10rem] px-4 xl:px-0">
       <h2 className="text-[30px] xl:text-[40px] font-semibold text-neutral-0 text-center mb-10">
         Jadilah Orang Pertama Yang Tau
       </h2>
@@ -26,6 +26,6 @@ export function Berlangganan() {
           Berlangganan
         </button>
       </div>
-    </div>
+    </article>
   );
 }
