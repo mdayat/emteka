@@ -28,18 +28,10 @@ export function Navbar() {
 
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 z-20">
-        <div
-          className={`${
-            pathname === "/" ? "bg-secondary-500" : "bg-neutral-0"
-          }`}
-        >
-          <div className="flex justify-between items-center py-4 mx-8 lg:mx-16 xl:w-[1200px] xl:mx-auto">
-            <strong
-              className={`${
-                pathname === "/" ? "text-neutral-0" : "text-neutral-900"
-              } font-semibold flex justify-between items-center gap-x-1 lg:text-xl`}
-            >
+      <div className="fixed top-0 left-0 right-0 z-20 w-full">
+        <div className="bg-[#4075FFBF] backdrop-blur-md">
+          <div className="flex justify-between items-center py-4 mx-3 lg:mx-16 xl:max-w-[1480px] xl:mx-auto xl:px-20">
+            <strong className="text-neutral-0 font-semibold flex justify-between items-center gap-x-1 lg:text-xl">
               <Emteka className="w-6 h-6 lg:w-8 lg:h-8" />
               Emteka
             </strong>
@@ -51,11 +43,7 @@ export function Navbar() {
               aria-label="Navigation Menu"
               className="lg:hidden"
             >
-              <Menu
-                className={`${
-                  pathname === "/" ? "fill-neutral-0" : "fill-neutral-900"
-                } w-7 h-7`}
-              />
+              <Menu className="fill-neutral-0  w-7 h-7" />
             </button>
 
             <DesktopNavbar pathname={pathname} />
@@ -83,7 +71,7 @@ function DesktopNavbar({ pathname }: { pathname: string }) {
               className={`${
                 pathname === "/"
                   ? "text-neutral-0 font-bold"
-                  : "text-neutral-900"
+                  : "text-neutral-200"
               }`}
             >
               Beranda
@@ -95,8 +83,8 @@ function DesktopNavbar({ pathname }: { pathname: string }) {
               href="/about-us"
               className={`${
                 pathname === "/about-us"
-                  ? "text-neutral-900 font-bold"
-                  : "text-neutral-0"
+                  ? "text-neutral-0 font-bold"
+                  : "text-neutral-200"
               }`}
             >
               Tentang Kami
@@ -105,21 +93,32 @@ function DesktopNavbar({ pathname }: { pathname: string }) {
 
           <li>
             <Link
-              href="/#mailing-list"
-              scroll={false}
+              href="/roadmap"
+              // scroll={false}
               className={`${
-                pathname === "/" ? "text-neutral-0" : "text-neutral-900"
+                pathname === "/roadmap"
+                  ? "text-neutral-0 font-bold"
+                  : "text-neutral-200"
               }`}
             >
-              Waiting List
+              Roadmap
             </Link>
           </li>
         </ul>
       </nav>
 
-      <a href="https://app.emteka.id" className="btn-yellow lg:block lg:px-16">
-        Try Our App
-      </a>
+      <div className="flex items-center gap-x-6">
+        <a href="#" className="lg:block font-karla font-lg text-neutral-0">
+          Masuk
+        </a>
+
+        <a
+          href="https://app.emteka.id"
+          className="btn-yellow lg:block lg:px-8 font-karla font-semibold"
+        >
+          Coba Sekarang
+        </a>
+      </div>
     </>
   );
 }
@@ -136,14 +135,14 @@ function MobileNavbar({
       <ul
         className={`${
           isMounted ? "animate-scaleIn" : "animate-scaleOut"
-        } bg-neutral-0 flex flex-col lg:hidden`}
+        } bg-secondary-300 flex flex-col lg:hidden w-full`}
       >
         <li>
           <Link
             href="/"
             className={`${
               pathname === "/" ? "font-bold" : ""
-            } text-neutral-900 font-medium inline-block text-sm pt-4 pb-2 px-6`}
+            } text-neutral-0 font-medium inline-block text-sm pt-4 pb-2 px-6`}
           >
             Beranda
           </Link>
@@ -154,7 +153,7 @@ function MobileNavbar({
             href="/about-us"
             className={`${
               pathname === "/about-us" ? "font-bold" : ""
-            } text-neutral-900 font-medium inline-block text-sm py-2 px-6`}
+            } text-neutral-0 font-medium inline-block text-sm py-2 px-6`}
           >
             Tentang Kami
           </Link>
@@ -162,11 +161,10 @@ function MobileNavbar({
 
         <li>
           <Link
-            href="/#mailing-list"
-            scroll={false}
-            className="text-neutral-900 font-medium inline-block text-sm pt-2 pb-4 px-6"
+            href="/roadmap"
+            className="text-neutral-0 font-medium inline-block text-sm pt-2 pb-4 px-6"
           >
-            Waiting List
+            Roadmap
           </Link>
         </li>
       </ul>
