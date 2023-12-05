@@ -21,10 +21,11 @@ export function LatarBelakang() {
   return (
     <article className="bg-secondary-500 relative overflow-hidden font-karla">
       <div className="mt-10">
-        <div className="xl:flex xl:w-[1000px] mx-auto px-4 xl:px-0">
-          <p className="text-[30px] font-semibold text-neutral-0 text-center tracking-widest xl:w-[60%]">
+        <article className="xl:flex xl:w-[1000px] mx-auto px-4 xl:px-0">
+          <h2 className="text-[30px] font-semibold text-neutral-0 text-center tracking-widest xl:w-[60%] xl:text-left">
             Cara mengukur kemampuan matematika Anda
-          </p>
+          </h2>
+
           <div className="flex gap-x-5 mx-auto w-fit">
             <Link
               href="#01pilihan-materi"
@@ -39,7 +40,7 @@ export function LatarBelakang() {
               </button>
             </a>
           </div>
-        </div>
+        </article>
 
         <div
           className="pt-[6rem] h-fit mx-auto xl:w-[1000px] px-4"

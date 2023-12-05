@@ -15,16 +15,17 @@ export function Hero() {
         className="absolute left-0 -top-36 xl:top-0"
       />
       <div className="w-full xl:max-w-[840px] mx-auto mt-10">
-        <div className="xl:flex xl:justify-between">
-          <p className="text-[30px] xl:text-[40px] font-semibold text-neutral-0 text-center">
+        <article className="xl:flex xl:justify-between">
+          <h1 className="text-[30px] xl:text-[40px] font-semibold text-neutral-0 text-center xl:text-left">
             Alat Ukur Kemampuan Matematika Anda
-          </p>
+          </h1>
+
           <div className="w-fit mx-auto px-4">
-            <p className="text-neutral-50 xl:w-[334px] text-center mt-5">
+            <p className="text-neutral-50 xl:w-[334px] text-center mt-5 xl:text-left">
               Tidak Perlu Lagi Khawatir dalam menghadapi persoalan Matematika di
               setiap pembelajaran sekolah
             </p>
-            <div className="relative z-10 text-center">
+            <div className="relative z-10 text-center xl:text-left">
               <Link
                 href="https://app.emteka.id/"
                 target="_blank"
@@ -34,7 +35,7 @@ export function Hero() {
               </Link>
             </div>
           </div>
-        </div>
+        </article>
         <div className="relative px-5">
           <Image
             src={Screen01}
