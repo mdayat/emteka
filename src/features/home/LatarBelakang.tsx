@@ -229,9 +229,8 @@ export function LatarBelakang() {
               </div>
             </div>
           </div>
+          <div className="w-[80%] mx-auto h-[2px] bg-neutral-200 mt-16"></div>
         </div>
-
-        <div className="w-[80%] mx-auto h-[2px] bg-neutral-200 mt-16"></div>
       </div>
     </article>
   );

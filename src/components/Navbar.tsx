@@ -162,7 +162,6 @@ function MobileNavbar({
         <li>
           <Link
             href="/roadmap"
-            scroll={false}
             className="text-neutral-0 font-medium inline-block text-sm pt-2 pb-4 px-6"
           >
             Roadmap

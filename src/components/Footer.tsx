@@ -1,11 +1,27 @@
 import Image from "next/image";
-
-import EmtekaLogo from "@images/Emteka-Logo White.png";
 import Link from "next/link";
 
+import { useWindowSize } from "@hooks/useWindowSize";
+
+import EmtekaLogo from "@images/Emteka-Logo White.png";
+import { Instagram } from "./icons/Instagram";
+import { LinkedIn } from "./icons/LinkedIn";
+
 export function Footer() {
+  const width = useWindowSize();
+
   return (
-    <footer className="pt-8 pb-[4rem] xl:pb-[130px] xl:max-h-80 font-karla overflow-y-clip w-full">
+    <footer className="pt-8 pb-[2rem] xl:pb-[130px] xl:max-h-80 font-karla overflow-y-clip w-full">
+      {width > 1280 && <FooterDesktop />}
+
+      {width < 680 && <FooterMobile />}
+    </footer>
+  );
+}
+
+function FooterDesktop() {
+  return (
+    <>
       <div className="relative overflow-x-clip">
         <div className="w-[477px] h-[477px] absolute top-32 -right-[15rem] xl:-right-32 opacity-50 bg-[#FFE600] rounded-full blur-[200px]" />
       </div>
@@ -68,6 +84,75 @@ export function Footer() {
           </ul>
         </div>
       </div>
-    </footer>
+    </>
+  );
+}
+
+function FooterMobile() {
+  return (
+    <>
+      <div className="flex flex-col px-7 items-start xl:items-center justify-between w-full">
+        <div className="mx-auto w-4/5 flex flex-col items-center text-center gap-5 mb-8">
+          <Image src={EmtekaLogo} alt={""} className="w-24" />
+          <p className="text-[26px] text-neutral-0 font-bold max-w-md leading-[40px]">
+            <span className="text-primary-400">Matematika</span> ternyata
+            gampang, lho!
+          </p>
+        </div>
+        <hr className="mx-auto w-[90%] mb-5 h-0.5 border-[#D4D7DC80]" />
+
+        <div className="flex gap-x-3 items-center mx-auto mb-6">
+          <LinkedIn className="w-7 fill-neutral-0" />
+          <Instagram className="w-7 fill-neutral-0" />
+        </div>
+
+        <div className="flex flex-col w-full gap-y-5 xl:gap-16 text-neutral-0">
+          <ul className="text-sm">
+            <li className="font-bold mb-4">Link</li>
+            <li className="font-normal text-neutral-200 mb-2">
+              <Link href="/">Beranda</Link>
+            </li>
+            <li className="font-normal text-neutral-200 mb-2">
+              <Link href="/about-us">Tentang Kami</Link>
+            </li>
+            <li className="font-normal text-neutral-200">
+              <Link href="/roadmap">Roadmap</Link>
+            </li>
+          </ul>
+
+          <hr className="mx-auto w-full h-0.5  border-neutral-0" />
+
+          <ul className="text-sm">
+            <li className="font-bold mb-4">Kontak</li>
+            <li className="font-normal text-neutral-200 mb-2">
+              <Link target="_blank" href="https://wa.me/6282211000129">
+                0822 1100 0129
+              </Link>
+            </li>
+            <li className="font-normal text-neutral-200">
+              <Link href="mailto:info@furahasystems.com">
+                info@furahasystems.com
+              </Link>
+            </li>
+          </ul>
+
+          <hr className="mx-auto w-full h-0.5  border-neutral-0" />
+          <ul className="text-sm">
+            <li className="font-bold mb-4">Alamat</li>
+            <li className="font-normal text-neutral-200 mb-1">
+              Blok A30, Jl. Pamulang Permai Bar. 1 No.23, Pamulang Bar., Kec.
+              Pamulang, Kota Tangerang Selatan
+            </li>
+          </ul>
+          <hr className="mx-auto w-full h-0.5  border-neutral-0" />
+        </div>
+
+        <div className="mt-5 mx-auto">
+          <p className="text-sm font-karla text-neutral-0">
+            &copy; 2023 Emteka. All Rights Reserved
+          </p>
+        </div>
+      </div>
+    </>
   );
 }
