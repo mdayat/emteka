@@ -45,8 +45,9 @@ const CardDesktop = () => {
             Tantangan Pembelajaran yang Digamifikasi
           </h5>
           <p className="text-base font-normal text-neutral-0">
-            Integrasikan asisten pembelajaran berbasis kecerdasan buatan (AI)
-            yang memberikan panduan pribadi dalam pembelajaran Anda.
+            Menambahkan tantangan pembelajaran berbasis game untuk meningkatkan
+            motivasi dan membuat pembelajaran matematika menjadi lebih
+            menyenangkan
           </p>
         </article>
 

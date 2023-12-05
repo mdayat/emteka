@@ -10,7 +10,7 @@ const CardTemp = [
     id: 2,
     title: "Tantangan Pembelajaran yang Digamifikasi",
     paragraph:
-      "Integrasikan asisten pembelajaran berbasis kecerdasan buatan (AI) yang memberikan panduan pribadi dalam pembelajaran Anda.",
+      "Menambahkan tantangan pembelajaran berbasis game untuk meningkatkan motivasi dan membuat pembelajaran matematika menjadi lebih menyenangkan.",
     images: "tantangan_pembelajaran.png",
   },
   {

@@ -2,7 +2,7 @@ export function Berlangganan() {
   return (
     <article className="font-karla mt-10 xl:w-[1100px] mx-auto pb-[10rem] px-4 xl:px-0">
       <h2 className="text-[30px] xl:text-[40px] font-semibold text-neutral-0 text-center mb-10">
-        Jadilah Orang Pertama Yang Tau
+        Jadilah orang pertama yang tahu
       </h2>
 
       <p className="text-center text-xl w-[80%] mx-auto font-karla">
