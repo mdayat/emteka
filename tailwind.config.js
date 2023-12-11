@@ -127,9 +127,9 @@ module.exports = {
           "100%": { opacity: "0", transform: "scale3d(0.75, 0.75, 0.75)" },
         },
       },
-      // backgroundImage: {
-      //   default: "url('/images/background.png')",
-      // },
+      backgroundColor: {
+        default: "#3D6FF2",
+      },
     },
   },
   plugins: [],

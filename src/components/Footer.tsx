@@ -11,7 +11,7 @@ export function Footer() {
   const width = useWindowSize();
 
   return (
-    <footer className="pt-8 pb-[2rem] xl:pb-[130px] xl:max-h-80 font-karla overflow-y-clip w-full">
+    <footer className="pt-8 pb-[3rem] xl:pb-[130px] xl:max-h-80 font-karla overflow-y-clip w-full">
       {width > 1280 && <FooterDesktop />}
 
       {width < 680 && <FooterMobile />}
@@ -102,8 +102,15 @@ function FooterMobile() {
         <hr className="mx-auto w-[90%] mb-5 h-0.5 border-[#D4D7DC80]" />
 
         <div className="flex gap-x-3 items-center mx-auto mb-6">
-          <LinkedIn className="w-7 fill-neutral-0" />
-          <Instagram className="w-7 fill-neutral-0" />
+          <Link
+            href="https://www.linkedin.com/company/emteka-id/"
+            target="_blank"
+          >
+            <LinkedIn className="w-7 fill-neutral-0" />
+          </Link>
+          <Link href="https://www.instagram.com/emteka_frh/" target="_blank">
+            <Instagram className="w-7 fill-neutral-0" />
+          </Link>
         </div>
 
         <div className="flex flex-col w-full gap-y-5 xl:gap-16 text-neutral-0">
@@ -140,13 +147,12 @@ function FooterMobile() {
           <ul className="text-sm">
             <li className="font-bold mb-4">Alamat</li>
             <li className="font-normal text-neutral-200 mb-1">
-              Blok A30, Jl. Pamulang Permai Bar. 1 No.23, Pamulang Bar., Kec.
-              Pamulang, Kota Tangerang Selatan
+              Jl. Pamulang Permai, Kec. Pamulang, Kota Tangerang Selatan
             </li>
           </ul>
         </div>
 
-        <div className="mt-12 mx-auto">
+        <div className="mt-10 mx-auto">
           <p className="text-sm font-karla text-neutral-0">
             &copy; 2023 Emteka. All Rights Reserved
           </p>

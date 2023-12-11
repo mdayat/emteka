@@ -30,7 +30,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="favicon.svg" type="image/svg" />
       </Head>
 
-      <div className={`${poppins.variable} ${karla.variable} bg-secondary-400`}>
+      <div className={`${poppins.variable} ${karla.variable}`}>
         <Navbar />
         <Component {...pageProps} />
         <Footer />
