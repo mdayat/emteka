@@ -19,50 +19,50 @@ const CardMobile = ({ id, title, paragraph }: Card) => {
   return (
     <section className="relative flex flex-col items-center justify-center w-full px-4">
       <article
-        className="bg-secondary-600 w-full pt-6 pb-8 px-5 rounded-lg border-[3px] border-secondary-200/40 my-2"
+        className="bg-secondary-600 w-full pt-3 pb-8 px-5 rounded-lg border-[3px] border-secondary-200/40 my-2"
         key={id}
       >
         {id === 1 ? (
           <Image
             src={Images01}
             alt="Akademi Pertumbuhan"
-            className="object-contain object-center w-full h-full px-5 mb-6"
+            className="object-contain object-center w-full h-full mb-6"
           />
         ) : id === 2 ? (
           <Image
             src={Images02}
             alt="Akademi Pertumbuhan"
-            className="object-contain object-center w-full h-full px-5 mb-6"
+            className="object-contain object-center w-full h-full mb-6"
           />
         ) : id === 3 ? (
           <Image
             src={Images03}
             alt="Akademi Pertumbuhan"
-            className="object-contain object-center w-full h-full px-5 mb-6"
+            className="object-contain object-center w-full h-full mb-6"
           />
         ) : id === 4 ? (
           <Image
             src={Images04}
             alt="Akademi Pertumbuhan"
-            className="object-contain object-center w-full h-full px-5 mb-6"
+            className="object-contain object-center w-full h-full mb-6"
           />
         ) : id === 5 ? (
           <Image
             src={Images05}
             alt="Akademi Pertumbuhan"
-            className="object-contain object-center w-full h-full px-5 mb-6"
+            className="object-contain object-center w-full h-full mb-6"
           />
         ) : (
           id === 6 && (
             <Image
               src={Images06}
               alt="Akademi Pertumbuhan"
-              className="object-contain object-center w-full h-full px-5 mb-6"
+              className="object-contain object-center w-full h-full mb-6"
             />
           )
         )}
 
-        <h5 className="font-semibold text-2xl text-neutral-0 mb-4">{title}</h5>
+        <h5 className="font-semibold text-xl text-neutral-0 mb-4">{title}</h5>
         <p className="text-base font-normal text-neutral-0">{paragraph}</p>
       </article>
 

@@ -107,16 +107,16 @@ function DesktopNavbar({ pathname }: { pathname: string }) {
       </nav>
 
       <div className="flex items-center gap-x-6">
-        <a href="#" className="lg:block font-karla font-lg text-neutral-0">
+        <Link href="#" className="lg:block font-karla font-lg text-neutral-0">
           Masuk
-        </a>
+        </Link>
 
-        <a
+        <Link
           href="https://app.emteka.id"
           className="btn-yellow lg:block lg:px-8 font-karla font-semibold"
         >
           Coba Sekarang
-        </a>
+        </Link>
       </div>
     </>
   );
@@ -137,7 +137,7 @@ function MobileNavbar({
         // isMounted ? "animate-scaleIn" : "animate-scaleOut"
         isMounted === true
           ? "left-0 ease-in opacity-100"
-          : "-left-full ease-out opacity-0"
+          : "left-full ease-out opacity-0"
       }`}
     >
       <ul className="flex flex-col">
@@ -179,17 +179,17 @@ function MobileNavbar({
         </li>
       </ul>
 
-      <div className="flex items-center gap-y-4 flex-col-reverse mt-64">
-        <a href="#" className="font-karla text-lg text-neutral-0">
+      <div className="flex items-center gap-y-4 flex-col-reverse h-full justify-center">
+        <Link href="#" className="font-karla text-lg text-neutral-0">
           Masuk
-        </a>
+        </Link>
 
-        <a
+        <Link
           href="https://app.emteka.id"
           className="btn-yellow px-8 font-karla font-semibold text-base"
         >
           Coba Sekarang
-        </a>
+        </Link>
       </div>
     </nav>
   );
