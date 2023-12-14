@@ -130,7 +130,7 @@ export default function AboutUs() {
           <h1 className="text-4xl xl:text-5xl font-bold text-neutral-0">
             Penghargaan
           </h1>
-          <div className="flex flex-col w-full px-4 xl:flex-row gap-6">
+          <div className="flex flex-col justify-center w-full px-4 xl:flex-row gap-6">
             <div className="flex flex-col items-center justify-center py-8 px-4 gap-6 h-[199px] w-full xl:w-[357px] rounded-2xl bg-secondary-500 border-2 border-[#F2F6FF40]">
               <Image
                 src={Penghargaan1}
