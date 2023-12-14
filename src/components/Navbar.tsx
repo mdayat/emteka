@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import type { Dispatch, SetStateAction } from "react";
 
 import { useDelayedUnmount } from "@hooks/useDelayedUnmount";
 import { useWindowSize } from "@hooks/useWindowSize";
@@ -53,7 +54,11 @@ export function Navbar() {
           </div>
         </div>
 
-        <MobileNavbar isMounted={isMounted} pathname={pathname} />
+        <MobileNavbar
+          isMounted={isMounted}
+          openMenu={openMenu}
+          pathname={pathname}
+        />
       </div>
     </>
   );
@@ -125,9 +130,11 @@ function DesktopNavbar({ pathname }: { pathname: string }) {
 function MobileNavbar({
   isMounted,
   pathname,
+  openMenu,
 }: {
   isMounted: boolean;
   pathname: string;
+  openMenu: Dispatch<SetStateAction<boolean>>;
 }) {
   return (
     <nav
@@ -145,8 +152,9 @@ function MobileNavbar({
           <Link
             href="/"
             className={`${
-              pathname === "/" ? "font-bold" : ""
-            } text-neutral-0 font-medium text-base pt-4`}
+              pathname === "/" ? "font-bold" : "font-medium"
+            } text-neutral-0 text-base pt-4`}
+            onClick={() => openMenu(false)}
           >
             Beranda
           </Link>
@@ -158,8 +166,9 @@ function MobileNavbar({
           <Link
             href="/about-us"
             className={`${
-              pathname === "/about-us" ? "font-bold" : ""
-            } text-neutral-0 font-medium text-base`}
+              pathname === "/about-us" ? "font-bold" : "font-medium"
+            } text-neutral-0 text-base`}
+            onClick={() => openMenu(false)}
           >
             Tentang Kami
           </Link>
@@ -170,7 +179,10 @@ function MobileNavbar({
         <li>
           <Link
             href="/roadmap"
-            className="text-neutral-0 font-medium text-base"
+            className={`${
+              pathname === "/roadmap" ? "font-bold" : "font-medium"
+            } text-neutral-0 text-base`}
+            onClick={() => openMenu(false)}
           >
             Roadmap
           </Link>
@@ -179,7 +191,7 @@ function MobileNavbar({
         </li>
       </ul>
 
-      <div className="flex items-center gap-y-4 flex-col-reverse h-full justify-center">
+      <div className="flex items-center gap-y-4 flex-col-reverse absolute bottom-28 inset-x-0 justify-center">
         <Link href="#" className="font-karla text-lg text-neutral-0">
           Masuk
         </Link>

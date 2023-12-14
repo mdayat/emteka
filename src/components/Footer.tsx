@@ -11,7 +11,7 @@ export function Footer() {
   const width = useWindowSize();
 
   return (
-    <footer className="pt-8 pb-[3rem] xl:pb-[130px] xl:max-h-80 font-karla overflow-y-clip w-full">
+    <footer className="pt-8 pb-[2rem] xl:pb-[130px] xl:max-h-80 font-karla overflow-y-clip w-full">
       {width > 1280 && <FooterDesktop />}
 
       {width < 680 && <FooterMobile />}
@@ -41,7 +41,11 @@ function FooterDesktop() {
           <ul className="text-xl">
             <li className="text-xl font-bold mb-4">Hubungi Kami</li>
             <li className="font-normal text-neutral-200 mb-2">
-              <Link target="_blank" href="https://wa.me/6282211000129">
+              <Link
+                target="_blank"
+                href="https://wa.me/6282211000129"
+                rel="noreferrer"
+              >
                 0822 1100 0129
               </Link>
             </li>
@@ -68,6 +72,7 @@ function FooterDesktop() {
             <li className="font-normal text-neutral-200 mb-2">
               <Link
                 target="_blank"
+                rel="noreferrer"
                 href="https://www.instagram.com/emteka_frh/"
               >
                 Instagram
@@ -76,6 +81,7 @@ function FooterDesktop() {
             <li className="font-normal text-neutral-200">
               <Link
                 target="_blank"
+                rel="noreferrer"
                 href="https://www.linkedin.com/company/emteka-id/"
               >
                 Linkedin
@@ -105,10 +111,15 @@ function FooterMobile() {
           <Link
             href="https://www.linkedin.com/company/emteka-id/"
             target="_blank"
+            rel="noreferrer"
           >
             <LinkedIn className="w-7 fill-neutral-0" />
           </Link>
-          <Link href="https://www.instagram.com/emteka_frh/" target="_blank">
+          <Link
+            href="https://www.instagram.com/emteka_frh/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Instagram className="w-7 fill-neutral-0" />
           </Link>
         </div>
@@ -132,7 +143,11 @@ function FooterMobile() {
           <ul className="text-sm">
             <li className="font-bold mb-4">Kontak</li>
             <li className="font-normal text-neutral-200 mb-2">
-              <Link target="_blank" href="https://wa.me/6282211000129">
+              <Link
+                target="_blank"
+                href="https://wa.me/6282211000129"
+                rel="noreferrer"
+              >
                 0822 1100 0129
               </Link>
             </li>
@@ -152,7 +167,7 @@ function FooterMobile() {
           </ul>
         </div>
 
-        <div className="mt-10 mx-auto">
+        <div className="mt-12 mx-auto">
           <p className="text-sm font-karla text-neutral-0">
             &copy; 2023 Emteka. All Rights Reserved
           </p>
