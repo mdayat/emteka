@@ -169,7 +169,7 @@ function FooterMobile() {
 
         <div className="mt-12 mx-auto">
           <p className="text-sm font-karla text-neutral-0">
-            &copy; 2023 Emteka. All Rights Reserved
+            &copy; {new Date().getFullYear()} Emteka. All Rights Reserved
           </p>
         </div>
       </div>

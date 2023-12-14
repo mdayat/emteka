@@ -16,7 +16,7 @@ export function Hero() {
 
       <div className="w-full xl:max-w-[840px] xl:mx-auto mt-10">
         <div className="xl:flex xl:justify-between">
-          <h1 className="text-[40px] font-semibold text-neutral-0 text-left leading-[50px]">
+          <h1 className="text-4xl xl:text-[40px] font-semibold text-neutral-0 text-left leading-[45px] xl:leading-[50px]">
             Alat Ukur Kemampuan Matematika Anda
           </h1>
 
