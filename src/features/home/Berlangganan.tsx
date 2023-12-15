@@ -1,11 +1,11 @@
 export function Berlangganan() {
   return (
-    <article className="font-karla mt-10 xl:w-[1100px] mx-auto pb-[10rem] px-4 xl:px-0">
-      <h2 className="text-[30px] xl:text-[40px] font-semibold text-neutral-0 text-center mb-10">
+    <section className="font-karla mt-10 xl:w-[1100px] mx-auto pb-[6rem] px-4 xl:px-0">
+      <h2 className="text-[30px] xl:text-[40px] font-semibold text-neutral-0 text-center mb-4">
         Jadilah Orang Pertama Yang Tau
       </h2>
 
-      <p className="text-center text-xl w-[80%] mx-auto font-karla">
+      <p className="text-center text-base xl:text-lg xl:w-4/6 mx-auto font-karla">
         Kami akan memberi tahu Anda tentang aplikasi dan penawaran baru. Tidak
         ada spam, kami berjanji.
       </p>
@@ -26,6 +26,6 @@ export function Berlangganan() {
           Berlangganan
         </button>
       </div>
-    </article>
+    </section>
   );
 }
