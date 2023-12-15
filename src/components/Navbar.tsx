@@ -1,20 +1,20 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import type { Dispatch, SetStateAction } from "react";
+
+import { useDelayedUnmount } from "@hooks/useDelayedUnmount";
+import { useWindowSize } from "@hooks/useWindowSize";
 
 import { Emteka } from "./icons/Emteka";
+import { Close } from "./icons/Close";
 import { Menu } from "./icons/Menu";
-import { useDelayedUnmount } from "@hooks/useDelayedUnmount";
-import { useClickOutside } from "@hooks/useClickOutside";
 
 export function Navbar() {
   const [isOpened, setIsOpened] = useState(false);
   const { isMounted, setIsMounted, animationOnUnmount } = useDelayedUnmount();
   const { pathname } = useRouter();
-
-  const buttonRef = useClickOutside<HTMLButtonElement>(() =>
-    animationOnUnmount(() => setIsOpened(false), 250)
-  );
+  const width = useWindowSize();
 
   function openMenu() {
     if (isMounted === false) {
@@ -28,33 +28,37 @@ export function Navbar() {
 
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 z-20 w-full">
+      <div className="fixed top-0 left-0 right-0 z-30 w-full duration-200">
         <div className="bg-[#4075FFBF] backdrop-blur-md">
-          <div className="flex justify-between items-center py-4 mx-3 lg:mx-16 xl:max-w-[1480px] xl:mx-auto xl:px-20">
-            <strong className="text-neutral-0 font-semibold flex justify-between items-center gap-x-1 lg:text-xl">
-              <Emteka className="w-6 h-6 lg:w-8 lg:h-8" />
+          <div className="flex justify-between items-center py-4 mx-5 lg:mx-16 xl:max-w-[1480px] xl:mx-auto xl:px-20">
+            <strong className="text-neutral-0 font-semibold flex justify-between items-center gap-x-1 text-lg lg:text-xl">
+              <Emteka className="w-7 h-7 lg:w-8 lg:h-8" />
               Emteka
             </strong>
 
             <button
-              ref={buttonRef}
+              // ref={buttonRef}
               onClick={openMenu}
               type="button"
               aria-label="Navigation Menu"
               className="lg:hidden"
             >
-              <Menu className="fill-neutral-0  w-7 h-7" />
+              {isOpened === false ? (
+                <Menu className="fill-neutral-0  w-8 h-8" />
+              ) : (
+                <Close className="fill-neutral-0  w-8 h-8" />
+              )}
             </button>
 
-            <DesktopNavbar pathname={pathname} />
+            {width > 640 && <DesktopNavbar pathname={pathname} />}
           </div>
         </div>
 
-        {isOpened ? (
-          <MobileNavbar isMounted={isMounted} pathname={pathname} />
-        ) : (
-          <></>
-        )}
+        <MobileNavbar
+          isMounted={isMounted}
+          openMenu={openMenu}
+          pathname={pathname}
+        />
       </div>
     </>
   );
@@ -108,16 +112,16 @@ function DesktopNavbar({ pathname }: { pathname: string }) {
       </nav>
 
       <div className="flex items-center gap-x-6">
-        <a href="#" className="lg:block font-karla font-lg text-neutral-0">
+        <Link href="#" className="lg:block font-karla font-lg text-neutral-0">
           Masuk
-        </a>
+        </Link>
 
-        <a
+        <Link
           href="https://app.emteka.id"
           className="btn-yellow lg:block lg:px-8 font-karla font-semibold"
         >
           Coba Sekarang
-        </a>
+        </Link>
       </div>
     </>
   );
@@ -126,48 +130,79 @@ function DesktopNavbar({ pathname }: { pathname: string }) {
 function MobileNavbar({
   isMounted,
   pathname,
+  openMenu,
 }: {
   isMounted: boolean;
   pathname: string;
+  openMenu: Dispatch<SetStateAction<boolean>>;
 }) {
   return (
-    <nav>
-      <ul
-        className={`${
-          isMounted ? "animate-scaleIn" : "animate-scaleOut"
-        } bg-secondary-300 flex flex-col lg:hidden w-full`}
-      >
+    <nav
+      className={`
+      bg-[#4075FFBF]/70 lg:hidden w-full h-[100vh] fixed backdrop-blur-lg pt-6 px-6 flex flex-col duration-500
+      ${
+        // isMounted ? "animate-scaleIn" : "animate-scaleOut"
+        isMounted === true
+          ? "left-0 ease-in opacity-100"
+          : "left-full ease-out opacity-0"
+      }`}
+    >
+      <ul className="flex flex-col">
         <li>
           <Link
             href="/"
             className={`${
-              pathname === "/" ? "font-bold" : ""
-            } text-neutral-0 font-medium inline-block text-sm pt-4 pb-2 px-6`}
+              pathname === "/" ? "font-bold" : "font-medium"
+            } text-neutral-0 text-base pt-4`}
+            onClick={() => openMenu(false)}
           >
             Beranda
           </Link>
+
+          <hr className="w-full h-[1px] border-neutral-200 my-6" />
         </li>
 
         <li>
           <Link
             href="/about-us"
             className={`${
-              pathname === "/about-us" ? "font-bold" : ""
-            } text-neutral-0 font-medium inline-block text-sm py-2 px-6`}
+              pathname === "/about-us" ? "font-bold" : "font-medium"
+            } text-neutral-0 text-base`}
+            onClick={() => openMenu(false)}
           >
             Tentang Kami
           </Link>
+
+          <hr className="w-full h-[1px] border-neutral-200 my-6" />
         </li>
 
         <li>
           <Link
             href="/roadmap"
-            className="text-neutral-0 font-medium inline-block text-sm pt-2 pb-4 px-6"
+            className={`${
+              pathname === "/roadmap" ? "font-bold" : "font-medium"
+            } text-neutral-0 text-base`}
+            onClick={() => openMenu(false)}
           >
             Roadmap
           </Link>
+
+          <hr className="w-full h-[1px] border-neutral-200 my-6" />
         </li>
       </ul>
+
+      <div className="flex items-center gap-y-4 flex-col-reverse absolute bottom-28 inset-x-0 justify-center">
+        <Link href="#" className="font-karla text-lg text-neutral-0">
+          Masuk
+        </Link>
+
+        <Link
+          href="https://app.emteka.id"
+          className="btn-yellow px-8 font-karla font-semibold text-base"
+        >
+          Coba Sekarang
+        </Link>
+      </div>
     </nav>
   );
 }

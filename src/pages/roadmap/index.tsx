@@ -46,9 +46,9 @@ export default function RoadMapPage() {
 
       <div className="bg-secondary-500">
         <div className="relative overflow-x-clip flex flex-col justify-center items-center z-10">
-          <div className="w-[477px] h-[477px] absolute -top-[14rem] opacity-50 bg-[#FFE600] rounded-full blur-[200px] -z-10" />
+          <div className="w-[477px] h-[477px] absolute -top-[19rem] xl:-top-[14rem] opacity-50 bg-[#FFE600] rounded-full blur-[200px] -z-10" />
         </div>
-        <main className="relative z-10 mx-auto w-full xl:w-3/4 font-karla px-4 xl:px-0 pb-10 pt-[150px]">
+        <main className="relative z-10 mx-auto w-full xl:w-3/4 font-karla px-4 xl:px-0 pb-10 pt-[120px] xl:pt-[150px]">
           <section className="flex flex-col gap-y-4 text-center mx-auto xl:w-[738px] mb-8 px-4 xl:px-0">
             <h1 className="text-5xl font-semibold text-neutral-0">
               Ikuti Jalan Produk Ini
@@ -64,13 +64,12 @@ export default function RoadMapPage() {
           {width > 1200 && <CardDesktop />}
 
           {width < 680 &&
-            CardTemp.map(({ id, title, paragraph, images }) => (
+            CardTemp.map(({ id, title, paragraph }) => (
               <CardMobile
                 key={id}
                 id={id}
                 title={title}
                 paragraph={paragraph}
-                images={images}
               />
             ))}
 
