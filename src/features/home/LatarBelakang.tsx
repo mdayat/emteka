@@ -2,18 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Bookmark } from "../../components/icons/bookmark";
-import GreenCheck from "../../components/icons/green_check_circle.svg";
 import { Edit } from "../../components/icons/edit";
 import Arrow from "../../components/icons/arrow_downward.svg";
 import { Poll } from "@components/icons/poll";
 
 import Circle from "@images/home/circle_effect.png";
 import MainImage from "@images/home/Emteka_Screen_02_1.png";
-import TopRight from "@images/home/Emteka_Screen_02_2.png";
-import BottomLeft from "@images/home/Emteka_Screen_02_3.png";
 
 import SecondMain from "@images/home/Emteka_Screen_03_1.png";
-import SecondBottom from "@images/home/Emteka_Screen_03_2.png";
 
 import ThirdMain from "@images/home/Emteka_Screen_04.png";
 
@@ -50,7 +46,7 @@ export function LatarBelakang() {
         className="pt-[6rem] h-fit mx-auto xl:w-[1000px] px-4 flex flex-col gap-y-6 xl:gap-y-0"
         id="01pilihan-materi"
       >
-        {KemampuanMengukur.map(({ id, title, text, poin }, index) => (
+        {KemampuanMengukur.map(({ id, title, text }, index) => (
           <article
             className={`xl:flex xl:justify-between  ${
               id === 2 && "flex-row-reverse"
@@ -59,9 +55,9 @@ export function LatarBelakang() {
           >
             <div className="mt-0.5 w-full xl:w-[40%] flex ">
               {id === 1 ? (
-                <Bookmark className="w-12 h-12 flex-none fill-primary-400 " />
-              ) : id === 2 ? (
                 <Edit className="w-12 h-12 flex-none fill-primary-400 " />
+              ) : id === 2 ? (
+                <Bookmark className="w-12 h-12 flex-none fill-primary-400 " />
               ) : (
                 id === 3 && (
                   <Poll className="w-12 h-12 flex-none fill-primary-400 " />
@@ -76,26 +72,6 @@ export function LatarBelakang() {
 
                 <div className="-ml-10 xl:ml-5">
                   <p className="mt-5">{text}</p>
-
-                  <p className="my-5">
-                    {id === 1
-                      ? "Pilihan materi sudah mencakup"
-                      : id === 2
-                      ? "Pada asesmen terdiri atas"
-                      : id === 3 && "Kamu akan mendapatkan"}
-                    :
-                  </p>
-
-                  {poin.map((point) => (
-                    <div className="flex mb-3" key={point}>
-                      <Image
-                        src={GreenCheck}
-                        alt="Green Check Svg"
-                        className="mr-3"
-                      />
-                      <p>{point}</p>
-                    </div>
-                  ))}
                 </div>
               </div>
             </div>
@@ -106,33 +82,25 @@ export function LatarBelakang() {
                   <Image
                     src={Circle}
                     alt=""
-                    className="w-[80%] h-[80%] object-contain ml-10 -mt-8"
-                  />
-                  <Image src={MainImage} alt="" className="absolute top-14" />
-                  <Image
-                    src={TopRight}
-                    alt=""
-                    className="absolute top-2 -right-4 xl:-right-20 z-10 w-[45%] h-[45%] object-contain"
+                    className="w-[90%] h-[90%] object-contain ml-10 -mt-8"
                   />
                   <Image
-                    src={BottomLeft}
+                    src={MainImage}
                     alt=""
-                    className="absolute bottom-4 -left-3 xl:-left-10 z-10 w-[45%] h-[45%] object-contain"
+                    className="absolute top-14 xl:top-4 xl:-right-5"
                   />
                 </>
               ) : id === 2 ? (
                 <>
-                  {" "}
                   <Image
                     src={Circle}
                     alt=""
-                    className="w-[80%] h-[80%] object-contain ml-10 -mt-8"
+                    className="w-[90%] h-[90%] object-contain ml-10 -mt-8"
                   />
-                  <Image src={SecondMain} alt="" className="absolute top-14" />
                   <Image
-                    src={SecondBottom}
+                    src={SecondMain}
                     alt=""
-                    className="absolute bottom-8 xl:bottom-52 -left-4 z-10 w-[45%] h-[45%] object-contain"
+                    className="absolute top-14 xl:top-8"
                   />
                 </>
               ) : (
@@ -141,12 +109,12 @@ export function LatarBelakang() {
                     <Image
                       src={Circle}
                       alt=""
-                      className="w-[80%] h-[80%] object-contain ml-10 -mt-8"
+                      className="w-[90%] h-[90%] object-contain ml-10 -mt-8"
                     />
                     <Image
                       src={ThirdMain}
                       alt=""
-                      className="absolute top-10 xl:top-16"
+                      className="absolute top-14 xl:top-4 xl:-right-5"
                     />
                   </>
                 )

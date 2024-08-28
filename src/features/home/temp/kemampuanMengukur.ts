@@ -1,22 +1,19 @@
 export const KemampuanMengukur = [
   {
     id: 1,
-    title: "Pilih Materi",
-    text: "Kami menyediakan beragam pilihan materi matematika mulai dari tingkat SMP hingga SMA untuk setiap kurikulum, seperti Kurikulum 2013, Kurikulum K13 Revisi, dan Kurikulum Merdeka.",
-    poin: ["Materi Prasyarat", "Peta Materi"],
+    title: "Asesmen Kesiapan Belajar",
+    text: "Mengukur kesiapan siswa dengan mengerjakan soal terkait materi prasyarat sebelum memasuki materi inti, dengan 3 kesempatan pengerjaan.",
   },
 
   {
     id: 2,
-    title: "Mulai Asesmen",
-    text: "Ukur seberapa jauh kemampuanmu dalam suatu materi matematika melalui asesmen hingga pada materi prasyarat nya!",
-    poin: ["Fitur Tracking"],
+    title: "Belajar Materi",
+    text: "Fitur untuk mempelajari beragam materi prasyarat yang diperlukan sebelum belajar materi inti",
   },
 
   {
     id: 3,
-    title: "Lihat Hasil Asesmen",
-    text: "Analisis kemampuanmu dengan evaluasi yang  kami berikan secara menyeluruh dan terstruktur.",
-    poin: ["Skor Penilaian", "Rekomendasi Pembelajaran", "Pembahasan Soal"],
+    title: "Asesmen Akhir",
+    text: "Fitur untuk menilai pencapaian belajar setelah menyelesaikan materi, dengan hanya 1 kesempatan pengerjaan.",
   },
 ];

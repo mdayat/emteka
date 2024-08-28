@@ -37,15 +37,11 @@ export function Hero() {
             </div>
           </div>
         </div>
-        <div className="relative">
-          <Image
-            src={Screen01}
-            alt="Emteka Screen Capture"
-            className="mt-10 w-fit h-fit"
-          />
-          <button className="hidden xl:block bg-secondary-500 absolute top-[18%] xl:right-14 right-1 px-3 py-1.5 rounded-full border-neutral-200 border-4 border-solid cursor-default">
+        <div className="flex justify-center items-center">
+          <Image src={Screen01} alt="Emteka Screen Capture" className="mt-10" />
+          {/* <button className="hidden xl:block bg-secondary-500 absolute top-[18%] xl:right-14 right-1 px-3 py-1.5 rounded-full border-neutral-200 border-4 border-solid cursor-default">
             Coming Soon
-          </button>
+          </button> */}
         </div>
       </div>
     </section>
