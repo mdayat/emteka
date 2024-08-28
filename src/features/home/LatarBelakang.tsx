@@ -26,6 +26,7 @@ export function LatarBelakang() {
           <Link
             href="#01pilihan-materi"
             className="bg-transparent border-2 border-solid border-primary-100 text-primary-100 py-2.5 px-3 rounded-full mt-5 h-fit flex"
+            scroll={false}
           >
             <Image src={Arrow} alt="Arrow SVG" className="mr-3" />
             Lihat Di bawah

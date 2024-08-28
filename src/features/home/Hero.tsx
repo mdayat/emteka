@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 import Screen01 from "@images/home/Emteka_Screen_01.png";
 
@@ -25,16 +24,6 @@ export function Hero() {
               Tidak Perlu Lagi Khawatir dalam menghadapi persoalan Matematika di
               setiap pembelajaran sekolah
             </p>
-            <div className="relative z-10 text-left">
-              <Link
-                href="https://app.emteka.id/"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-block bg-primary-300 text-neutral-900 rounded-full py-2.5 px-6 xl:px-8 font-semibold mt-5"
-              >
-                Coba Sekarang
-              </Link>
-            </div>
           </div>
         </div>
         <div className="flex justify-center items-center">

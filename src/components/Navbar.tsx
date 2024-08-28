@@ -112,10 +112,6 @@ function DesktopNavbar({ pathname }: { pathname: string }) {
       </nav>
 
       <div className="flex items-center gap-x-6">
-        <Link href="#" className="lg:block font-karla font-lg text-neutral-0">
-          Masuk
-        </Link>
-
         <Link
           href="https://app.emteka.id"
           className="btn-yellow lg:block lg:px-8 font-karla font-semibold"
@@ -192,10 +188,6 @@ function MobileNavbar({
       </ul>
 
       <div className="flex items-center gap-y-4 flex-col-reverse absolute bottom-28 inset-x-0 justify-center">
-        <Link href="#" className="font-karla text-lg text-neutral-0">
-          Masuk
-        </Link>
-
         <Link
           href="https://app.emteka.id"
           className="btn-yellow px-8 font-karla font-semibold text-base"
