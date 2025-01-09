@@ -26,7 +26,7 @@ function FooterDesktop({ pathname }: { pathname: string }) {
   return (
     <>
       <div className="relative overflow-x-clip">
-        <div className="w-[477px] h-[477px] absolute top-32 -right-[15rem] xl:-right-32 opacity-50 bg-[#FFE600] rounded-full blur-[200px]" />
+        <div className="w-[477px] h-[477px] absolute top-32 -right-[15rem] xl:-right-32 opacity-50 bg-[#FFE600] rounded-full blur-[200px] z-0" />
       </div>
       <div className="relative overflow-x-clip">
         <div className="w-[477px] h-[477px] absolute -bottom-60 -left-60 opacity-50 bg-[#FFE600] rounded-full blur-[200px]" />
@@ -46,7 +46,7 @@ function FooterDesktop({ pathname }: { pathname: string }) {
             semua.
           </p>
         </div>
-        <div className="flex flex-col xl:flex-row gap-y-5 xl:gap-16 text-neutral-0">
+        <div className="flex flex-col xl:flex-row gap-y-5 xl:gap-16 text-neutral-0 z-10">
           <ul className="text-xl">
             <li className="text-xl font-bold mb-4">Hubungi Kami</li>
             <li className="font-normal text-neutral-200 mb-2">
