@@ -15,7 +15,7 @@ export default function Bimbel() {
         <div className="w-[477px] h-[477px] -left-[356px] top-[304px] absolute opacity-50 bg-[#3d70f3] rounded-full blur-[200px] invisible old-lg:visible" />
         <div className="w-[477px] h-[477px] -right-[307px] top-[1711px] absolute opacity-50 bg-[#3d70f3] rounded-full blur-[200px] invisible old-lg:visible" />
 
-        <div className="mt-[76px] old-lg:mx-20">
+        <div className="flex flex-col mt-16 max-w-prose mx-auto old-lg:flex-none old-lg:max-w-none">
           <Hero />
           <Feature />
           <hr className="w-[332px] old-lg:w-[914px] h-0.5 bg-neutral-300/25 mx-auto" />

@@ -138,13 +138,24 @@ function FooterMobile({ pathname }: { pathname: string }) {
           >
             <LinkedIn className="w-7 fill-neutral-0" />
           </Link>
-          <Link
-            href="https://www.instagram.com/emteka_frh/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Instagram className="w-7 fill-neutral-0" />
-          </Link>
+          {pathname === "/bimbel" && (
+            <Link
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.instagram.com/bimbel.emteka/"
+            >
+              <Instagram className="w-7 fill-neutral-0" />
+            </Link>
+          )}
+          {(pathname === "/" || pathname === "/about-us") && (
+            <Link
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.instagram.com/emteka_frh/"
+            >
+              <Instagram className="w-7 fill-neutral-0" />
+            </Link>
+          )}
         </div>
 
         <div className="flex flex-col w-full gap-y-5 xl:gap-16 text-neutral-0">

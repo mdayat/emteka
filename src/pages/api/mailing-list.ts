@@ -42,7 +42,17 @@ export default async function handler(
 
     res.status(200).json({ response });
   } catch (err: any) {
-    console.log(err);
-    res.status(400).send({ error: "Bad Request" });
+    console.error(err);
+
+    if (err.code === "ECONNREFUSED" || err.code === "ENOTFOUND") {
+      return res.status(503).json({
+        error: "Connection Error",
+      });
+    }
+
+    return res.status(500).json({
+      error: "Internal Server Error",
+      message: "Terjadi kesalahan. Silakan coba lagi nanti.",
+    });
   }
 }
