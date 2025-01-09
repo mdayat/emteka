@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Poppins, Karla } from "next/font/google";
+import { Poppins, Karla, Nunito } from "next/font/google";
 import type { AppProps } from "next/app";
 
 import { Navbar } from "@components/Navbar";
@@ -21,6 +21,12 @@ const karla = Karla({
   variable: "--font-karla",
 });
 
+const nunito = Nunito({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-nunito",
+});
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
@@ -30,7 +36,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="favicon.svg" type="image/svg" />
       </Head>
 
-      <div className={`${poppins.variable} ${karla.variable}`}>
+      <div
+        className={`${poppins.variable} ${karla.variable} ${nunito.variable}`}
+      >
         <Navbar />
         <Component {...pageProps} />
         <Footer />

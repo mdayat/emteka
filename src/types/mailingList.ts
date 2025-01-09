@@ -5,4 +5,11 @@ interface MailingListData {
   institusi: string;
 }
 
-export type { MailingListData };
+interface MailingListBimbel {
+  nama: string;
+  whatsapp: string;
+  kelas: string;
+  preferensi: string;
+}
+
+export type { MailingListData, MailingListBimbel };

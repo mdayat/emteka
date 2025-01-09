@@ -1,25 +1,28 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import { useWindowSize } from "@hooks/useWindowSize";
 
 import EmtekaLogo from "@images/Emteka-Logo White.png";
+import EmtekaBimbelLogo from "@images/Bimbel Emteka Logo_White Text.png";
 import { Instagram } from "./icons/Instagram";
 import { LinkedIn } from "./icons/LinkedIn";
 
 export function Footer() {
   const width = useWindowSize();
+  const { pathname } = useRouter();
 
   return (
     <footer className="pt-8 pb-[2rem] xl:pb-[130px] xl:max-h-80 font-karla overflow-y-clip w-full">
-      {width > 1280 && <FooterDesktop />}
+      {width > 1024 && <FooterDesktop pathname={pathname} />}
 
-      {width < 680 && <FooterMobile />}
+      {width < 680 && <FooterMobile pathname={pathname} />}
     </footer>
   );
 }
 
-function FooterDesktop() {
+function FooterDesktop({ pathname }: { pathname: string }) {
   return (
     <>
       <div className="relative overflow-x-clip">
@@ -31,10 +34,16 @@ function FooterDesktop() {
       <hr className="mx-auto w-[90%] xl:w-[1200px] mb-8 h-0.5 border-[#D4D7DC80]" />
       <div className="flex flex-col xl:flex-row px-4 xl:px-20 xl:mx-auto items-start xl:items-center justify-between w-full xl:max-w-[1480px]">
         <div className="gap-4 mb-8 xl:mb-0">
-          <Image src={EmtekaLogo} alt={""} className="w-28" />
+          {(pathname === "/" || pathname === "/about-us") && (
+            <Image src={EmtekaLogo} alt={""} className="w-28" />
+          )}
+          {pathname === "/bimbel" && (
+            <Image src={EmtekaBimbelLogo} alt={""} className="w-28" />
+          )}
+
           <p className="text-[38px] xl:text-[40px] text-neutral-0 font-bold max-w-md leading-[50px]">
-            <span className="text-primary-400">Matematika</span> ternyata
-            gampang, lho!
+            <span className="text-primary-400">Matematika</span> mudah untuk
+            semua.
           </p>
         </div>
         <div className="flex flex-col xl:flex-row gap-y-5 xl:gap-16 text-neutral-0">
@@ -50,12 +59,15 @@ function FooterDesktop() {
               </Link>
             </li>
             <li className="font-normal text-neutral-200">
-              <Link href="mailto:info@furahasystems.com">
-                info@furahasystems.com
-              </Link>
+              {pathname === "/bimbel" && (
+                <Link href="mailto:bimbel@emteka.id">bimbel@emteka.id</Link>
+              )}
+              {(pathname === "/" || pathname === "/about-us") && (
+                <Link href="mailto:info@emteka.id">info@emteka.id</Link>
+              )}
             </li>
           </ul>
-          <ul className="text-xl">
+          {/* <ul className="text-xl">
             <li className="font-bold mb-4">Halaman</li>
             <li className="font-normal text-neutral-200 mb-2">
               <Link href="/">Home</Link>
@@ -66,17 +78,28 @@ function FooterDesktop() {
             <li className="font-normal text-neutral-200">
               <Link href="/roadmap">Roadmap</Link>
             </li>
-          </ul>
+          </ul> */}
           <ul className="text-xl">
             <li className="text-xl font-bold mb-4">Sosial Media</li>
             <li className="font-normal text-neutral-200 mb-2">
-              <Link
-                target="_blank"
-                rel="noreferrer"
-                href="https://www.instagram.com/emteka_frh/"
-              >
-                Instagram
-              </Link>
+              {pathname === "/bimbel" && (
+                <Link
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://www.instagram.com/bimbel.emteka/"
+                >
+                  Instagram
+                </Link>
+              )}
+              {(pathname === "/" || pathname === "/about-us") && (
+                <Link
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://www.instagram.com/emteka_frh/"
+                >
+                  Instagram
+                </Link>
+              )}
             </li>
             <li className="font-normal text-neutral-200">
               <Link
@@ -94,15 +117,15 @@ function FooterDesktop() {
   );
 }
 
-function FooterMobile() {
+function FooterMobile({ pathname }: { pathname: string }) {
   return (
     <>
       <div className="flex flex-col px-7 items-start xl:items-center justify-between w-full">
         <div className="mx-auto w-4/5 flex flex-col items-center text-center gap-5 mb-8">
           <Image src={EmtekaLogo} alt={""} className="w-24" />
           <p className="text-[26px] text-neutral-0 font-bold max-w-md leading-[40px]">
-            <span className="text-primary-400">Matematika</span> ternyata
-            gampang, lho!
+            <span className="text-primary-400">Matematika</span> mudah untuk
+            semua.
           </p>
         </div>
         <hr className="mx-auto w-[90%] mb-5 h-0.5 border-[#D4D7DC80]" />
@@ -125,7 +148,7 @@ function FooterMobile() {
         </div>
 
         <div className="flex flex-col w-full gap-y-5 xl:gap-16 text-neutral-0">
-          <ul className="text-sm">
+          {/* <ul className="text-sm">
             <li className="font-bold mb-4">Link</li>
             <li className="font-normal text-neutral-200 mb-2">
               <Link href="/">Beranda</Link>
@@ -136,7 +159,7 @@ function FooterMobile() {
             <li className="font-normal text-neutral-200">
               <Link href="/roadmap">Roadmap</Link>
             </li>
-          </ul>
+          </ul> */}
 
           <hr className="mx-auto w-full h-0.5  border-neutral-0" />
 
@@ -152,9 +175,9 @@ function FooterMobile() {
               </Link>
             </li>
             <li className="font-normal text-neutral-200">
-              <Link href="mailto:info@furahasystems.com">
-                info@furahasystems.com
-              </Link>
+              {pathname === "/bimbel" && (
+                <Link href="mailto:bimbel@emteka.id">bimbel@emteka.id</Link>
+              )}
             </li>
           </ul>
 

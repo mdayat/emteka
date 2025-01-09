@@ -98,6 +98,7 @@ module.exports = {
       fontFamily: {
         poppins: ["var(--font-poppins)", "sans-serif"],
         karla: ["var(--font-karla)", "sans-serif"],
+        nunito: ["var(--font-nunito)", "sans-serif"],
       },
       transitionDuration: {
         250: "250",
