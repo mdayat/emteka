@@ -20,6 +20,7 @@ export function MailingList() {
   const [errorType, setErrorType] = useState<
     "connection" | "validation" | "server" | null
   >(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   function mutateInput(event: ChangeEvent<HTMLInputElement>) {
     setMailingList({
@@ -30,10 +31,13 @@ export function MailingList() {
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    setIsSubmitting(true);
+
     const formattedData = {
       ...mailingList,
       nama: `Bimbel-${mailingList.nama}`,
     };
+
     try {
       const response = await fetch("/api/mailing-list", {
         method: "POST",
@@ -70,6 +74,8 @@ export function MailingList() {
         institusi: "",
         profesi: "",
       });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -256,9 +262,12 @@ export function MailingList() {
 
           <button
             type="submit"
-            className="btn-yellow mx-auto px-8 w-fit font-bold"
+            disabled={isSubmitting}
+            className={`btn-yellow mx-auto px-8 w-fit font-bold ${
+              isSubmitting ? "opacity-50 cursor-not-allowed" : ""
+            }`}
           >
-            Hubungi Saya Sekarang
+            {isSubmitting ? "Mengirim..." : "Hubungi Saya Sekarang"}
           </button>
         </form>
       </div>

@@ -1,8 +1,9 @@
 import Image from "next/image";
 
-import HeroImage from "@images/bimbel/hero.webp";
-import { Bubble } from "../../components/icons/bubble";
-import CheckCircle from "../../components/icons/check_circle.svg";
+import HeroImage from "@images/bimbel/hero-fixed.webp";
+// import HeroImage from "@images/bimbel/hero.webp";
+// import { Bubble } from "../../components/icons/bubble";
+// import CheckCircle from "../../components/icons/check_circle.svg";
 
 export function Hero() {
   return (
@@ -39,7 +40,16 @@ export function Hero() {
       </div>
 
       {/* Image Section */}
-      <div className="relative">
+      <Image
+        src={HeroImage}
+        alt={"Hero"}
+        width={0}
+        height={0}
+        sizes="100vw"
+        style={{ width: "100%", height: "auto" }}
+      />
+
+      {/* <div className="relative">
         <Image
           src={HeroImage}
           alt={"Hero"}
@@ -76,7 +86,7 @@ export function Hero() {
           />
           Engaging
         </span>
-      </div>
+      </div> */}
     </section>
   );
 }

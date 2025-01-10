@@ -30,9 +30,9 @@ export function Navbar() {
   return (
     <>
       <div className="fixed top-0 left-0 right-0 z-30 w-full duration-200">
-        <div className="bg-[#3f75ff] backdrop-blur-[20px]">
+        <div className="bg-[#3f75ff] backdrop-blur-[20px] font-nunito">
           <div className="flex justify-between items-center py-4 mx-5 lg:mx-16 xl:max-w-[1480px] xl:mx-auto xl:px-20">
-            <strong className="text-neutral-0 font-semibold flex justify-between items-center gap-x-1 text-lg lg:text-xl">
+            <strong className="text-neutral-0 font-extrabold flex flex-shrink-0 justify-between items-center gap-x-1 text-lg">
               {(pathname === "/" || pathname === "/about-us") && (
                 <>
                   <Emteka className="w-7 h-7 lg:w-8 lg:h-8" />
@@ -48,7 +48,6 @@ export function Navbar() {
             </strong>
 
             <button
-              // ref={buttonRef}
               onClick={openMenu}
               type="button"
               aria-label="Navigation Menu"
@@ -78,8 +77,8 @@ export function Navbar() {
 function DesktopNavbar({ pathname }: { pathname: string }) {
   return (
     <>
-      <nav className="hidden lg:flex lg:justify-between lg:items-center">
-        <ul className="lg:flex lg:justify-between lg:items-center lg:gap-x-6 xl:gap-x-8">
+      <nav className="hidden lg:flex lg:justify-center lg:items-center w-fit">
+        <ul className="text-xl leading-7 lg:flex lg:justify-center lg:items-center lg:gap-x-6 xl:gap-x-8">
           {(pathname === "/" || pathname === "/about-us") && (
             <>
               <li>
@@ -157,7 +156,7 @@ function DesktopNavbar({ pathname }: { pathname: string }) {
           <Link
             href="https://wa.me/6282211000129"
             target="_blank"
-            className="btn-yellow lg:block lg:px-8 font-karla font-bold"
+            className="btn-yellow lg:block lg:px-8 font-nunito font-bold"
           >
             Daftar Sekarang
           </Link>
@@ -187,7 +186,7 @@ function MobileNavbar({
           : "left-full ease-out opacity-0"
       }`}
     >
-      <ul className="flex flex-col">
+      <ul className="flex flex-col text-xl">
         {(pathname === "/" || pathname === "/about-us") && (
           <>
             <li>
@@ -272,7 +271,7 @@ function MobileNavbar({
       <div className="flex items-center gap-y-4 flex-col-reverse absolute bottom-28 inset-x-0 justify-center">
         <Link
           href="https://wa.me/6282211000129"
-          className="btn-yellow px-8 font-karla font-semibold text-base"
+          className="btn-yellow px-8 font-nunito font-semibold text-base"
         >
           Daftar Sekarang
         </Link>
