@@ -69,7 +69,7 @@ export function CaraBelajar() {
             <div className="flex flex-col gap-4">
               <div className="flex px-2 py-[6px] rounded-lg bg-secondary-400">
                 <h2 className="text-neutral-0 text-xl font-bold leading-7">
-                  Renacana Pembelajaran Personal
+                  Rencana Pembelajaran Personal
                 </h2>
               </div>
               <div className="flex flex-col gap-2 text-neutral-800 w-fit">
