@@ -301,7 +301,7 @@ function MobileNavbar({
             href=""
             className="w-full border block text-center py-2.5 rounded-full font-bold border-neutral-300"
           >
-            Masuk Platform
+            Masuk Platforms
           </Link>
         </li>
         <li>
