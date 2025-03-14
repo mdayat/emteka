@@ -23,16 +23,16 @@ export function Navbar() {
     }
 
     isOpened
-      ? animationOnUnmount(() => setIsOpened(false), 250)
+      ? animationOnUnmount(() => setIsOpened(false), 150)
       : setIsOpened(true);
   }
 
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 z-30 w-full duration-200">
-        <div className="bg-[#3f75ff] backdrop-blur-[20px] font-nunito">
+      <div className="fixed top-0 left-0 right-0 z-[999] w-full duration-200">
+        <div className="bg-neutral-0 backdrop-blur-[20px] font-nunito absolute w-full z-[999] border-b border-neutral-200">
           <div className="flex justify-between items-center py-4 mx-5 lg:mx-16 xl:max-w-[1480px] xl:mx-auto xl:px-20">
-            <strong className="text-neutral-0 font-extrabold flex flex-shrink-0 justify-between items-center gap-x-1 text-lg">
+            <strong className="text-neutral-800 font-extrabold flex flex-shrink-0 justify-between items-center gap-x-1 text-lg">
               {(pathname === "/" || pathname === "/about-us") && (
                 <>
                   <Emteka className="w-7 h-7 lg:w-8 lg:h-8" />
@@ -51,16 +51,16 @@ export function Navbar() {
               onClick={openMenu}
               type="button"
               aria-label="Navigation Menu"
-              className="lg:hidden"
+              className="old-lg:hidden"
             >
               {isOpened === false ? (
-                <Menu className="fill-neutral-0  w-8 h-8" />
+                <Menu className="fill-neutral-800  w-6 h-6" />
               ) : (
-                <Close className="fill-neutral-0  w-8 h-8" />
+                <Close className="fill-neutral-800  w-6 h-6" />
               )}
             </button>
 
-            {width > 640 && <DesktopNavbar pathname={pathname} />}
+            {width > 1024 && <DesktopNavbar pathname={pathname} />}
           </div>
         </div>
 
@@ -69,6 +69,11 @@ export function Navbar() {
           openMenu={openMenu}
           pathname={pathname}
         />
+        {isOpened && (
+          <button onClick={openMenu}>
+            <div className="block old-lg:hidden fixed inset-0 bg-neutral-900/50 -z-10"></div>
+          </button>
+        )}
       </div>
     </>
   );
@@ -78,7 +83,7 @@ function DesktopNavbar({ pathname }: { pathname: string }) {
   return (
     <>
       <nav className="hidden lg:flex lg:justify-center lg:items-center w-fit">
-        <ul className="text-xl leading-7 lg:flex lg:justify-center lg:items-center lg:gap-x-6 xl:gap-x-8">
+        <ul className="text-base leading-7 lg:flex lg:justify-center lg:items-center lg:gap-x-10 xl:gap-x-16">
           {(pathname === "/" || pathname === "/about-us") && (
             <>
               <li>
@@ -86,8 +91,8 @@ function DesktopNavbar({ pathname }: { pathname: string }) {
                   href="/"
                   className={`${
                     pathname === ("/" as string)
-                      ? "text-neutral-0 font-bold"
-                      : "text-neutral-200"
+                      ? "text-secondary-500 font-bold"
+                      : "text-neutral-500 font-normal"
                   }`}
                 >
                   Beranda
@@ -98,8 +103,8 @@ function DesktopNavbar({ pathname }: { pathname: string }) {
                   href="/bimbel"
                   className={`${
                     pathname === ("/bimbel" as string)
-                      ? "text-neutral-0 font-bold"
-                      : "text-neutral-200"
+                      ? "text-secondary-500 font-bold"
+                      : "text-neutral-500 font-normal"
                   }`}
                 >
                   Bimbel Emteka
@@ -110,8 +115,8 @@ function DesktopNavbar({ pathname }: { pathname: string }) {
                   href="/about-us"
                   className={`${
                     pathname === ("/about-us" as string)
-                      ? "text-neutral-0 font-bold"
-                      : "text-neutral-200"
+                      ? "text-secondary-500 font-bold"
+                      : "text-neutral-500 font-normal"
                   }`}
                 >
                   Tentang Kami
@@ -127,8 +132,8 @@ function DesktopNavbar({ pathname }: { pathname: string }) {
                   href="/"
                   className={`${
                     pathname === ("/" as string)
-                      ? "text-neutral-0 font-bold"
-                      : "text-neutral-200"
+                      ? "text-secondary-500 font-bold"
+                      : "text-neutral-500 font-normal"
                   }`}
                 >
                   Beranda
@@ -139,8 +144,8 @@ function DesktopNavbar({ pathname }: { pathname: string }) {
                   href="/about-us"
                   className={`${
                     pathname === ("/about-us" as string)
-                      ? "text-neutral-0 font-bold"
-                      : "text-neutral-200"
+                      ? "text-secondary-500 font-bold"
+                      : "text-neutral-500 font-normal"
                   }`}
                 >
                   Profil Emteka
@@ -150,6 +155,33 @@ function DesktopNavbar({ pathname }: { pathname: string }) {
           )}
         </ul>
       </nav>
+
+      {pathname !== "/bimbel" && (
+        <ul className="hidden lg:flex gap-x-2.5 items-center justify-center">
+          <li>
+            <div className="flex items-center gap-x-6">
+              <Link
+                href=""
+                target="_blank"
+                className="border border-neutral-250 py-3 rounded-full lg:block lg:px-8 font-nunito font-bold text-base"
+              >
+                Masuk Platform
+              </Link>
+            </div>
+          </li>
+          <li>
+            <div className="flex items-center gap-x-6">
+              <Link
+                href=""
+                target="_blank"
+                className="bg-warning-300 border border-warning-400 btn-yellow lg:block lg:px-8 font-nunito font-bold text-base"
+              >
+                Konsultasi
+              </Link>
+            </div>
+          </li>
+        </ul>
+      )}
 
       {pathname === "/bimbel" && (
         <div className="flex items-center gap-x-6">
@@ -178,60 +210,55 @@ function MobileNavbar({
   return (
     <nav
       className={`
-      bg-[#4075FFBF]/70 lg:hidden w-full h-[100vh] fixed backdrop-blur-lg pt-6 px-6 flex flex-col duration-500
+      bg-[#FAFAFA] old-lg:hidden w-full fixed backdrop-blur-lg px-6 flex flex-col duration-500 gap-y-8 top-14
       ${
         // isMounted ? "animate-scaleIn" : "animate-scaleOut"
         isMounted === true
-          ? "left-0 ease-in opacity-100"
-          : "left-full ease-out opacity-0"
+          ? "h-[330px] overflow-auto ease-in"
+          : "h-0 overflow-hidden ease-out"
       }`}
     >
-      <ul className="flex flex-col text-xl">
+      <ul className="flex flex-col gap-y-8 mt-8">
         {(pathname === "/" || pathname === "/about-us") && (
           <>
             <li>
               <Link
                 href="/"
                 className={`${
-                  pathname === "/" ? "font-bold" : "font-medium"
-                } text-neutral-0 text-base pt-4`}
+                  pathname === "/"
+                    ? "text-secondary-500 font-bold"
+                    : "text-neutral-500 font-normal"
+                } text-lg`}
                 onClick={() => openMenu(false)}
               >
                 Beranda
               </Link>
-
-              <hr className="w-full h-[1px] border-neutral-200 my-6" />
             </li>
-
             <li>
               <Link
                 href="/bimbel"
                 className={`${
                   pathname === ("/bimbel" as string)
-                    ? "font-bold"
-                    : "font-medium"
-                } text-neutral-0 text-base`}
+                    ? "text-secondary-500 font-bold"
+                    : "text-neutral-500 font-normal"
+                } text-lg`}
                 onClick={() => openMenu(false)}
               >
                 Bimbel Emteka
               </Link>
-
-              <hr className="w-full h-[1px] border-neutral-200 my-6" />
             </li>
             <li>
               <Link
                 href="/about-us"
                 className={`${
                   pathname === ("/about-us" as string)
-                    ? "font-bold"
-                    : "font-medium"
-                } text-neutral-0 text-base`}
+                    ? "text-secondary-500 font-bold"
+                    : "text-neutral-500 font-normal"
+                } text-lg`}
                 onClick={() => openMenu(false)}
               >
                 Tentang Kami
               </Link>
-
-              <hr className="w-full h-[1px] border-neutral-200 my-6" />
             </li>
           </>
         )}
@@ -242,40 +269,50 @@ function MobileNavbar({
               <Link
                 href="/"
                 className={`${
-                  pathname === ("/" as string) ? "font-bold" : "font-medium"
-                } text-neutral-0 text-base`}
+                  pathname === ("/" as string)
+                    ? "text-secondary-500 font-bold"
+                    : "text-neutral-500 font-normal"
+                } text-lg`}
                 onClick={() => openMenu(false)}
               >
                 Beranda
               </Link>
-              <hr className="w-full h-[1px] border-neutral-200 my-6" />
             </li>
             <li>
               <Link
                 href="/about-us"
                 className={`${
                   pathname === ("/about-us" as string)
-                    ? "font-bold"
-                    : "font-medium"
-                } text-neutral-0 text-base`}
+                    ? "text-secondary-500 font-bold"
+                    : "text-neutral-500 font-normal"
+                } text-lg`}
                 onClick={() => openMenu(false)}
               >
                 Profil Emteka
               </Link>
-              <hr className="w-full h-[1px] border-neutral-200 my-6" />
             </li>
           </>
         )}
       </ul>
 
-      <div className="flex items-center gap-y-4 flex-col-reverse absolute bottom-28 inset-x-0 justify-center">
-        <Link
-          href="https://wa.me/6282211000129"
-          className="btn-yellow px-8 font-nunito font-semibold text-base"
-        >
-          Daftar Sekarang
-        </Link>
-      </div>
+      <ul className="flex flex-col gap-y-2.5">
+        <li>
+          <Link
+            href=""
+            className="w-full border block text-center py-2.5 rounded-full font-bold border-neutral-300"
+          >
+            Masuk Platform
+          </Link>
+        </li>
+        <li>
+          <Link
+            href=""
+            className="w-full border block text-center py-2.5 rounded-full font-bold border-warning-400 bg-warning-300"
+          >
+            Konsultasi
+          </Link>
+        </li>
+      </ul>
     </nav>
   );
 }
