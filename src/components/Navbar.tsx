@@ -161,9 +161,9 @@ function DesktopNavbar({ pathname }: { pathname: string }) {
           <li>
             <div className="flex items-center gap-x-6">
               <Link
-                href=""
+                href="https://app.emteka.id/"
                 target="_blank"
-                className="border border-neutral-250 py-3 rounded-full lg:block lg:px-8 font-nunito font-bold text-base"
+                className="border border-neutral-250 py-3 rounded-full lg:block lg:px-8 font-nunito font-bold text-sm"
               >
                 Masuk Platform
               </Link>
@@ -172,9 +172,9 @@ function DesktopNavbar({ pathname }: { pathname: string }) {
           <li>
             <div className="flex items-center gap-x-6">
               <Link
-                href=""
+                href="https://api.whatsapp.com/send/?phone=6282211000129&text&type=phone_number&app_absent=0"
                 target="_blank"
-                className="bg-warning-300 border border-warning-400 btn-yellow lg:block lg:px-8 font-nunito font-bold text-base"
+                className="bg-warning-300 border border-warning-400 btn-yellow lg:block lg:px-8 font-nunito font-bold text-sm"
               >
                 Konsultasi
               </Link>
@@ -301,7 +301,7 @@ function MobileNavbar({
             href=""
             className="w-full border block text-center py-2.5 rounded-full font-bold border-neutral-300"
           >
-            Masuk Platforms
+            Masuk Platform
           </Link>
         </li>
         <li>

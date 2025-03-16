@@ -3,7 +3,6 @@ import { Poppins, Karla, Nunito } from "next/font/google";
 import type { AppProps } from "next/app";
 
 import { Navbar } from "@components/Navbar";
-import { Footer } from "@components/Footer";
 
 import "../styles/globals.css";
 
@@ -41,7 +40,7 @@ export default function App({ Component, pageProps }: AppProps) {
       >
         <Navbar />
         <Component {...pageProps} />
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

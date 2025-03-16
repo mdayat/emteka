@@ -1,9 +1,7 @@
 import Head from "next/head";
 
 import { Hero } from "src/features/home/Hero";
-import { LatarBelakang } from "src/features/home/LatarBelakang";
-import { PrioritasKami } from "src/features/home/PrioritasKami";
-import { Berlangganan } from "src/features/home/Berlangganan";
+import { ProgramPopuler } from "src/features/home/ProgramPopuler";
 import { WhatsappButton } from "@components/whatsappButton";
 
 export default function Home() {
@@ -54,11 +52,9 @@ export default function Home() {
 
       <WhatsappButton />
 
-      <div className="bg-secondary-500 font-karla text-neutral-0">
+      <div className="bg-[#E7F2FF] font-karla mb-[80rem]">
         <Hero />
-        <PrioritasKami />
-        <LatarBelakang />
-        <Berlangganan />
+        <ProgramPopuler />
       </div>
     </>
   );

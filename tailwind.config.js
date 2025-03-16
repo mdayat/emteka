@@ -129,7 +129,7 @@ module.exports = {
         },
       },
       backgroundColor: {
-        default: "#3D6FF2",
+        default: "#F0F7FF",
       },
     },
   },
