@@ -84,75 +84,42 @@ function DesktopNavbar({ pathname }: { pathname: string }) {
     <>
       <nav className="hidden lg:flex lg:justify-center lg:items-center w-fit">
         <ul className="text-base leading-7 lg:flex lg:justify-center lg:items-center lg:gap-x-10 xl:gap-x-16">
-          {(pathname === "/" || pathname === "/about-us") && (
-            <>
-              <li>
-                <Link
-                  href="/"
-                  className={`${
-                    pathname === ("/" as string)
-                      ? "text-secondary-500 font-bold"
-                      : "text-neutral-500 font-normal"
-                  }`}
-                >
-                  Beranda
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/bimbel"
-                  className={`${
-                    pathname === ("/bimbel" as string)
-                      ? "text-secondary-500 font-bold"
-                      : "text-neutral-500 font-normal"
-                  }`}
-                >
-                  Bimbel Emteka
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about-us"
-                  className={`${
-                    pathname === ("/about-us" as string)
-                      ? "text-secondary-500 font-bold"
-                      : "text-neutral-500 font-normal"
-                  }`}
-                >
-                  Tentang Kami
-                </Link>
-              </li>
-            </>
-          )}
-
-          {pathname === "/bimbel" && (
-            <>
-              <li>
-                <Link
-                  href="/"
-                  className={`${
-                    pathname === ("/" as string)
-                      ? "text-secondary-500 font-bold"
-                      : "text-neutral-500 font-normal"
-                  }`}
-                >
-                  Beranda
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about-us"
-                  className={`${
-                    pathname === ("/about-us" as string)
-                      ? "text-secondary-500 font-bold"
-                      : "text-neutral-500 font-normal"
-                  }`}
-                >
-                  Profil Emteka
-                </Link>
-              </li>
-            </>
-          )}
+          <li>
+            <Link
+              href="/"
+              className={`${
+                pathname === ("/" as string)
+                  ? "text-secondary-500 font-bold"
+                  : "text-neutral-500 font-normal"
+              }`}
+            >
+              Beranda
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/bimbel"
+              className={`${
+                pathname === ("/bimbel" as string)
+                  ? "text-secondary-500 font-bold"
+                  : "text-neutral-500 font-normal"
+              }`}
+            >
+              Bimbel Emteka
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/about-us"
+              className={`${
+                pathname === ("/about-us" as string)
+                  ? "text-secondary-500 font-bold"
+                  : "text-neutral-500 font-normal"
+              }`}
+            >
+              Tentang Kami
+            </Link>
+          </li>
         </ul>
       </nav>
 
@@ -210,7 +177,7 @@ function MobileNavbar({
   return (
     <nav
       className={`
-      bg-[#FAFAFA] old-lg:hidden w-full fixed backdrop-blur-lg px-6 flex flex-col duration-500 gap-y-8 top-14
+      bg-[#FAFAFA] old-lg:hidden w-full fixed backdrop-blur-lg px-6 flex flex-col duration-300 gap-y-8 top-14
       ${
         // isMounted ? "animate-scaleIn" : "animate-scaleOut"
         isMounted === true
@@ -219,100 +186,79 @@ function MobileNavbar({
       }`}
     >
       <ul className="flex flex-col gap-y-8 mt-8">
-        {(pathname === "/" || pathname === "/about-us") && (
-          <>
-            <li>
-              <Link
-                href="/"
-                className={`${
-                  pathname === "/"
-                    ? "text-secondary-500 font-bold"
-                    : "text-neutral-500 font-normal"
-                } text-lg`}
-                onClick={() => openMenu(false)}
-              >
-                Beranda
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/bimbel"
-                className={`${
-                  pathname === ("/bimbel" as string)
-                    ? "text-secondary-500 font-bold"
-                    : "text-neutral-500 font-normal"
-                } text-lg`}
-                onClick={() => openMenu(false)}
-              >
-                Bimbel Emteka
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/about-us"
-                className={`${
-                  pathname === ("/about-us" as string)
-                    ? "text-secondary-500 font-bold"
-                    : "text-neutral-500 font-normal"
-                } text-lg`}
-                onClick={() => openMenu(false)}
-              >
-                Tentang Kami
-              </Link>
-            </li>
-          </>
-        )}
-
-        {pathname === "/bimbel" && (
-          <>
-            <li>
-              <Link
-                href="/"
-                className={`${
-                  pathname === ("/" as string)
-                    ? "text-secondary-500 font-bold"
-                    : "text-neutral-500 font-normal"
-                } text-lg`}
-                onClick={() => openMenu(false)}
-              >
-                Beranda
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/about-us"
-                className={`${
-                  pathname === ("/about-us" as string)
-                    ? "text-secondary-500 font-bold"
-                    : "text-neutral-500 font-normal"
-                } text-lg`}
-                onClick={() => openMenu(false)}
-              >
-                Profil Emteka
-              </Link>
-            </li>
-          </>
-        )}
-      </ul>
-
-      <ul className="flex flex-col gap-y-2.5">
         <li>
           <Link
-            href=""
-            className="w-full border block text-center py-2.5 rounded-full font-bold border-neutral-300"
+            href="/"
+            className={`${
+              pathname === "/"
+                ? "text-secondary-500 font-bold"
+                : "text-neutral-500 font-normal"
+            } text-lg`}
+            onClick={() => openMenu(false)}
           >
-            Masuk Platform
+            Beranda
           </Link>
         </li>
         <li>
           <Link
-            href=""
-            className="w-full border block text-center py-2.5 rounded-full font-bold border-warning-400 bg-warning-300"
+            href="/bimbel"
+            className={`${
+              pathname === ("/bimbel" as string)
+                ? "text-secondary-500 font-bold"
+                : "text-neutral-500 font-normal"
+            } text-lg`}
+            onClick={() => openMenu(false)}
           >
-            Konsultasi
+            Bimbel Emteka
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/about-us"
+            className={`${
+              pathname === ("/about-us" as string)
+                ? "text-secondary-500 font-bold"
+                : "text-neutral-500 font-normal"
+            } text-lg`}
+            onClick={() => openMenu(false)}
+          >
+            Tentang Kami
           </Link>
         </li>
       </ul>
+
+      {pathname !== "/bimbel" && (
+        <ul className="flex flex-col gap-y-2.5">
+          <li>
+            <Link
+              href="https://app.emteka.id/"
+              target="_blank"
+              className="w-full border block text-center py-2.5 rounded-full font-bold border-neutral-300"
+            >
+              Masuk Platform
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="https://api.whatsapp.com/send/?phone=6282211000129&text&type=phone_number&app_absent=0"
+              target="_blank"
+              className="w-full border block text-center py-2.5 rounded-full font-bold border-warning-400 bg-warning-300"
+            >
+              Konsultasi
+            </Link>
+          </li>
+        </ul>
+      )}
+
+      {pathname === "/bimbel" && (
+        <Link
+          href="https://wa.me/6282211000129"
+          target="_blank"
+          className="w-full border block text-center py-2.5 rounded-full font-bold border-warning-400 bg-warning-300"
+        >
+          Daftar Sekarang
+        </Link>
+      )}
     </nav>
   );
 }

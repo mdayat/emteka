@@ -22,7 +22,7 @@ export function OurMentor() {
 
       <div className="flex justify-center mt-6 gap-x-5 gap-y-4 flex-wrap">
         {/* Sapto Bukti */}
-        <div className="bg-neutral-0 rounded-2xl shadow-md w-full lg:max-w-[422px]">
+        <div className="bg-neutral-0 rounded-2xl shadow-md w-full lg:max-w-sm">
           <div className="h-[234px] bg-gradient-to-r from-[#E7F2FF] to-[#94C7F6] rounded-t-2xl flex items-end justify-center">
             <Image src={SaptoImage} alt="Sapto Mukti" />
           </div>
@@ -57,7 +57,7 @@ export function OurMentor() {
         </div>
 
         {/* Abdul Baist */}
-        <div className="bg-neutral-0 rounded-2xl shadow-md w-full lg:max-w-[422px]">
+        <div className="bg-neutral-0 rounded-2xl shadow-md w-full lg:max-w-sm">
           <div className="h-[234px] bg-gradient-to-r from-[#E7F2FF] to-[#94C7F6] rounded-t-2xl flex items-end justify-center">
             <Image src={AbdulImage} alt="Abdul Baist" />
           </div>
@@ -94,7 +94,7 @@ export function OurMentor() {
         </div>
 
         {/* Muh Irfan */}
-        <div className="bg-neutral-0 rounded-2xl shadow-md w-full lg:max-w-[422px]">
+        <div className="bg-neutral-0 rounded-2xl shadow-md w-full lg:max-w-sm">
           <div className="h-[234px] bg-gradient-to-r from-[#E7F2FF] to-[#94C7F6] rounded-t-2xl flex items-end justify-center">
             <Image src={IrfanImage} alt="Irfan Arsyad" />
           </div>
@@ -123,7 +123,7 @@ export function OurMentor() {
         </div>
 
         {/* Abyan Daffa */}
-        <div className="bg-neutral-0 rounded-2xl shadow-md w-full lg:max-w-[422px]">
+        <div className="bg-neutral-0 rounded-2xl shadow-md w-full lg:max-w-sm">
           <div className="h-[234px] bg-gradient-to-r from-[#E7F2FF] to-[#94C7F6] rounded-t-2xl flex items-end justify-center">
             <Image src={DaffaImage} alt="Abyan Daffa" />
           </div>
@@ -151,7 +151,7 @@ export function OurMentor() {
         </div>
 
         {/* Kathrin Nur */}
-        <div className="bg-neutral-0 rounded-2xl shadow-md w-full lg:max-w-[422px]">
+        <div className="bg-neutral-0 rounded-2xl shadow-md w-full lg:max-w-sm">
           <div className="h-[234px] bg-gradient-to-r from-[#E7F2FF] to-[#94C7F6] rounded-t-2xl flex items-end justify-center">
             <Image src={KathrinImage} alt="Kathrin Nur Wulandari" />
           </div>

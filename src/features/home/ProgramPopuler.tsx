@@ -86,7 +86,7 @@ export function ProgramPopuler() {
 
               <div className="block text-center my-3">
                 <Link
-                  href="https://emteka.id/bimbel"
+                  href="/bimbel"
                   className="text-[#805300] font-bold underline outline-[#805300] text-sm"
                 >
                   Apa saja yang akan aku dapatkan?
