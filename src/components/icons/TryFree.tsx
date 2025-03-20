@@ -1,4 +1,4 @@
-import { ComponentPropsWithRef } from "react";
+import type { ComponentPropsWithRef } from "react";
 
 export function TryFreeIcon({ className = "" }: ComponentPropsWithRef<"svg">) {
   return (

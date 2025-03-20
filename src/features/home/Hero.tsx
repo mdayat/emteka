@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import HeroHomeImage from "@images/home/hero-image.png";
-import { TitleHeroText } from "@components/TitleHeroText";
+import { TitleHeroText } from "@components/TitleText/TitleHeroText";
 import { BlobWavesImage } from "@components/BlobWavesImage";
 
 export function Hero() {
@@ -41,7 +41,11 @@ export function Hero() {
       </div>
 
       <div className="mt-8 lg:mt-10 relative z-10">
-        <Image src={HeroHomeImage} alt="Home Hero" className="w-full h-full" />
+        <Image
+          src={HeroHomeImage}
+          alt="Home Hero"
+          className="w-full h-full object-contain"
+        />
       </div>
 
       <div>

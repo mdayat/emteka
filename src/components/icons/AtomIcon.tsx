@@ -1,4 +1,4 @@
-import { ComponentPropsWithRef } from "react";
+import type { ComponentPropsWithRef } from "react";
 
 export function AtomIcon({ className = "" }: ComponentPropsWithRef<"svg">) {
   return (

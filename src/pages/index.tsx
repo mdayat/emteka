@@ -1,8 +1,10 @@
 import Head from "next/head";
 
 import { Hero } from "src/features/home/Hero";
+import { LatarBelakang } from "src/features/home/LatarBelakang";
 import { ProgramPopuler } from "src/features/home/ProgramPopuler";
-import { WhatsappButton } from "@components/whatsappButton";
+import { ContactKonsultan } from "src/features/home/ContactKonsultan";
+import { OurMentor } from "src/features/home/OurMentor";
 
 export default function Home() {
   return (
@@ -50,11 +52,12 @@ export default function Home() {
         />
       </Head>
 
-      <WhatsappButton />
-
-      <div className="bg-[#E7F2FF] font-karla mb-[80rem]">
+      <div className="bg-[#E7F2FF] font-karla mb-16 old-lg:mb-20 overflow-x-hidden">
         <Hero />
         <ProgramPopuler />
+        <LatarBelakang />
+        <OurMentor />
+        <ContactKonsultan />
       </div>
     </>
   );

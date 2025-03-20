@@ -1,4 +1,4 @@
-import { ComponentPropsWithRef } from "react";
+import type { ComponentPropsWithRef } from "react";
 
 export function TrophyIcon({ className = "" }: ComponentPropsWithRef<"svg">) {
   return (

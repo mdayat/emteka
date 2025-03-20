@@ -1,130 +1,97 @@
 import Image from "next/image";
-import Link from "next/link";
+import { useWindowSize } from "@hooks/useWindowSize";
 
-import { Bookmark } from "../../components/icons/bookmark";
-import { Edit } from "../../components/icons/edit";
-import Arrow from "../../components/icons/arrow_downward.svg";
-import { Poll } from "@components/icons/poll";
+import { TitleLatarBelakangTextDesktop } from "@components/TitleText/TitleLatarBelakangTextDesktop";
+import { TitleWhyEmtekaTextMobile } from "@components/TitleText/TitleWhyEmtekaTextMobile";
 
-import Circle from "@images/home/circle_effect.png";
-import MainImage from "@images/home/Emteka_Screen_02_1.png";
+import WhyEmtekaImage from "@images/home/maskot_1_pose_1.svg";
+import { BlobWavesImage } from "@components/BlobWavesImage";
+import { FlaxConicalIcon } from "@components/icons/FlaxConicalIcon";
+import { LocaleFixedIcon } from "@components/icons/LocateFixedIcon";
+import { MapIcon } from "@components/icons/MapIcon";
 
-import SecondMain from "@images/home/Emteka_Screen_03_1.png";
-
-import ThirdMain from "@images/home/Emteka_Screen_04.png";
-
-import { KemampuanMengukur } from "./temp/kemampuanMengukur";
 export function LatarBelakang() {
-  return (
-    <section className="bg-secondary-500 relative overflow-hidden font-karla">
-      <div className="xl:flex xl:w-[1000px] mx-auto px-4 xl:px-0">
-        <h2 className="text-[30px] font-semibold text-neutral-0 tracking-normal xl:w-1/2 text-left leading-[35px] ">
-          Cara mengukur kemampuan matematika Anda
-        </h2>
+  const resize = useWindowSize();
 
-        <div className="flex gap-x-5 mx-auto w-fit">
-          <Link
-            href="#01pilihan-materi"
-            className="bg-transparent border-2 border-solid border-primary-100 text-primary-100 py-2.5 px-3 rounded-full mt-5 h-fit flex"
-            scroll={false}
-          >
-            <Image src={Arrow} alt="Arrow SVG" className="mr-3" />
-            Lihat Di bawah
-          </Link>
-          <a
-            href="https://youtu.be/_JTp4JzZHbY"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <button className="bg-primary-300 text-neutral-900 rounded-full py-3 px-4 font-semibold mt-5 h-fit">
-              Tonton Vidio
-            </button>
-          </a>
+  return (
+    <section className="bg-gradient-to-r from-[#1E3A8A] via-[#2563EB] to-[#4F46E5] text-neutral-0 mx-4 old-lg:mx-auto old-lg:w-[90%] pt-5 px-3 pb-44 old-lg:py-10 old-lg:px-8 rounded-3xl drop-shadow-xl relative overflow-hidden mb-16 old-lg:mb-20">
+      <div className="absolute bottom-0 left-0 right-0 flex old-lg:block justify-center old-lg:left-20 -z-10">
+        <div className="absolute -bottom-10 old-lg:-top-8 old-lg:-left-7 -z-10 w-[233px] h-[233px] bg-neutral-0 rounded-full opacity-10" />
+        <div className="absolute -bottom-8 old-lg:-left-0 -z-10 w-[176px] h-[176px] bg-neutral-0 rounded-full opacity-10" />
+        <Image
+          src={WhyEmtekaImage}
+          alt="Kenapa Harus Emteka"
+          className="max-w-max max-h-max"
+        />
+      </div>
+
+      <div className="old-lg:grid grid-cols-4 items-start gap-x-11">
+        <div className="flex flex-col items-center mb-6">
+          {resize > 1024 ? (
+            <TitleLatarBelakangTextDesktop className="max-w-max w-64" />
+          ) : (
+            <TitleWhyEmtekaTextMobile className="max-w-max w-64" />
+          )}
+          <p className="mt-2 font-semibold text-center lg:text-start">
+            Matematika tidak lagi menjadi mimpi buruk. Kami telah sediakan
+            solusinya!
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 old-lg:grid-cols-3 gap-5 col-span-3">
+          <div className="bg-neutral-0 border px-5 py-4 rounded-lg">
+            <div className="rounded-full bg-[#E3F0FF] w-10 h-10 lg:w-[68px] lg:h-[68px] mx-auto old-lg:mx-0 flex items-center justify-center">
+              <LocaleFixedIcon className="w-6 lg:w-11 fill-none stroke-[#3D6FF2]" />
+            </div>
+
+            <h4 className="text-[#1937A6] font-extrabold font-nunito text-center old-lg:text-start old-lg:text-xl my-4">
+              Ketahui Kesulitanmu
+            </h4>
+            <p className="text-base text-[#656876] text-justify lg:text-left">
+              Lewat Asesmen Kesiapan Belajar, kamu bisa cek dulu pemahamanmu
+              sebelum masuk ke materi inti. Jadi, nggak ada lagi kejutan yang
+              bikin pusing!
+            </p>
+          </div>
+
+          <div className="bg-neutral-0 border px-5 py-4 rounded-lg">
+            <div className="rounded-full bg-[#FFF5A8] w-10 h-10 lg:w-[68px] lg:h-[68px] mx-auto old-lg:mx-0 flex items-center justify-center">
+              <MapIcon className="w-6 lg:w-11 fill-none stroke-[#F2B705]" />
+            </div>
+
+            <h4 className="text-[#A67100] font-extrabold font-nunito text-center old-lg:text-start old-lg:text-xl my-4">
+              Belajar Sesuai Kebutuhan
+            </h4>
+            <p className="text-base text-[#656876] text-justify lg:text-left">
+              Materi yang disediakan Emteka nggak cuma lengkap, tapi juga
+              disusun biar kamu bisa paham konsep dasar sebelum lanjut ke yang
+              lebih sulit.
+            </p>
+          </div>
+
+          <div className="bg-neutral-0 border px-5 py-4 rounded-lg">
+            <div className="rounded-full bg-[#E3F0FF] w-10 h-10 lg:w-[68px] lg:h-[68px] mx-auto old-lg:mx-0 flex items-center justify-center">
+              <FlaxConicalIcon className="w-6 lg:w-11 fill-none stroke-[#3D6FF2]" />
+            </div>
+
+            <h4 className="text-[#1937A6] font-extrabold font-nunito text-center old-lg:text-start old-lg:text-xl my-4">
+              Uji Diri & Lihat Progresmu
+            </h4>
+            <p className="text-base text-[#656876] text-justify lg:text-left">
+              Selesai belajar? Tantang dirimu di Asesmen Akhir dan Try-Out untuk
+              lihat sejauh mana kamu berkembang!
+            </p>
+          </div>
         </div>
       </div>
 
-      <div
-        className="pt-[6rem] h-fit mx-auto xl:w-[1000px] px-4 flex flex-col gap-y-6 xl:gap-y-0"
-        id="01pilihan-materi"
-      >
-        {KemampuanMengukur.map(({ id, title, text }, index) => (
-          <article
-            className={`xl:flex xl:justify-between  ${
-              id === 2 && "flex-row-reverse"
-            }`}
-            key={id}
-          >
-            <div className="mt-0.5 w-full xl:w-[40%] flex ">
-              {id === 1 ? (
-                <Edit className="w-12 h-12 flex-none fill-primary-400 " />
-              ) : id === 2 ? (
-                <Bookmark className="w-12 h-12 flex-none fill-primary-400 " />
-              ) : (
-                id === 3 && (
-                  <Poll className="w-12 h-12 flex-none fill-primary-400 " />
-                )
-              )}
-
-              <div>
-                <h5 className="-mb-1 ml-4 xl:ml-5">0{index + 1}</h5>
-                <h2 className="text-xl ml-4 xl:ml-5 font-semibold font-karla">
-                  {title}
-                </h2>
-
-                <div className="-ml-10 xl:ml-5">
-                  <p className="mt-5">{text}</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative xl:-mt-7 mt-10">
-              {id === 1 ? (
-                <>
-                  <Image
-                    src={Circle}
-                    alt=""
-                    className="w-[90%] h-[90%] object-contain ml-10 -mt-8"
-                  />
-                  <Image
-                    src={MainImage}
-                    alt=""
-                    className="absolute top-14 xl:top-4 xl:-right-5"
-                  />
-                </>
-              ) : id === 2 ? (
-                <>
-                  <Image
-                    src={Circle}
-                    alt=""
-                    className="w-[90%] h-[90%] object-contain ml-10 -mt-8"
-                  />
-                  <Image
-                    src={SecondMain}
-                    alt=""
-                    className="absolute top-14 xl:top-8"
-                  />
-                </>
-              ) : (
-                id === 3 && (
-                  <>
-                    <Image
-                      src={Circle}
-                      alt=""
-                      className="w-[90%] h-[90%] object-contain ml-10 -mt-8"
-                    />
-                    <Image
-                      src={ThirdMain}
-                      alt=""
-                      className="absolute top-14 xl:top-4 xl:-right-5"
-                    />
-                  </>
-                )
-              )}
-            </div>
-          </article>
-        ))}
-
-        <hr className="w-full border-[#d4d7dc]/40 border my-7 xl:my-[64px] mx-auto" />
+      <div>
+        <div className="absolute -right-16 old-lg:-right-28 old-lg:-bottom-24 -top-10 old-lg:-top-24 -z-10">
+          <BlobWavesImage className="fill-neutral-0 w-full h-full opacity-10" />
+        </div>
+        <div className="absolute -right-32 old-lg:-right-48 old-lg:-bottom-24 -top-10 old-lg:-top-24 -z-10">
+          <BlobWavesImage className="fill-neutral-0 w-full h-full opacity-10" />
+        </div>
       </div>
     </section>
   );

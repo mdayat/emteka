@@ -8,7 +8,7 @@ import { HistoryIcon } from "@components/icons/HistoryIcon";
 import { LocaleFixedIcon } from "@components/icons/LocateFixedIcon";
 import { PencilRullerIcon } from "@components/icons/PencilRullerIcon";
 import { RouteIcon } from "@components/icons/RouteIcon";
-import { TitleProgramPopulerText } from "@components/TitleProgramPopulerText";
+import { TitleProgramPopulerText } from "@components/TitleText/TitleProgramPopulerText";
 import { TrophyIcon } from "@components/icons/TrophyIcon";
 import { TryFreeIcon } from "@components/icons/TryFree";
 import { StarIcon } from "@components/icons/StarIcon";
@@ -17,7 +17,7 @@ export function ProgramPopuler() {
   return (
     <section
       id="programpopuler"
-      className="bg-neutral-0 old-lg:absolute z-10 old-lg:w-[90%] old-lg:translate-x-[5.5%] mt-16 old-lg:-mt-16 py-5 mx-4 old-lg:mx-0 old-lg:px-8 rounded-3xl drop-shadow-xl mb-20"
+      className="bg-neutral-0 old-lg:relative z-10 old-lg:w-[90%] old-lg:translate-x-[5.5%] mt-16 old-lg:-mt-16 py-5 mx-4 old-lg:mx-0 old-lg:px-8 rounded-3xl drop-shadow-xl mb-16 old-lg:mb-20"
     >
       <div className="absolute -left-6 -top-8  old-lg:-left-12 old-lg:-top-12">
         <StarIcon className="w-[80px] old-lg:w-[116px] h-full" />
@@ -57,7 +57,7 @@ export function ProgramPopuler() {
 
               <ul className="flex flex-col gap-y-5">
                 <li className="flex items-center gap-x-3">
-                  <LocaleFixedIcon className="min-w-[24px] max-w-[24px] fill-none" />
+                  <LocaleFixedIcon className="min-w-[24px] max-w-[24px] fill-none stroke-[#D47D04]" />
                   <p className="font-normal text-base text-[#232529]">
                     Pemetaan dan Diagnosa Kebutuhan Belajar
                   </p>
