@@ -38,26 +38,30 @@ export function FooterHome() {
 
             <div className="mt-4 flex gap-x-4 flex-wrap">
               <Link
-                href=""
+                href="https://api.whatsapp.com/send/?phone=6282211000129&text&type=phone_number&app_absent=0"
                 className="w-8 h-8 bg-neutral-0 flex items-center justify-center rounded-lg"
+                target="_blank"
               >
                 <WhatsappIcon className="w-5 h-5" />
               </Link>
               <Link
-                href=""
+                href="https://x.com/emteka_frh"
                 className="w-8 h-8 bg-neutral-0 flex items-center justify-center rounded-lg"
+                target="_blank"
               >
                 <XIcon className="w-5 h-5" />
               </Link>
               <Link
-                href=""
+                href="mailto:info@emteka.id"
                 className="w-8 h-8 bg-neutral-0 flex items-center justify-center rounded-lg"
+                target="_blank"
               >
                 <AlternateEmailIcon className="w-5 h-5" />
               </Link>
               <Link
-                href=""
+                href="https://www.instagram.com/emteka_frh/"
                 className="w-8 h-8 bg-neutral-0 flex items-center justify-center rounded-lg"
+                target="_blank"
               >
                 <InstagramIcon className="w-5 h-5" />
               </Link>
