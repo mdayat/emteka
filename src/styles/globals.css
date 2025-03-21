@@ -47,7 +47,4 @@
     text-shadow: -3px 5px #081459, 0 5px #081459, 0 5px #081459, 1px 5px #081459,
       0px -2px #081459;
   }
-  .font-outline-4 {
-    -webkit-text-stroke: 4px black;
-  }
 }

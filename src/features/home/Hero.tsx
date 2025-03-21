@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 import HeroHomeImage from "@images/home/hero-image.png";
-import { TitleHeroText } from "@components/TitleText/TitleHeroText";
 import { BlobWavesImage } from "@components/BlobWavesImage";
 
 export function Hero() {
@@ -10,7 +9,10 @@ export function Hero() {
     <section className="text-neutral-0 bg-gradient-to-r from-[#1E3A8A] via-[#2563EB] to-[#4F46E5] relative pt-[60px] overflow-hidden old-lg:pt-[76px] font-karla px-4 pb-24 old-lg:px-20 grid old-lg:grid-cols-2 gap-x-20">
       <div className="mt-10 old-lg:mt-[160px]">
         <div>
-          <TitleHeroText className="max-w-[350px] old-lg:max-w-[450px]" />
+          <h1 className="mb-5 text-[32px] leading-10 old-lg:text-5xl max-w-max font-extrabold font-nunito w-full old-lg:w-[525px] font-outline-2 tracking-tighter">
+            Belajar Matematika dengan{" "}
+            <span className="text-warning-300">Lebih Mudah</span>
+          </h1>
           <p className="max-w-[540px] mt-5">
             Identifikasi kesulitan belajar, pelajari materi yang sesuai, dan
             tingkatkan pemahaman matematikamu dengan cara yang lebih efektif

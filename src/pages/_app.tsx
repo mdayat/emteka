@@ -43,7 +43,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <div
         className={`${poppins.variable} ${karla.variable} ${nunito.variable} ${
           pathname !== "/" ? "bg-default" : "bg-bgHome"
-        }`}
+        } overflow-x-hidden`}
       >
         <Navbar />
         <Component {...pageProps} />
