@@ -1,36 +1,59 @@
 import Image from "next/image";
+import Link from "next/link";
 
-import Screen01 from "@images/home/Emteka_Screen_01.png";
+import HeroHomeImage from "@images/home/hero-image.png";
+import { TitleHeroText } from "@components/TitleText/TitleHeroText";
+import { BlobWavesImage } from "@components/BlobWavesImage";
 
 export function Hero() {
   return (
-    <section className="bg-secondary-500 relative mt-[60px] overflow-hidden old-lg:mt-[76px] font-karla px-4 xl:px-0 pb-20 xl:pb-0">
-      <div className="relative overflow-x-clip">
-        <div className="hidden xl:block w-[400px] h-[400px] absolute -top-40 -right-[10rem] opacity-30 bg-[#FFE600] rounded-full blur-[200px]" />
-      </div>
-
-      <div className="relative overflow-x-clip">
-        <div className="hidden xl:block w-[400px] h-[400px] absolute top-48 -left-[16.5rem] opacity-40 bg-[#FFE600] rounded-full blur-[200px]" />
-      </div>
-
-      <div className="w-full xl:max-w-[840px] xl:mx-auto mt-10">
-        <div className="xl:flex xl:justify-between">
-          <h1 className="text-4xl xl:text-[40px] font-semibold text-neutral-0 text-left leading-[45px] xl:leading-[50px]">
-            Alat Ukur Kemampuan Matematika Anda
-          </h1>
-
-          <div className="w-fit mx-auto">
-            <p className="text-neutral-50 xl:w-[334px] mt-3 xl:mt-1.5 text-left">
-              Tidak Perlu Lagi Khawatir dalam menghadapi persoalan Matematika di
-              setiap pembelajaran sekolah
-            </p>
-          </div>
+    <section className="text-neutral-0 bg-gradient-to-r from-[#1E3A8A] via-[#2563EB] to-[#4F46E5] relative pt-[60px] overflow-hidden old-lg:pt-[76px] font-karla px-4 pb-24 old-lg:px-20 grid old-lg:grid-cols-2 gap-x-20">
+      <div className="mt-10 old-lg:mt-[160px]">
+        <div>
+          <TitleHeroText className="max-w-[350px] old-lg:max-w-[450px]" />
+          <p className="max-w-[540px] mt-5">
+            Identifikasi kesulitan belajar, pelajari materi yang sesuai, dan
+            tingkatkan pemahaman matematikamu dengan cara yang lebih efektif
+            melalui
+            <span className="text-warning-50 font-semibold">
+              asesmen yang terstruktur dan dipersonalisasi
+            </span>
+            .
+          </p>
         </div>
-        <div className="flex justify-center items-center">
-          <Image src={Screen01} alt="Emteka Screen Capture" className="mt-10" />
-          {/* <button className="hidden xl:block bg-secondary-500 absolute top-[18%] xl:right-14 right-1 px-3 py-1.5 rounded-full border-neutral-200 border-4 border-solid cursor-default">
-            Coming Soon
-          </button> */}
+        <div className="flex flex-col md:flex-row gap-x-4 mt-4 gap-y-1.5">
+          <Link
+            href="https://api.whatsapp.com/send/?phone=6282211000129&text&type=phone_number&app_absent=0"
+            className=" bg-[#FFD22E] border border-[#F2B705] font-bold text-center px-3 old-lg:px-6 rounded-full py-3 text-neutral-900 text-sm"
+            target="_blank"
+          >
+            Coba Sekarang
+          </Link>
+
+          <Link
+            href="#programpopuler"
+            className=" bg-neutral-0 border border-neutral-200 font-bold text-center px-3 old-lg:px-6 rounded-full py-3 text-neutral-900 text-sm"
+            scroll={false}
+          >
+            Lihat Program
+          </Link>
+        </div>
+      </div>
+
+      <div className="mt-8 lg:mt-10 relative z-10">
+        <Image
+          src={HeroHomeImage}
+          alt="Home Hero"
+          className="w-full h-full object-contain"
+        />
+      </div>
+
+      <div>
+        <div className="absolute -bottom-20 lg:top-36 -right-28">
+          <BlobWavesImage className="w-full h-1/2 lg:h-full fill-neutral-0 opacity-10" />
+        </div>
+        <div className="absolute -bottom-32 lg:top-48 -right-40">
+          <BlobWavesImage className="w-full h-1/2 lg:h-full fill-neutral-0 opacity-10" />
         </div>
       </div>
     </section>

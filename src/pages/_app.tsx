@@ -1,9 +1,11 @@
+import { useRouter } from "next/router";
 import Head from "next/head";
 import { Poppins, Karla, Nunito } from "next/font/google";
 import type { AppProps } from "next/app";
 
 import { Navbar } from "@components/Navbar";
 import { Footer } from "@components/Footer";
+import { FooterHome } from "src/features/home/FooterHome";
 
 import "../styles/globals.css";
 
@@ -28,6 +30,8 @@ const nunito = Nunito({
 });
 
 export default function App({ Component, pageProps }: AppProps) {
+  const { pathname } = useRouter();
+
   return (
     <>
       <Head>
@@ -37,11 +41,13 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
 
       <div
-        className={`${poppins.variable} ${karla.variable} ${nunito.variable}`}
+        className={`${poppins.variable} ${karla.variable} ${nunito.variable} ${
+          pathname !== "/" ? "bg-default" : "bg-bgHome"
+        }`}
       >
         <Navbar />
         <Component {...pageProps} />
-        <Footer />
+        {pathname !== "/" ? <Footer /> : <FooterHome />}
       </div>
     </>
   );
