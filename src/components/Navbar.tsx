@@ -41,7 +41,7 @@ export function Navbar() {
               )}
               {pathname === "/bimbel" && (
                 <>
-                  <EmtekaBimbel className="w-9 h-8" />
+                  <EmtekaBimbel className="w-7 h-7 lg:w-8 lg:h-8" />
                   Bimbel Emteka
                 </>
               )}
@@ -123,44 +123,30 @@ function DesktopNavbar({ pathname }: { pathname: string }) {
         </ul>
       </nav>
 
-      {pathname !== "/bimbel" && (
-        <ul className="hidden lg:flex gap-x-2.5 items-center justify-center">
-          <li>
-            <div className="flex items-center gap-x-6">
-              <Link
-                href="https://app.emteka.id/"
-                target="_blank"
-                className="border border-neutral-250 py-3 rounded-full lg:block lg:px-8 font-nunito font-bold text-sm"
-              >
-                Masuk Platform
-              </Link>
-            </div>
-          </li>
-          <li>
-            <div className="flex items-center gap-x-6">
-              <Link
-                href="https://api.whatsapp.com/send/?phone=6282211000129&text&type=phone_number&app_absent=0"
-                target="_blank"
-                className="bg-warning-300 border border-warning-400 btn-yellow lg:block lg:px-8 font-nunito font-bold text-sm"
-              >
-                Konsultasi
-              </Link>
-            </div>
-          </li>
-        </ul>
-      )}
-
-      {pathname === "/bimbel" && (
-        <div className="flex items-center gap-x-6">
-          <Link
-            href="https://wa.me/6282211000129"
-            target="_blank"
-            className="btn-yellow lg:block lg:px-8 font-nunito font-bold"
-          >
-            Daftar Sekarang
-          </Link>
-        </div>
-      )}
+      <ul className="hidden lg:flex gap-x-2.5 items-center justify-center">
+        <li>
+          <div className="flex items-center gap-x-6">
+            <Link
+              href="https://app.emteka.id/"
+              target="_blank"
+              className="border border-neutral-250 py-3 rounded-full lg:block lg:px-8 font-nunito font-bold text-sm"
+            >
+              Masuk Platform
+            </Link>
+          </div>
+        </li>
+        <li>
+          <div className="flex items-center gap-x-6">
+            <Link
+              href="https://api.whatsapp.com/send/?phone=6282211000129&text&type=phone_number&app_absent=0"
+              target="_blank"
+              className="bg-warning-300 border border-warning-400 btn-yellow lg:block lg:px-8 font-nunito font-bold text-sm"
+            >
+              Konsultasi
+            </Link>
+          </div>
+        </li>
+      </ul>
     </>
   );
 }
@@ -227,38 +213,26 @@ function MobileNavbar({
         </li>
       </ul>
 
-      {pathname !== "/bimbel" && (
-        <ul className="flex flex-col gap-y-2.5">
-          <li>
-            <Link
-              href="https://app.emteka.id/"
-              target="_blank"
-              className="w-full border block text-center py-2.5 rounded-full font-bold border-neutral-300"
-            >
-              Masuk Platform
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="https://api.whatsapp.com/send/?phone=6282211000129&text&type=phone_number&app_absent=0"
-              target="_blank"
-              className="w-full border block text-center py-2.5 rounded-full font-bold border-warning-400 bg-warning-300"
-            >
-              Konsultasi
-            </Link>
-          </li>
-        </ul>
-      )}
-
-      {pathname === "/bimbel" && (
-        <Link
-          href="https://wa.me/6282211000129"
-          target="_blank"
-          className="w-full border block text-center py-2.5 rounded-full font-bold border-warning-400 bg-warning-300"
-        >
-          Daftar Sekarang
-        </Link>
-      )}
+      <ul className="flex flex-col gap-y-2.5">
+        <li>
+          <Link
+            href="https://app.emteka.id/"
+            target="_blank"
+            className="w-full border block text-center py-2.5 rounded-full font-bold border-neutral-300"
+          >
+            Masuk Platform
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="https://api.whatsapp.com/send/?phone=6282211000129&text&type=phone_number&app_absent=0"
+            target="_blank"
+            className="w-full border block text-center py-2.5 rounded-full font-bold border-warning-400 bg-warning-300"
+          >
+            Konsultasi
+          </Link>
+        </li>
+      </ul>
     </nav>
   );
 }
