@@ -1,17 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useWindowSize } from "@hooks/useWindowSize";
-
-import { TitleContactKonsultanTextDesktop } from "@components/TitleText/TitleContactKonsultanTextDesktop";
-import { TitleContactKonsultanTextMobile } from "@components/TitleText/TitleContactKonsultanTextMobile";
 
 import PoseContactConsultan from "@images/home/pose_contact_consultan.svg";
 import { BlobWavesImage } from "@components/BlobWavesImage";
 import { CircleMessageIcon } from "@components/icons/CircleMessageIcon";
 
 export function ContactKonsultan() {
-  const resize = useWindowSize();
-
   return (
     <section className="bg-gradient-to-r from-[#1E3A8A] via-[#2563EB] to-[#4F46E5] text-neutral-0 mx-4 old-lg:mx-auto old-lg:w-[90%] pt-8 px-3 old-lg:py-10 old-lg:px-8 rounded-3xl drop-shadow-xl relative overflow-hidden">
       <div>
@@ -28,14 +22,12 @@ export function ContactKonsultan() {
           <h6 className="bg-warning-300 text-[#874600] w-fit px-3 py-1 rounded-md font-bold">
             Punya pertanyaan?
           </h6>
-          {resize > 1024 ? (
-            <TitleContactKonsultanTextDesktop className="max-w-max w-[525px] mt-3 mb-8" />
-          ) : (
-            <TitleContactKonsultanTextMobile className="max-w-max w-[319px] mt-3 mb-8" />
-          )}
+          <h1 className="mt-3 mb-8 text-4xl max-w-max font-extrabold font-nunito w-full lg:w-[525px] text-center old-lg:text-start font-outline-2 tracking-tighter">
+            Hubungi konsultan pendidikan kami melalui chat
+          </h1>
           <Link
             href="https://api.whatsapp.com/send/?phone=6282211000129&text&type=phone_number&app_absent=0"
-            className="flex w-full justify-center old-lg:w-fit items-center gap-x-2 bg-neutral-0 text-neutral-900 font-semibold px-6 py-3 rounded-full"
+            className="flex w-full justify-center lg:w-fit items-center gap-x-2 bg-neutral-0 text-neutral-900 font-semibold px-6 py-3 rounded-full"
             target="_blank"
           >
             <CircleMessageIcon className="stroke-[#000] w-6" />

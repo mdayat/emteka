@@ -7,7 +7,7 @@ import { BlobWavesImage } from "@components/BlobWavesImage";
 
 export function Hero() {
   return (
-    <section className="text-neutral-0 bg-gradient-to-r from-[#1E3A8A] via-[#2563EB] to-[#4F46E5] relative pt-[60px] overflow-hidden old-lg:pt-[76px] font-karla px-4 pb-24 old-lg:px-20 flex flex-col lg:flex-row gap-x-20">
+    <section className="text-neutral-0 bg-gradient-to-r from-[#1E3A8A] via-[#2563EB] to-[#4F46E5] relative pt-[60px] overflow-hidden old-lg:pt-[76px] font-karla px-4 pb-24 old-lg:px-20 grid old-lg:grid-cols-2 gap-x-20">
       <div className="mt-10 old-lg:mt-[160px]">
         <div>
           <TitleHeroText className="max-w-[350px] old-lg:max-w-[450px]" />

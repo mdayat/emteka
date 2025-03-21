@@ -42,4 +42,12 @@
   .blue-ball {
     @apply bg-secondary-500 rounded-full w-10 h-10 lg:w-12 lg:h-12;
   }
+
+  .font-outline-2 {
+    text-shadow: -3px 5px #081459, 0 5px #081459, 0 5px #081459, 1px 5px #081459,
+      0px -2px #081459;
+  }
+  .font-outline-4 {
+    -webkit-text-stroke: 4px black;
+  }
 }
