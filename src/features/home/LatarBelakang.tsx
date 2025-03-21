@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useWindowSize } from "@hooks/useWindowSize";
 
 import { TitleLatarBelakangTextDesktop } from "@components/TitleText/TitleLatarBelakangTextDesktop";
-import { TitleWhyEmtekaTextMobile } from "@components/TitleText/TitleWhyEmtekaTextMobile";
+import KenapaHarusEmtekaMobileImage from "@images/home/Kenapa Harus Emteka_.png";
 
 import WhyEmtekaImage from "@images/home/maskot_1_pose_1.svg";
 import { BlobWavesImage } from "@components/BlobWavesImage";
@@ -26,11 +26,14 @@ export function LatarBelakang() {
       </div>
 
       <div className="old-lg:grid grid-cols-4 items-start gap-x-11">
-        <div className="flex flex-col items-center mb-6">
+        <div className="flex flex-col items-center old-lg:items-start mb-6">
           {resize > 1024 ? (
             <TitleLatarBelakangTextDesktop className="max-w-max w-64" />
           ) : (
-            <TitleWhyEmtekaTextMobile className="max-w-max w-64" />
+            <Image
+              src={KenapaHarusEmtekaMobileImage}
+              alt="Kenapa Harus Emteka"
+            />
           )}
           <p className="mt-2 font-semibold text-center lg:text-start">
             Matematika tidak lagi menjadi mimpi buruk. Kami telah sediakan
