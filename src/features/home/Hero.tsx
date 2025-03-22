@@ -7,6 +7,10 @@ export function Hero() {
     <section className="text-neutral-0 bg-gradient-to-r from-[#1E3A8A] via-[#2563EB] to-[#4F46E5] relative pt-[60px] overflow-hidden old-lg:pt-[76px] font-karla px-4 pb-24 old-lg:px-20 grid old-lg:grid-cols-2 gap-x-20">
       <div className="mt-10 old-lg:mt-[160px]">
         <div>
+          {/* <h1 className="mb-5 text-[32px] leading-10 old-lg:text-5xl max-w-max font-extrabold font-nunito w-full old-lg:w-[525px] font-outline-2 tracking-tighter">
+            Belajar Matematika dengan{" "}
+            <span className="text-warning-300">Lebih Mudah</span>
+          </h1> */}
           <h1 className="mb-5 text-[32px] leading-10 old-lg:text-5xl max-w-max font-extrabold font-nunito w-full old-lg:w-[525px] font-outline-2 tracking-tighter">
             Belajar Matematika dengan{" "}
             <span className="text-warning-300">Lebih Mudah</span>
@@ -41,6 +45,11 @@ export function Hero() {
       </div>
 
       <div className="mt-8 lg:mt-10 relative z-10">
+        {/* <img
+          src="https://ec3q29jlfx8dke21.public.blob.vercel-storage.com/emteka-hero-img-lz38RmMJMaHhR6pff3SiyxQkekznuL.png"
+          alt="Home Hero"
+          className="w-full h-full object-contain"
+        /> */}
         <img
           src="https://ec3q29jlfx8dke21.public.blob.vercel-storage.com/emteka-hero-img-lz38RmMJMaHhR6pff3SiyxQkekznuL.png"
           alt="Home Hero"

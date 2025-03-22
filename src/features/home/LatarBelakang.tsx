@@ -32,7 +32,7 @@ export function LatarBelakang() {
           ) : (
             <Image
               src={KenapaHarusEmtekaMobileImage}
-              alt="Kenapa Harus Emteka"
+              alt="Kenapa Harus Emtekaa"
             />
           )}
           <p className="mt-2 font-semibold text-center lg:text-start">
