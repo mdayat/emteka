@@ -1,7 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
 
-import HeroHomeImage from "@images/home/hero-image.png";
 import { BlobWavesImage } from "@components/BlobWavesImage";
 
 export function Hero() {
@@ -43,8 +41,8 @@ export function Hero() {
       </div>
 
       <div className="mt-8 lg:mt-10 relative z-10">
-        <Image
-          src={HeroHomeImage}
+        <img
+          src="https://ec3q29jlfx8dke21.public.blob.vercel-storage.com/emteka-hero-img-lz38RmMJMaHhR6pff3SiyxQkekznuL.png"
           alt="Home Hero"
           className="w-full h-full object-contain"
         />
